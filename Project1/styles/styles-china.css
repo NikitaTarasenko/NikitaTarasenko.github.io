@@ -1224,7 +1224,8 @@ header
 	}
 	.nav li:hover
 	{
-		background-color: #68020f;
+		background-color: #fff;
+		opacity: 0.7
 	}
 	.gm-style-mtc, .gm-svpc/*, .gmnoprint*/
 	{
