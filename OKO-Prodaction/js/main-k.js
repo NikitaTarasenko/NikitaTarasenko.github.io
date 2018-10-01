@@ -23,7 +23,7 @@ document.body.onload = function ()
 	setTimeout(()=>{
 				nonActiveVideoList(listLines1,lineWidth1);
 				counterChanger=0;
-			},7000);
+			},11000);
 
 		videoTimer();
 		topBotAnime();
@@ -245,8 +245,7 @@ document.body.onload = function ()
 				top.classList.add('makeItDisapir');
 				bot.classList.add('makeItDisapir');
 				mid.classList.remove('worksAnime2');
-				top.classList.remove('addWaves');
-				bot.classList.remove('addWaves');
+
 				vAbs.classList.remove('worksAnime2');
 				video.pause();
 			}
@@ -259,21 +258,21 @@ document.body.onload = function ()
 				blockForHover.addEventListener('mouseenter',function()
 				{
 
-				// blockForHover.removeEventListener('mouseleave',function(){});
+				blockForHover.removeEventListener('mouseleave',function(){});
 				HoverOnVideo1();
-				// setTimeout(()=>
-				// {
-				// 	blockForHover.addEventListener('mouseleave',function(){});
-				// },1000);
+				setTimeout(()=>
+				{
+					blockForHover.addEventListener('mouseleave',function(){});
+				},1000);
 			});
 				blockForHover.addEventListener('mouseleave',function()
 				{
-				// blockForHover.removeEventListener('mouseenter',function(){});
+				blockForHover.removeEventListener('mouseenter',function(){});
 				HoverOffVideo1();
-				// setTimeout(()=>
-				// {
-				// 	blockForHover.addEventListener('mouseenter',function(){});
-				// },1600);
+				setTimeout(()=>
+				{
+					blockForHover.addEventListener('mouseenter',function(){});
+				},1000);
 			});
 			}
 
@@ -328,7 +327,7 @@ document.body.onload = function ()
 										// blockForHover.addEventListener('mouseenter',function(){});
 										flag1=0;
 										
-									},1600);
+									},1500);
 								}
 							else
 							{
@@ -364,7 +363,7 @@ document.body.onload = function ()
 				setTimeout(()=>
 				{
 					blockForHover2.addEventListener('mouseenter',function(){});
-				},1600);
+				},1000);
 			});
 
 		}
@@ -462,7 +461,7 @@ document.body.onload = function ()
 				setTimeout(()=>
 				{
 					blockForHover3.addEventListener('mouseenter',function(){});
-				},1600);
+				},1000);
 			});
 		}
 
@@ -749,10 +748,10 @@ google.maps.event.addDomListener(window, "load", initMap);
 // });
 // });
 var video = document.getElementById('MyVideo');
-var arrayVideo = [" styles/video/videoMain2.mp4", " styles/video/videoMain1.mp4", "styles/video/videoMain33.mp4" ];
+var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain2.mp4", "styles/video/videoMain3-2.mp4" ];
 var arrayImages = ["url('styles/images/mobMain1.png')","url('styles/images/mobMain2.png')","url('styles/images/mobMain3.png')"]
 var arrayImagePos = ["mob_backgr_pos1","mob_backgr_pos2","mob_backgr_pos3"];
-var arrayVideoDuration = ["8000","8000","8000" ];
+var arrayVideoDuration = ["12000","8000","8000" ];
 var arrayVideoNames = ["KYIV IS MY CITY","UKRAINE","WOMAN"];
 var arrayImagesNames = ["UKRAINE","KYIV IS MY CITY","WOMAN"];
 var counterVideo = 0;
@@ -846,14 +845,16 @@ function topBotAnime(){
 	// 	}
 		
 	// },0);
-	setTimeout(()=>
+	if(arrayVideoDuration[counterVideo]==12000)
 	{
-		botLine.classList.add("animeLineForward");
-	},0);
-	
-	setTimeout(()=>
-	{
-		botLine.classList.remove("animeLineForward");
+		setTimeout(()=>
+		{
+			botLine.classList.add("animeLineForward_12");
+		},0);
+
+		setTimeout(()=>
+		{
+			botLine.classList.remove("animeLineForward_12");
 
 		// if(counterAnimeLines<3)
 		// {
@@ -865,8 +866,22 @@ function topBotAnime(){
 		// 	counterAnimeLines=0;
 		// 	topBotAnime();
 		// }
-	},8000);
-	
+	},arrayVideoDuration[counterVideo]);
+	}
+	else
+	{
+		setTimeout(()=>
+		{
+			botLine.classList.add("animeLineForward_8");
+		},0);
+
+		setTimeout(()=>
+		{
+			botLine.classList.remove("animeLineForward_8");
+
+
+		},arrayVideoDuration[counterVideo]);
+	}
 	// setTimeout(()=>
 	// {
 	// 	topLine.classList.remove("animeLineForward");
@@ -934,7 +949,7 @@ function videoTimer()
 			},500);
 	setTimeout(()=>{
 				nonActiveVideoList(changerArrayL1[counterChanger],changerArrayL2[counterChanger]);
-			},7000);
+			},(arrayVideoDuration[counterVideo] - 800));
 	setTimeout(function()
 		{
 			addAnimation();
@@ -993,7 +1008,7 @@ function videoTimer()
 		},500);
 		setTimeout(()=>{
 			nonActiveVideoList(changerArrayL1[counterChanger],changerArrayL2[counterChanger]);
-		},7000);
+		},(arrayVideoDuration[counterVideo] - 800));
 		setTimeout(function()
 		{
 			addAnimation();
