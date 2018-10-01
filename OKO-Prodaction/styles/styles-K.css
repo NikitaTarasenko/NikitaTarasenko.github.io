@@ -104,13 +104,18 @@ html
 
  
 
-.animeLineForward
+.animeLineForward_8
 {
  width: 0%;
   animation: 8s linear topBotLinesAnime;
 
 }
- 
+.animeLineForward_12
+{
+ width: 0%;
+  animation: 12s linear topBotLinesAnime;
+
+} 
 .animeLineReverse
 {
   width: 100%;
