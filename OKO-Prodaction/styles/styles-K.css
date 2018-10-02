@@ -107,7 +107,13 @@ html
 .animeLineForward_8
 {
  width: 0%;
-  animation: 8s linear topBotLinesAnime;
+  animation: 8.3s linear topBotLinesAnime;
+
+}
+.animeLineForward_9
+{
+ width: 0%;
+  animation: 9.4s linear topBotLinesAnime;
 
 }
 .animeLineForward_12
@@ -447,6 +453,7 @@ html
 		opacity: 0.4;
 		cursor: pointer;
 		transition: 1s;
+		z-index: 10000;
 	}
 	.works_arrowUp:hover
 	{
@@ -1270,6 +1277,7 @@ html
   width:  0%;
   height:0.1rem;
   background-color: #fff;
+  opacity: 0.8;
   
 }
 .about-slide
@@ -1815,7 +1823,7 @@ html
    	
     background: rgba(0,0,0,0.9);
 
-   z-index: 1000;
+   z-index: 20000;
    
   }
   
@@ -2057,7 +2065,7 @@ html
     height: 21px;
     margin-top:  0px;
     background-image: url("../styles/images/miniPc.png");
-    background-color: #000;
+    
     background-repeat: no-repeat;
     background-size: contain;
 
@@ -2068,7 +2076,7 @@ html
 	width: 30px;
 	height: 21px;
 	background-image: url("../styles/images/fls.png");
-	background-color: #000; 
+	 
 }
 
 .mejs-controls div.mejs-horizontal-volume-slider {

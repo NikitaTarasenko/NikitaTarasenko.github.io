@@ -34,10 +34,6 @@
 		display: none;
 		visibility: hidden;
 	}
-  #MyVideo
-  {
-    display: none;
-  }
 /*	.hidden_mob1
 	{
 		visibility: visible;
@@ -261,9 +257,16 @@
       }
       .works_arrowUp
       {
+      	z-index: 100000;
       	opacity: 1;
       }
-
+      .works_arrowUp i
+	{
+	z-index: 10000;
+	border-width: 0 0.6rem 0.6rem 0;
+		display: inline-block;
+		padding: 0.7rem;
+	}
      .works-contain
      {
      	width: 70vw;
@@ -480,6 +483,10 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 50% 50%;
+	}
+	#MyVideo
+	{
+		display: none;
 	}
 }
 @media(max-height: 450px)

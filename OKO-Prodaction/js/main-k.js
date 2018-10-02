@@ -748,11 +748,11 @@ google.maps.event.addDomListener(window, "load", initMap);
 // });
 // });
 var video = document.getElementById('MyVideo');
-var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain2.mp4", "styles/video/videoMain3-2.mp4" ];
+var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain2-2.mp4", "styles/video/videoMain3-2.mp4" ];
 var arrayImages = ["url('styles/images/mobMain1.png')","url('styles/images/mobMain2.png')","url('styles/images/mobMain3.png')"]
 var arrayImagePos = ["mob_backgr_pos1","mob_backgr_pos2","mob_backgr_pos3"];
-var arrayVideoDuration = ["12000","8000","8000" ];
-var arrayVideoNames = ["KYIV IS MY CITY","UKRAINE","WOMAN"];
+var arrayVideoDuration = ["12000","9400","8300"];
+var arrayVideoNames = ["UKRAINE","KYIV IS MY CITY","WOMAN"];
 var arrayImagesNames = ["UKRAINE","KYIV IS MY CITY","WOMAN"];
 var counterVideo = 0;
 var counterChanger = -1;
@@ -868,7 +868,21 @@ function topBotAnime(){
 		// }
 	},arrayVideoDuration[counterVideo]);
 	}
-	else
+	if(arrayVideoDuration[counterVideo]==9400)
+	{
+		setTimeout(()=>
+		{
+			botLine.classList.add("animeLineForward_9");
+		},0);
+
+		setTimeout(()=>
+		{
+			botLine.classList.remove("animeLineForward_9");
+
+
+		},arrayVideoDuration[counterVideo]);
+	}
+	if(arrayVideoDuration[counterVideo]==8300)
 	{
 		setTimeout(()=>
 		{
@@ -942,6 +956,7 @@ function videoTimer()
 	if(!detectmob() || (!detectmob2()))
 	{
 	video.src = arrayVideo[counterVideo];
+
 	topBotAnime();
 	changeNameOfTrack(arrayVideoNames[counterVideo]);
 	setTimeout(()=>{
@@ -1077,11 +1092,19 @@ lang_main.classList.add("class_z-index_900");
 
 // }
 var flagAnime = true;	
+var extraCounter = 0;
+var extraCounter2 = 1;
 var lines = document.querySelectorAll("#block");
 var but = document.querySelector("video");
 function addAnimation(delay)
 {
-	
+	 
+	 	
+
+		if(extraCounter==3)
+		{
+			extraCounter2= 0;
+		}
 		var count = 0;
 		for(var i=0;i<lines.length;i++)
 		{
@@ -1106,32 +1129,18 @@ function addAnimation(delay)
 				}
 			}
 		},1400);
-		// if(count==1)
-		// {
-			
-		// }
-		// if(flagAnime==true){
-		// 	setTimeout(()=>
-
-		// 	{
-		// 		console.log("900");
-		// 		lang_main.classList.remove("class_z-index_1100");
-		// 		lang_main.classList.add("class_z-index_900");
-		// 		flagAnime=false;
-		// 	},5200);
-		// }
-		// else
-		// {
+	
 			setTimeout(()=>
 
 			{
 				 
 				lang_main.classList.remove("class_z-index_1100");
 				lang_main.classList.add("class_z-index_900");
-				 
-			},8000);
-		// }
-		
+			 	
+			},arrayVideoDuration[extraCounter + extraCounter2]);
+	
+		extraCounter++;
+
 }
 function addAnimationFirst()
 {
@@ -1166,8 +1175,9 @@ function addAnimationFirst()
 				 
 				lang_main.classList.remove("class_z-index_1100");
 				lang_main.classList.add("class_z-index_900");
+			 
 				 
-			},5200);
+			},9100);
 }
 const en = document.querySelector("#en");
 const ua = document.querySelector("#ua");
@@ -1388,7 +1398,8 @@ $(function(){
 
 
 
-
+let nav_links_mob = document.querySelectorAll("#nav_mob li");
+ 
 var flagMob = false;
 	let bur = document.getElementById("navmenumob");
 
@@ -1396,20 +1407,29 @@ var flagMob = false;
 	{
 		e.preventDefault;
 
-		$(this).toggleClass('burger-btn-acitve');
+		document.querySelector(".burger-btn").classList.add('burger-btn-acitve');
 		
- 		if(flagMob==false)
- 		{
-		
-		bur.classList.remove("hidden_mob1");
-		bur.classList.add("visb_mob");
-		flagMob=true;
-	}
-	else
-	{
-		bur.classList.add("hidden_mob1");
-		bur.classList.remove("visb_mob");
-		flagMob=false;
-	}
+		nav_links_mob.forEach(function(e)
+		{
+			e.addEventListener("click",()=>{
+				document.querySelector(".burger-btn").classList.remove('burger-btn-acitve');
+				bur.classList.add("hidden_mob1");
+				bur.classList.remove("visb_mob");
+				flagMob=false;
+			});
+		})
+		if(flagMob==false)
+		{
+
+			bur.classList.remove("hidden_mob1");
+			bur.classList.add("visb_mob");
+			flagMob=true;
+		}
+		else
+		{
+			bur.classList.add("hidden_mob1");
+			bur.classList.remove("visb_mob");
+			flagMob=false;
+		}
 		
 	});
