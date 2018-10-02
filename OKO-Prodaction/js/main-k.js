@@ -580,6 +580,9 @@ function modalWindows(currentModal,video,blockHover)
 				if(detectmob()||(detectmob2()))
 	 		{
 				closerModal.classList.remove('displayNone');
+
+				
+
 			}
 				currentModal.classList.remove("makeitDisapir");
 				currentModal.classList.add("showit");
@@ -1397,17 +1400,18 @@ $(function(){
 
 
 
-
 let nav_links_mob = document.querySelectorAll("#nav_mob li");
- 
+ var burgerClicked = false;
 var flagMob = false;
 	let bur = document.getElementById("navmenumob");
 
 	$('.burger-btn').on('click', function(e)
 	{
-		e.preventDefault;
 
+		e.preventDefault;
+		if(burgerClicked == false){
 		document.querySelector(".burger-btn").classList.add('burger-btn-acitve');
+		burgerClicked = true;
 		
 		nav_links_mob.forEach(function(e)
 		{
@@ -1416,8 +1420,15 @@ var flagMob = false;
 				bur.classList.add("hidden_mob1");
 				bur.classList.remove("visb_mob");
 				flagMob=false;
+				burgerClicked = false;
 			});
 		})
+	}
+	else
+	{
+		document.querySelector(".burger-btn").classList.remove('burger-btn-acitve');
+		burgerClicked = false;
+	}
 		if(flagMob==false)
 		{
 

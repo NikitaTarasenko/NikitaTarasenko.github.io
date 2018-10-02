@@ -2199,3 +2199,8 @@ mejs-controls div.mejs-time-rail {
 		visibility: visible;
 	}
 
+.map_mob_3part
+{
+	display: none;
+	visibility: hidden;
+}
