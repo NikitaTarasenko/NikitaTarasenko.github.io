@@ -8,9 +8,9 @@ document.body.onload = function ()
 			if(!preloader.classList.contains('done'))
 			{
 				preloader.classList.add('done');
-				// video.src = " styles/video/videoMain2-2.mp4";
-				// video.src = " styles/video/videoMain3-2.mp4";
-				// video.src = " styles/video/videoMain1-2.mp4";
+				video.src = " styles/video/videoMain2-2.mp4";
+				video.src = " styles/video/videoMain3-2.mp4";
+				video.src = " styles/video/videoMain1-2.mp4";
 			
 			}
 			addAnimationFirst();
