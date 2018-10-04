@@ -981,6 +981,7 @@ html
 	background: black;
 	background-image: url("../styles/images/full-logo.jpg");
 	background-size: cover;
+	background-position: 50% 50%;
 	 
 	z-index: 1;
 }
