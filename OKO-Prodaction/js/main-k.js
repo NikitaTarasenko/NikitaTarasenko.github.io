@@ -18,14 +18,14 @@ document.body.onload = function ()
 			document.querySelector('header').classList.add('animeForHeader');
 		document.querySelector('footer').classList.add('animeForHeader');
 
-		},2000);
+		},5000);
 		setTimeout(()=>{
-				animeActiveVideoList(listLines1,lineWidth1);
-			},2800);
-	setTimeout(()=>{
-				nonActiveVideoList(listLines1,lineWidth1);
-				counterChanger=0;
-			},11000);
+			animeActiveVideoList(listLines1,lineWidth1);
+		},5800);
+		setTimeout(()=>{
+			nonActiveVideoList(listLines1,lineWidth1);
+			counterChanger=0;
+		},11000);
 
 		videoTimer();
 		topBotAnime();
