@@ -542,11 +542,10 @@ document.body.onload = function ()
 	 	// 	{
 				closerModal.classList.add('displayNone');
 			// }
-			modalWindows(videoModal_1,vid3,blockForHover,"styles/video/videoFull1.mp4");
-			modalWindows(videoModal_2,vid2,blockForHover2,"styles/video/videoFull2.mp4");
+			modalWindows(videoModal_1,vid3,blockForHover,"styles/video/videoMain1.mp4");
+			modalWindows(videoModal_2,vid2,blockForHover2,"styles/video/videoMain2.mp4");
 			modalWindows(videoModal_3,vid1,blockForHover3,"styles/video/videoMain3.mp4");
-			modalWindows(videoModal_4,vid4,blockForHover4,"styles/video/training1.mp4");
-
+			
 
 
 function modalWindows(currentModal,video,blockHover,currentSrc)
