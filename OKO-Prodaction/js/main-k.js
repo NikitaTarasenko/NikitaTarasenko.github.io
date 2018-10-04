@@ -2,8 +2,8 @@ document.body.onload = function ()
 {
 	preloader = document.getElementById('page-preloader');
 		// video.src = " styles/video/videoMain2-2.mp4";
-		video.src = " styles/video/videoMain3-2.mp4";
-		video.src = " styles/video/videoMain1-2.mp4";
+		// video.src = " styles/video/videoMain3-2.mp4";
+		// video.src = " styles/video/videoMain1-2.mp4";
 
 		setTimeout(function()
 		{
@@ -575,6 +575,7 @@ function modalWindows(currentModal,video,blockHover)
 				
 				 closerModal.classList.add('displayNone');
 				video.pause();
+				video.src = "";
 			});
 			blockHover.addEventListener('click',function()
 			{	
@@ -586,6 +587,7 @@ function modalWindows(currentModal,video,blockHover)
 				
 
 			}
+				video.src = currentSrc;
 				currentModal.classList.remove("makeitDisapir");
 				currentModal.classList.add("showit");
 			
