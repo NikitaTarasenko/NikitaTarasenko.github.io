@@ -979,6 +979,7 @@ html
 	margin: 0 auto;
 	 
 	background: black;
+	background-image: url("../styles/images/full-logo.png");
 	background-size: cover;
 	 
 	z-index: 1;
