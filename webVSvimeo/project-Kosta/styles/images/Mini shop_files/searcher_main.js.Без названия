@@ -1,0 +1,218 @@
+var data = [
+{id: 1, name: 'Холодильники', price: 12133, mark: 'holodok-2000'},
+{id: 2, name: 'Пылесосы', price: 2222, mark: 'zasos-3000'},
+{id: 3, name: 'Кондиционеры', price: 1323, mark: 'veterok-200'},
+{id: 4, name: 'Бойлеры', price: 22114, mark: 'boilerok-1200'},
+{id: 5, name: 'Фильтры', price: 9339, mark: 'прикольныйФильтр-4000'},
+{id: 6, name: 'Холодильники', price: 3339, mark: 'holodok-230'},
+{id: 7, name: 'Холодильники', price: 1339, mark: 'Холодильник-111000'},
+{id: 8, name: 'Холодильники', price: 4339, mark: 'holodok-2111'},
+{id: 9, name: 'Пылесосы', price: 3339, mark: 'zasos-302200'},
+{id: 10, name: 'Пылесосы', price: 2339, mark: 'Пыльчик-323300'},
+{id: 11, name: 'Пылесосы', price: 1339, mark: 'zasos-3233000'},
+{id: 12, name: 'Пылесосы', price: 11339, mark: 'Пылесос-233000'},
+{id: 13, name: 'Бойлеры', price: 12339, mark: 'крутой-22200'},
+{id: 14, name: 'Бойлеры', price: 29339, mark: 'Бойлер-1200'},
+{id: 15, name: 'Кондиционеры', price: 2339, mark: 'Конд-22200'},
+{id: 16, name: 'Кондиционеры', price: 19339, mark: 'конд-11200'},
+{id: 17, name: 'Кондиционеры', price: 229339, mark: 'veterok-99200'},
+{id: 18, name: 'Кондиционеры', price: 1239, mark: 'Холод-99990'},
+{id: 19, name: 'Водка', price: 129, mark: 'хортица'},
+{id: 20, name: 'Фильтры', price: 22339, mark: 'cleaner-42330'},
+{id: 21, name: 'Фильтры', price: 1339, mark: 'Фильтр-4030'},
+{id: 22, name: 'Пылесосы', price: 332222, mark: 'пыль-3122000'},
+{id: 23, name: 'Пылесосы', price: 12222, mark: 'zasos-301100'},
+{id: 24, name: 'Липа', price:22, mark: 'фф22s-0'},
+{id: 25, name: 'Пистолет', price: 221222, mark: 'ТТ-3'},
+{id: 26, name: 'Наушники', price: 221222, mark: 'tts-2223000'},
+{id: 27, name: 'Телефон', price: 221222, mark: 'tts-2223000'}
+];
+
+
+
+
+const form = document.forms.search_form;
+const  btn = document.getElementById("search");
+
+const form2 = document.forms.search_form2;
+const  btn2 = document.getElementById("search2");
+
+let pattern= "";
+let value = "";
+
+
+
+btn.addEventListener('click',(event)=>
+{
+  event.preventDefault();
+  myFunction();
+
+});
+
+btn2.addEventListener('click',(event)=>
+{
+  event.preventDefault();
+  myFunction();
+
+});
+
+
+
+form.addEventListener('submit',(event)=>
+{
+  event.preventDefault();
+  myFunction();
+ 
+})
+
+function myFunction2()
+{
+    let arrayRes = [];
+  value = form2.searcher2.value.trim(); 
+  pattern = new RegExp(value, "i");
+  
+  if(value!==""){
+    data.forEach((elem,index)=>
+    {
+      let strName = data[index].name;
+      let strMark = data[index].mark;
+
+      let resName = strName.search(pattern);
+      let resMark = strMark.search(pattern);
+
+      // console.log(resName + " and " + resMark);
+      if(resName == 0)
+      {
+        arrayRes.push(`${data[index].id}`);
+
+      }
+      // if(resName==0)
+      // {
+      //   console.log("bingo");
+      // }
+
+      if(resMark == 0)
+      {
+        arrayRes.push(`${data[index].id}`);
+      }
+
+      
+
+    });
+  }
+ // console.log(arrayRes);
+ 
+
+const totalResult =  arrayRes.map( item =>
+{
+           
+            // var img = data.Search[i].Poster;
+            var category = data[item-1].name;
+            var price =  data[item-1].price + " грн; ";
+            var model =  data[item-1].mark;
+           
+            
+          
+                return `
+                <div class="card" style=" width: 18rem;">
+                          
+                          <div class="card-body">
+                            <h5 class="card-title"  ><strong>Категория: </strong>${category}</h5>
+                            <p class="card-text" ><strong>Цена: </strong>${price}</p>
+                             <p class="card-text" ><strong>Название: </strong>${model}</p>
+                        </div>
+                    </div>`
+                        // }
+    }).join('');
+  
+  var output = document.getElementById("mainRow");
+  output.innerHTML = totalResult;
+}
+
+function myFunction()
+{
+    let arrayRes = [];
+  value = form.searcher.value.trim();
+  pattern = new RegExp(value, "i");
+  
+  if(value!==""){
+    data.forEach((elem,index)=>
+    {
+      let strName = data[index].name;
+      let strMark = data[index].mark;
+
+      let resName = strName.search(pattern);
+      let resMark = strMark.search(pattern);
+
+      // console.log(resName + " and " + resMark);
+      if(resName == 0)
+      {
+        arrayRes.push(`${data[index].id}`);
+
+      }
+      // if(resName==0)
+      // {
+      //   console.log("bingo");
+      // }
+
+      if(resMark == 0)
+      {
+        arrayRes.push(`${data[index].id}`);
+      }
+
+      
+
+    });
+  }
+ // console.log(arrayRes);
+ 
+
+const totalResult =  arrayRes.map( item =>
+{
+           
+            // var img = data.Search[i].Poster;
+            var category = data[item-1].name;
+            var price =  data[item-1].price + " грн; ";
+            var model =  data[item-1].mark;
+           
+            
+          
+                return `
+                <div class="card" style=" width: 18rem;">
+                          
+                          <div class="card-body">
+                            <h5 class="card-title"  ><strong>Категория: </strong>${category}</h5>
+                            <p class="card-text" ><strong>Цена: </strong>${price}</p>
+                             <p class="card-text" ><strong>Название: </strong>${model}</p>
+                        </div>
+                    </div>`
+                        // }
+    }).join('');
+  
+  var output = document.getElementById("mainRow");
+  output.innerHTML = totalResult;
+}
+
+const catalog = document.getElementById("catalog_btn");
+const modal_catalog = document.getElementById("opened_catalog");
+const catalog_menu = document.getElementById("catalog_menuId");
+const hero = document.getElementById("hero");
+let clicker_catalog = false;
+
+catalog.addEventListener("click",()=>
+{
+  if(!clicker_catalog)
+  {
+  modal_catalog.classList.remove("displayNone");
+  catalog_menu.classList.remove("displayNone");
+  hero.style.backgroundColor = "#a8a8a8";
+  clicker_catalog = true;
+}
+  else
+  {
+     modal_catalog.classList.add("displayNone");
+     catalog_menu.classList.add("displayNone");
+   clicker_catalog = false;
+   hero.style.backgroundColor = "#fff";
+  }
+})
