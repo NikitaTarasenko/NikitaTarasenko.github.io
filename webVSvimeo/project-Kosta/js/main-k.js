@@ -38,19 +38,20 @@ document.body.onload = function ()
 			const video2  = document.querySelector("#MyVideo2");
 			const video3  = document.querySelector("#MyVideo3");
 			const video4  = document.querySelector("#MyVideo4");
+			const video5  = document.querySelector("#MyVideo5");
 
 			const blockForHover = document.querySelector('#videoAbsol1Second');
 			const blockForHover2 = document.querySelector('#videoAbsol2Second');
 			const blockForHover3 = document.querySelector('#videoAbsol3Second');
 			const blockForHover4 = document.querySelector('#videoAbsol4Second');
-
+			const blockForHover5 = document.querySelector('#videoAbsol5Second');
 
 
 			const vAbs1   = document.querySelector("#videoAbsol1");
 			const vAbs2   = document.querySelector("#videoAbsol2");
 			const vAbs3   = document.querySelector("#videoAbsol3");
 			const vAbs4   = document.querySelector("#videoAbsol4");
-
+			const vAbs5   = document.querySelector("#videoAbsol5");
 
 			const topPart = document.querySelector('.top_part');
 			const midPart = document.querySelector('.mid_part');
@@ -73,7 +74,9 @@ document.body.onload = function ()
 			const midPart4 = document.querySelector('.video-block4 .mid_part');
 			const botPart4 = document.querySelector('.video-block4 .bot_part');
 
-
+			const topPart5 = document.querySelector('.video-block5 .top_part');
+			const midPart5 = document.querySelector('.video-block5 .mid_part');
+			const botPart5 = document.querySelector('.video-block5 .bot_part');
 
 
 
@@ -115,114 +118,7 @@ document.body.onload = function ()
 
 
 
-					// function HoverOnVideo1()
-			// {
-			
-			// blockForHover.addEventListener('mouseenter',function()
-			// {
-			// 				if(flag==false)
-			// 				{ 
-			// 					topPart.classList.add('makeItDisapir');
-			// 					botPart.classList.add('makeItDisapir');
-			// 					midPart.classList.add('worksAnime1');
-							 
-			// 					vAbs1.classList.add('worksAnime1');
-								 
-			// 				 	video1.play();
-
-			// 						blockForHover.addEventListener('mouseleave',function()
-			// 					{
-			// 						 HoverOffVideo1();
-			// 					});
-
-			// 					setTimeout(function()
-			// 					{
-									 
-			// 						midPart.classList.add('makeItDisapir');
-									
-									
-			// 						vAbs1.classList.remove('worksAnime1');
-			// 						midPart.classList.remove('worksAnime1');
-			// 						topPart.classList.remove('makeItDisapir');
-			// 						botPart.classList.remove('makeItDisapir');
-			// 						 flag = true;
-									
-								
-			// 					},955);
-
-
-			// 				}
-			// 				else{
-
-			// 					HoverOnVideo1();
-			// 				}
-							 
-			// });
-			// }
-			// function HoverOffVideo1(){
-		 	
-				
-			// 	 	if(flag==true )
-			// 	{
-					 
-			// 						midPart.classList.remove('makeItDisapir');
-
-			// 						topPart.classList.add('makeItDisapir'); //removing waves animation
-			// 						botPart.classList.add('makeItDisapir'); //removing waves animation
-									 
-			// 						vAbs1.classList.add('worksAnime2');
-			// 						midPart.classList.add('worksAnime2');
-			// 						setTimeout(function()
-			// 						{
-									
-			// 						topPart.classList.add('makeItDisapir');
-			// 						botPart.classList.add('makeItDisapir');
-			// 						midPart.classList.remove('worksAnime2');
-			// 						topPart.classList.remove('addWaves');
-			// 							botPart.classList.remove('addWaves');
-			// 						vAbs1.classList.remove('worksAnime2');
-									
-			// 						video1.pause();
-									 
-			// 						 flag=false;
-			// 					},1600);
-					 
-			// 		 }
-			// 		 else
-			// 		 {
-			// 		 	setTimeout(()=>{
-			// 		 			midPart.classList.remove('makeItDisapir');
-
-			// 						topPart.classList.add('makeItDisapir'); //removing waves animation
-			// 						botPart.classList.add('makeItDisapir'); //removing waves animation
-									 
-			// 						vAbs1.classList.add('worksAnime2');
-			// 						midPart.classList.add('worksAnime2');
-			// 						setTimeout(function()
-			// 						{
-									
-			// 						topPart.classList.add('makeItDisapir');
-			// 						botPart.classList.add('makeItDisapir');
-			// 						midPart.classList.remove('worksAnime2');
-			// 						topPart.classList.remove('addWaves');
-			// 							botPart.classList.remove('addWaves');
-			// 						vAbs1.classList.remove('worksAnime2');
-									
-			// 						video1.pause();
-									 
-			// 						 flag=false;
-			// 					},1600);
-			// 					},900);
-			// 		 }
-				 
-			 
-			
-			// }
-
-
-
-
-
+	
 
 
  			function FirstPartHoverOn(top,bot,mid,vAbs,video)
@@ -629,6 +525,95 @@ document.body.onload = function ()
 		}
 
 
+		let flag5 = 0;
+		if(!detectmob()||!detectmob2())
+		{
+
+		
+			blockForHover5.addEventListener('mouseenter',function()
+			{
+				
+				blockForHover5.removeEventListener('mouseleave',function(){});
+				HoverOnVideo5();
+				setTimeout(()=>
+				{
+					blockForHover5.addEventListener('mouseleave',function(){});
+				},1000);
+			});
+			blockForHover5.addEventListener('mouseleave',function()
+			{
+				blockForHover5.removeEventListener('mouseenter',function(){});
+				HoverOffVideo5();
+				setTimeout(()=>
+				{
+					blockForHover5.addEventListener('mouseenter',function(){});
+				},1000);
+			});
+		}
+
+		function HoverOnVideo5()
+		{
+
+			if(flag5==0)
+			{
+				setTimeout(()=>
+				{
+					FirstPartHoverOn(topPart5,botPart5,midPart5,vAbs5,video5);
+				},0);
+				
+
+				setTimeout(function()
+				{
+
+					LastPartHoverOn(topPart5,botPart5,midPart5,vAbs5);
+					flag5=1;
+				},955);
+				}
+				else
+							{
+								setTimeout(()=>
+								{
+									blockForHover5.addEventListener('mouseenter',function()
+										{
+											
+											blockForHover5.removeEventListener('mouseleave',function(){});
+											HoverOnVideo5();
+											setTimeout(()=>
+											{
+												blockForHover5.addEventListener('mouseleave',function(){});
+												flag5=0;
+											},1000);
+										});
+								},100);
+							}
+		}
+	function HoverOffVideo5()
+		{
+			if(flag5 ==1)
+			{
+				setTimeout(()=>{
+					FirstHoverOff(topPart5,botPart5,midPart5,vAbs5);
+				},10);
+
+				setTimeout(function()
+				{
+					LastHoverOff(topPart5,botPart5,midPart5,vAbs5,video5);
+					flag5=0;
+
+				},1600);
+			}
+			else
+			{
+				setTimeout(()=>
+				{
+					HoverOffVideo5();
+					flag5=1;
+				},900);
+			}
+		}
+
+
+
 
 
 
@@ -687,7 +672,7 @@ document.body.onload = function ()
 
  var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
-
+// const vv = document.getElementById("vv");
 function modalWindows(blockHover,curSrc)
 {
 		videoModal_1.classList.add('makeitDisapir');
@@ -728,6 +713,7 @@ function modalWindows(blockHover,curSrc)
 				
 
 			}
+
 				
 				videoModal_1.classList.remove("makeitDisapir");
 				iframe.src = curSrc;
@@ -1122,7 +1108,7 @@ function videoTimer()
 			// 	animeActiveVideoList(listLines2,lineWidth2);
 			// },1500);
 			
-		},arrayVideoDuration[counterVideo] - 800);
+		},arrayVideoDuration[counterVideo] - 750);
 	setTimeout(function()
 	{
 		
@@ -1139,7 +1125,7 @@ function videoTimer()
 		{
 			addAnimation();
 			changeNameOfTrack(arrayVideoNames[counterVideo]);
-		},arrayVideoDuration[counterVideo] - 800);
+		},arrayVideoDuration[counterVideo] - 750);
 			videoTimer();
 
 		}
@@ -1152,7 +1138,7 @@ function videoTimer()
 		{
 			addAnimation();
 			changeNameOfTrack(arrayVideoNames[counterVideo]);
-		},arrayVideoDuration[counterVideo] - 800);
+		},arrayVideoDuration[counterVideo] - 750);
 			videoTimer();
 		}
 	},arrayVideoDuration[counterVideo]);

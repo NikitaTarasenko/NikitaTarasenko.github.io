@@ -764,7 +764,17 @@ html
 	width: 100%;
 	background: #000;
 
-	margin-top: -30px;
+	margin-top: 30px;
+	z-index: 1;
+
+}
+.video-block5
+{
+	position: relative;
+	width: 100%;
+	background: #000;
+
+	margin-top: 30px;
 	z-index: 1;
 
 }
@@ -1317,7 +1327,7 @@ html
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 33%;
 	height: 100%;
 
 	background: #000;
@@ -1325,9 +1335,9 @@ html
 
 .man1-logo
 {
-	width: 350px;
+	width: 300px;
 	 
-	height: 350px;
+	height: 300px;
 	margin:0 auto;
 	
 	background-image: url("..//styles/images/kosta1.png");
@@ -1349,16 +1359,39 @@ html
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
+	width: 33%;
 	height: 100%;
 
 	background: #000;
 }
+.man3
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 33%;
+	height: 100%;
+
+	background: #000;
+}
+.man3-logo
+{
+	width: 300px;
+	height:300px;
+	margin:0 auto;
+	 
+	background-image: url("..//styles/images/ryaba.png");
+	background-repeat: no-repeat;
+	background-position: 60% 60%;
+	background-size: 125%;
+}
 
 .man2-logo
 {
-	width: 350px;
-	height:350px;
+	width: 300px;
+	height:300px;
 	margin:0 auto;
 	 
 	background-image: url("..//styles/images/Lesha1.png");
@@ -1514,7 +1547,14 @@ html
 		
 	
 	}
-
+	.TRX3 .myEqualizer
+{
+	position: absolute;
+	bottom: 20%;
+	right: -110%;
+	width: 60px;
+	height: 20px;
+}
 	.left_descr
 	{
 		display: flex;
