@@ -1,9 +1,11 @@
 window.onload = function ()
 {
 	preloader = document.getElementById('page-preloader');
-				// video.src = " styles/video/videoMain2-2.mp4";
-				// video.src = " styles/video/videoMain3-2.mp4";
-				// video.src = " styles/video/videoMain1-2.mp4";
+				video.src = " styles/video/videoMain2-2.mp4";
+				
+				video.src = " styles/video/videoMain1-2.mp4";
+
+				video.src = " styles/video/videoMain3-2.mp4";
 
 		setTimeout(function()
 		{
