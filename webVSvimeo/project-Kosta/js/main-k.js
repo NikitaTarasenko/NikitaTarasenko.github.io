@@ -1,9 +1,9 @@
-document.body.onload = function ()
+window.onload = function ()
 {
 	preloader = document.getElementById('page-preloader');
 				// video.src = " styles/video/videoMain2-2.mp4";
-				video.src = " styles/video/videoMain3-2.mp4";
-				video.src = " styles/video/videoMain1-2.mp4";
+				// video.src = " styles/video/videoMain3-2.mp4";
+				// video.src = " styles/video/videoMain1-2.mp4";
 
 		setTimeout(function()
 		{
@@ -15,7 +15,7 @@ document.body.onload = function ()
 			
 			}
 			addAnimationFirst();
-			// addAnimation();
+		 
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
 
@@ -34,6 +34,12 @@ document.body.onload = function ()
 		
 		 
 }
+// document.addEventListener("load",()=>
+// {
+
+// });
+
+
 			const video1  = document.querySelector("#MyVideo1");
 			const video2  = document.querySelector("#MyVideo2");
 			const video3  = document.querySelector("#MyVideo3");
@@ -668,7 +674,9 @@ document.body.onload = function ()
 			modalWindows( blockForHover,"https://player.vimeo.com/video/295411343" );
 			modalWindows( blockForHover2,"https://player.vimeo.com/video/295406065" );
 			modalWindows( blockForHover3, "https://player.vimeo.com/video/295627398" );
-			// modalWindows( blockForHover4 );
+			modalWindows( blockForHover5, "https://player.vimeo.com/video/296165150" );
+			modalWindows( blockForHover4, "https://player.vimeo.com/video/296166689" );
+			
 
  var iframe = document.querySelector('iframe');
     var player = new Vimeo.Player(iframe);
@@ -834,7 +842,10 @@ function initMap() {
 		position: centerLatLng,               // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
 		map: map,                             // Карта на которую нужно добавить маркер
 		title: "г. Киев,ул. Александра Бойченко, 8", // (Необязательно) Текст выводимый в момент наведения на маркер,
-		icon: "styles/images/marker.png"             // (Необязательно) Путь до изображения, которое будет выводится на карте вместо стандартного маркера
+		icon: {
+			url :"styles/images/marker.png",
+			scaledSize: new google.maps.Size(40,50)  
+		}       
 	});
 }
 // Ждем полной загрузки страницы, после этого запускаем initMap()

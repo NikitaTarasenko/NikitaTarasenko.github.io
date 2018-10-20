@@ -1935,6 +1935,9 @@ html
   	 z-index:20100;
   	width: 40px;
   	height: 40px;
+   
+   
+  	
 
   }
 
@@ -1943,9 +1946,9 @@ html
   {
     position: relative;
    
-   	float: right;
+   	
     border-radius: 10%;
-    margin: 6% 20% 0 0;
+    margin: 0% 0% 0 0;
    
     width: 25px;
     height: 25px;
@@ -1955,10 +1958,12 @@ html
     transition: 1s;
   }
 
-    .video-closer:hover
+
+    .video-closer:hover 
     {
     	opacity: 1;
     }
+    
    .video-closer .span1
    {
 
