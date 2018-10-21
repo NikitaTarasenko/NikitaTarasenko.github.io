@@ -40,9 +40,10 @@
 		
 		 
 // }
+console.log("befor");
 document.addEventListener("load",()=>
 {
-	
+	console.log("befor2")
 		preloader = document.getElementById('page-preloader');
 
 	 
