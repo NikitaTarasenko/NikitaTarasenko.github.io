@@ -22,8 +22,8 @@ window.onload = function ()
 			{
 				preloader.classList.add('done');
 				
-				// document.getElementById("MyVideoForLoad2").classList.add("displayNone");
-				// document.getElementById("MyVideoForLoad3").classList.add("displayNone");
+				document.getElementById("MyVideoForLoad2").classList.add("displayNone");
+				document.getElementById("MyVideoForLoad3").classList.add("displayNone");
 			
 			}
 			addAnimationFirst();
