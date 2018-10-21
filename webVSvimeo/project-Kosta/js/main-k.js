@@ -1,19 +1,51 @@
 if(!detectmob() || (!detectmob2()))
 	{
 		document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
-		
+
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
 	}
-window.onload = function ()
+// window.onload = function ()
+// {
+// 		preloader = document.getElementById('page-preloader');
+
+	 
+	
+// 		setTimeout(function()
+// 		{
+// 			if(!preloader.classList.contains('done'))
+// 			{
+// 				preloader.classList.add('done');
+				
+				
+			
+// 			}
+// 			addAnimationFirst();
+		 
+// 			document.querySelector('header').classList.add('animeForHeader');
+// 			document.querySelector('footer').classList.add('animeForHeader');
+
+// 		},2000);
+// 		setTimeout(()=>{
+// 				animeActiveVideoList(listLines1,lineWidth1);
+// 			},2800);
+// 	setTimeout(()=>{
+// 				nonActiveVideoList(listLines1,lineWidth1);
+// 				counterChanger=0;
+// 			},11200);
+
+// 		videoTimer();
+// 		topBotAnime();
+		
+		
+		 
+// }
+document.addEventListener("load",()=>
 {
+	
 		preloader = document.getElementById('page-preloader');
 
-		// document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
-		// document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
-		// document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		// document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
-		// document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
+	 
 	
 		setTimeout(function()
 		{
@@ -40,14 +72,7 @@ window.onload = function ()
 
 		videoTimer();
 		topBotAnime();
-		
-		
-		 
-}
-// document.addEventListener("load",()=>
-// {
-
-// });
+});
 
 
 			const video1  = document.querySelector("#MyVideo1");
