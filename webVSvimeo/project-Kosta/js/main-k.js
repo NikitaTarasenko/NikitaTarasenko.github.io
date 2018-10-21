@@ -1,10 +1,10 @@
-if(!detectmob() || (!detectmob2()))
-	{
-		document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
+// if(!detectmob() || (!detectmob2()))
+// 	{
+// 		document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
 
-		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
-		// document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
-	}
+// 		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
+// 		// document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
+// 	}
 // window.onload = function ()
 // {
 // 		preloader = document.getElementById('page-preloader');
