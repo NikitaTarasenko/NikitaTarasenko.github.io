@@ -1,5 +1,5 @@
 
-		console.log("befor1");
+		console.log("3213123123");
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
 
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
@@ -7,7 +7,7 @@
 
 window.onload = function ()
 {
-	console.log("befor2");
+	console.log("11111111");
 		preloader = document.getElementById('page-preloader');
 
 		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
