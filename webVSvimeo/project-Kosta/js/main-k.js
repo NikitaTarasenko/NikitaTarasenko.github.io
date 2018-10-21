@@ -10,11 +10,11 @@ window.onload = function ()
 	console.log("befor2");
 		preloader = document.getElementById('page-preloader');
 
-		// document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
-		// document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
-		// document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		// document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
-		// document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
+		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
+		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
 	
 		setTimeout(function()
 		{
@@ -22,7 +22,8 @@ window.onload = function ()
 			{
 				preloader.classList.add('done');
 				
-				
+				// document.getElementById("MyVideoForLoad2").classList.add("displayNone");
+				// document.getElementById("MyVideoForLoad3").classList.add("displayNone");
 			
 			}
 			addAnimationFirst();
@@ -1112,10 +1113,10 @@ function videoTimer()
 {
 	if(!detectmob() || (!detectmob2()))
 	{
-		if(!firstTime==1)
-		{
+		 
+		 
 			video.src = arrayVideo[counterVideo];
-		}
+		 
 	topBotAnime();
 	changeNameOfTrack(arrayVideoNames[counterVideo]);
 	setTimeout(()=>{
@@ -1136,7 +1137,7 @@ function videoTimer()
 	setTimeout(function()
 	{
 		
-		firstTime=0;
+	 
 		counterVideo++;
 		counterChanger++;
 		

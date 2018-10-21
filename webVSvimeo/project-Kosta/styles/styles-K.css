@@ -266,7 +266,14 @@ html
 	right: 0;
 	margin: auto;
 	}*/
-
+	#MyVideoForLoad2
+	{
+		visibility: hidden;
+	}
+		#MyVideoForLoad3
+	{
+		visibility: hidden;
+	}
 	.mainSection
 	{  
 		position: relative;
