@@ -1,5 +1,5 @@
 
-		console.log("3213123123");
+		console.log("fix1");
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
 
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
@@ -46,10 +46,7 @@ window.onload = function ()
 		
 		 
 }
-// document.addEventListener("load",()=>
-// {
-// console.log("befor3")
-// });
+ 
 
 
 			const video1  = document.querySelector("#MyVideo1");
