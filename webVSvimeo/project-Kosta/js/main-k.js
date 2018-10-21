@@ -1,14 +1,13 @@
-if(!detectmob() || (!detectmob2()))
-	{
-		console.log("befor1")
+
+		console.log("befor1");
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
 
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
 		// document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
-	}
+
 window.onload = function ()
 {
-	console.log("befor2")
+	console.log("befor2");
 		preloader = document.getElementById('page-preloader');
 
 		// document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
@@ -1105,7 +1104,7 @@ function detectmob() {
     return false;
   }
 }
-
+let firstTime = 1;
 let mobSlider = document.getElementById("mob_MyVideo");
 
 
@@ -1113,8 +1112,10 @@ function videoTimer()
 {
 	if(!detectmob() || (!detectmob2()))
 	{
-	video.src = arrayVideo[counterVideo];
-
+		if(!firstTime==1)
+		{
+			video.src = arrayVideo[counterVideo];
+		}
 	topBotAnime();
 	changeNameOfTrack(arrayVideoNames[counterVideo]);
 	setTimeout(()=>{
@@ -1135,7 +1136,7 @@ function videoTimer()
 	setTimeout(function()
 	{
 		
-		
+		firstTime=0;
 		counterVideo++;
 		counterChanger++;
 		
