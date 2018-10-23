@@ -1,13 +1,13 @@
- 	console.log("c1");
-		document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
-		setTimeout(()=>
-		{
-			document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
-		},2000);
-		setTimeout(()=>
-		{
-			document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
-		},4000);
+ 	// console.log("c1");
+		// document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
+		// setTimeout(()=>
+		// {
+		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
+		// },2000);
+		// setTimeout(()=>
+		// {
+		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
+		// },4000);
 		
 		
 
