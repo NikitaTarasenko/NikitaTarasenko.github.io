@@ -9,20 +9,20 @@
 		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
 		// },4000);
 		
-		
-
-window.onload = function ()
-{
-	 
-		preloader = document.getElementById('page-preloader');
-
 		if(!detectmob() || (!detectmob2())){
 		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
 		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
 		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
 		document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
 		document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
-	}
+		}
+
+window.onload = function ()
+{
+	 
+		preloader = document.getElementById('page-preloader');
+
+		
 		setTimeout(function()
 		{
 			if(!preloader.classList.contains('done'))
