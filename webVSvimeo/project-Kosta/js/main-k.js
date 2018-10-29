@@ -1137,7 +1137,7 @@ function videoTimer()
 			// 	animeActiveVideoList(listLines2,lineWidth2);
 			// },1500);
 			
-		},arrayVideoDuration[counterVideo] - 750);
+		},arrayVideoDuration[counterVideo] - 850);
 	setTimeout(function()
 	{
 		
@@ -1154,7 +1154,7 @@ function videoTimer()
 		{
 			addAnimation();
 			changeNameOfTrack(arrayVideoNames[counterVideo]);
-		},arrayVideoDuration[counterVideo] - 750);
+		},arrayVideoDuration[counterVideo] - 850);
 			videoTimer();
 
 		}
@@ -1167,7 +1167,7 @@ function videoTimer()
 		{
 			addAnimation();
 			changeNameOfTrack(arrayVideoNames[counterVideo]);
-		},arrayVideoDuration[counterVideo] - 750);
+		},arrayVideoDuration[counterVideo] - 850);
 			videoTimer();
 		}
 	},arrayVideoDuration[counterVideo]);
@@ -1194,7 +1194,7 @@ function videoTimer()
 			changeNameOfTrack(arrayImagesNames[counterVideo]);
 			 
 			
-		},arrayVideoDuration[counterVideo] - 800);
+		},arrayVideoDuration[counterVideo] - 850);
 		setTimeout(function()
 		{
 
@@ -1211,7 +1211,7 @@ function videoTimer()
 				{
 					addAnimation();
 					changeNameOfTrack(arrayImagesNames[counterVideo]);
-				},arrayVideoDuration[counterVideo] - 800);
+				},arrayVideoDuration[counterVideo] - 850);
 				videoTimer();
 
 			}
@@ -1224,7 +1224,7 @@ function videoTimer()
 				{
 					addAnimation();
 					changeNameOfTrack(arrayImagesNames[counterVideo]);
-				},arrayVideoDuration[counterVideo] - 800);
+				},arrayVideoDuration[counterVideo] - 850);
 				videoTimer();
 			}
 		},arrayVideoDuration[counterVideo]);
