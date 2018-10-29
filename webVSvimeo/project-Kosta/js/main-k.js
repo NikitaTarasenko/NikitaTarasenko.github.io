@@ -8,14 +8,14 @@
 		// {
 		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
 		// },4000);
+		console.log("850");
 		
-		if(!detectmob() || (!detectmob2())){
-		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
-		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
-		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
-		document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
-		}
+
+		// document.getElementById('my_iframe1').src = "styles/video/videoMain1-2.mp4";
+		// document.getElementById('my_iframe2').src = "styles/video/videoMain2-2.mp4";
+		// document.getElementById('my_iframe3').src = "styles/video/videoMain3-2.mp4";
+	
+	
 
 window.onload = function ()
 {
@@ -33,6 +33,14 @@ window.onload = function ()
 				// document.getElementById("MyVideoForLoad3").classList.add("displayNone");
 			
 			}
+
+				if(!detectmob() || (!detectmob2())){
+		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
+		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
+		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
+		}
 			addAnimationFirst();
 		 
 			document.querySelector('header').classList.add('animeForHeader');
