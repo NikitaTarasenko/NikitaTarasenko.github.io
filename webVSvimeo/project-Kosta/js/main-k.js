@@ -38,8 +38,8 @@ window.onload = function ()
 		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
 		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
 		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		document.getElementById("MyVideo4").src = "styles/video/videoMain33.mp4";
-		document.getElementById("MyVideo5").src = "styles/video/videoMain33.mp4";
+		document.getElementById("MyVideo4").src = "styles/video/GO.mp4";
+		document.getElementById("MyVideo5").src = "styles/video/Gangsta_sport.mp4";
 		}
 			addAnimationFirst();
 		 
@@ -61,8 +61,14 @@ window.onload = function ()
 		
 		 
 }
- 
-
+ 		// setTimeout(()=>
+ 		// {
+ 		// 	document.getElementById("MyVideo").classList.add("displayNone");
+ 		// },12000)
+ 		// setTimeout(()=>
+ 		// {
+ 		// 	document.getElementById("MyVideo").classList.remove("displayNone");
+ 		// },22000)
 
 			const video1  = document.querySelector("#MyVideo1");
 			const video2  = document.querySelector("#MyVideo2");
@@ -677,10 +683,10 @@ window.onload = function ()
 
 			const vvPlayer = document.querySelector(".iFrame");
 
-			vvPlayer.addEventListener("mouseenter",()=>
-			{
-				console.log("on");
-			})
+			// vvPlayer.addEventListener("mouseenter",()=>
+			// {
+			// 	console.log("on");
+			// })
 // 			// const vid3 = document.querySelector('#v3');
 
 // 			const videoModal_2 = document.querySelector("#video_modal2");
