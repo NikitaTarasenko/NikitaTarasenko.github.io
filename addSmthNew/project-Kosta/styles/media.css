@@ -1,5 +1,10 @@
 @media(max-width: 990px)
 {
+	.preloader
+	{
+		background-size: 120%;
+		background-position: 50% 30%;
+	}
 	.iFrame
 	{
 		width:600px; height:500px;
@@ -98,13 +103,14 @@
 		 font-size: 0.8rem;
 		 font-weight: bold;*/
 		 height: 100%;
-		 width: 60px;
+		 width: 70px;
 		 background-repeat: no-repeat;
 		 letter-spacing: 6px;
 
 		 
-		 background-image: url("../styles/images/oko.png");
-		 background-size: contain;
+		 background-image: url("../styles/images/mainLogo.png");
+		 background-position: 50% 10%;
+		 background-size: 250%;
 		}
 		.navmenumob
 		{
