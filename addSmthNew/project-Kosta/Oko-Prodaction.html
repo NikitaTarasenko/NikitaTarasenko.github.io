@@ -57,7 +57,7 @@
 					<span></span>
 				</a>
 			</div>
-			<div class="mob_title " onclick="mySwiper.slideTo(1)">
+			<div class="mob_title " onclick="mySwiper.slideTo(1);aboutAnimeOff()">
 			<!-- 	<img src="styles/images/oko.png"> -->
 			</div>
 		<div class="container">
@@ -67,11 +67,11 @@
 				
 				<ul id="nav_mob">
 					
-					<li><a class="relative" onclick="mySwiper.slideTo(1)" href="#main"><p data-en="MAIN" data-ru="ГЛАВНАЯ" data-ua="ГОЛОВНА">MAIN<div class=" und1"  ></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(2)" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1"  ></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(3)" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2"  ></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(4)" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3"  ></div></p></a></li>
-					<li><a  class="relative" onclick="mySwiper.slideTo(5)" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(1);aboutAnimeOff()" href="#main"><p data-en="MAIN" data-ru="ГЛАВНАЯ" data-ua="ГОЛОВНА">MAIN<div class=" und1"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(2);aboutBlockAnime()" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff()" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff()" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3"  ></div></p></a></li>
+					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4"  ></div></p></a></li>
 					
 				</ul>
 			</div>
@@ -82,17 +82,17 @@
 
 
 			<div class="nav-left">
-				<a onclick="mySwiper.slideTo(1)" href="#main" id="mainSection"><div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> </a>
+				<a onclick="mySwiper.slideTo(1);aboutAnimeOff()" href="#main" id="mainSection"><div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> </a>
 			</div>
 			<div class="nav-right">
 				<div class="nav" >
 				
 				<ul id="nav">
 				<!-- 	<li><a onclick="mySwiper.slideTo(1)" href="#"><img src="styles/images/logomini1.png" class="logo-main"></a></li> -->
-					<li><a class="relative" onclick="mySwiper.slideTo(2)" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(3)" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(4)" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3" id="navL"></div></p></a></li>
-					<li><a  class="relative" onclick="mySwiper.slideTo(5)" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(2);aboutBlockAnime();" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff()" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff()" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3" id="navL"></div></p></a></li>
+					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
 					
 				</ul>
 			</div>
@@ -213,31 +213,31 @@
 
 					<div class="about-slide">
 						<div class="about-container">
-							<div class="man1">
-								<div class="man1-logo">
-									
+							<div class="man1" >
+								<div class="man1-logo" id="manL1">
+
 								</div>
-								<div class="man-title">
+								<div class="man-title" id="demo1">
 									<h1 data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</h1>
 									<p data-en="general director" data-ru="главный режиссер" data-ua="головний режисер">general director</p>
 									<a href="https://www.instagram.com/khvostatyy/" target="_blank"><p>@KHVOSTATYY</p></a>
 								</div>
 							</div>
-							<div class="man2">
-								<div class="man2-logo">
+							<div class="man2" >
+								<div class="man2-logo" id="manL2">
 									
 								</div>
-								<div class="man-title">
+								<div class="man-title"  id="demo2">
 									<h1 data-en="OLEKSIY MYKOLENKO" data-ru="АЛЕКСЕЙ МИКОЛЕНКО" data-ua="ОЛЕКСІЙ МИКОЛЕНКО">OLEKSIY MYKOLENKO</h1>
 									<p data-en="general operator" data-ru="главный оператор" data-ua="головний оператор">general operator</p>
 									<a href="https://www.yooying.com/tramontanin" target="_blank"><p>@TRAMONTANIN</p></a>
 								</div>
 							</div>
-							<div class="man3">
-								<div class="man3-logo">
+							<div class="man3" >
+								<div class="man3-logo" id="manL3"> 
 									
 								</div>
-								<div class="man-title">
+								<div class="man-title"  id="demo3">
 									<h1 data-en="ANDREW RIABCHICOV" data-ru="АНДРЕЙ РЯБЧИКОВ" data-ua="АНДРІЙ РЯБЧИКОВ">ANDREW RIABCHICOV</h1>
 									<p data-en="general operator" data-ru="главный оператор" data-ua="головний оператор">general operator</p>
 									<a href="https://www.yooying.com/tramontanin" target="_blank"><p>@TRAMONTANIN</p></a>
@@ -247,7 +247,23 @@
 					</div>
 				</div>
 				<div class="swiper-slide" >
-					
+					<div class="changer_lang">
+						<div class="lang_items class_z-index_900 ">
+							<ul>
+								<li><div id="en3_1">EN</div></li>
+								<li><div id="ua3_1">UA</div></li>
+								<li><div id="ru3_1">RU</div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="twoBlocks" id="twoBlocks">
+						<div class="photoLink" id="photoLink">
+							<a href="#"><h1  data-en="PHOTOS" data-ru="ФОТОГРАФИИ" data-ua="ФОТОГРАФІЇ">PHOTOS</h1></a>
+						</div>
+						<div class="photoLink videoLink"  id="videoLink">
+							<a href="#" ><h1 data-en="VIDEOS" data-ru="ВИДЕО" data-ua="ВІДЕО">VIDEOS</h1></a>
+						</div>
+					</div>
 					<!-- <div class="changer_lang">
 						<div class="lang_items class_z-index_900 ">
 							<ul>
@@ -582,7 +598,7 @@
 							<div class="map-content">
 								<span data-en="ANDREW RIABCHICOV" data-ru="АНДРЕЙ РЯБЧИКОВ" data-ua="АНДРІЙ РЯБЧИКОВ">ANDREW RIABCHICOV</span></br>
 								<p>+38 (066) 449 18 10</br>
-								andrewriabchikov@gmail.com</p>
+								andrewriabchikov@<span class="brMob"></span>gmail.com</p>
 							</div>
 
 						</div>
@@ -607,11 +623,11 @@
 					<div class="clients-container">
 						<a href="#" class="ex c1"></a>
 						<a href="#" class="ex c2"></a>
-						<a href="#" class="ex c3"></a>
+						<!-- <a href="#" class="ex c3"></a>
 						<a href="#" class="ex c4"></a>
 						<a href="#" class="ex c5"></a>
 						<a href="https://www.samsung.com/ua/" class="ex c6" target="_blank"></a>
-						<a href="#" class="ex c7"></a>
+						<a href="#" class="ex c7"></a> -->
 					</div>
 				</div>
 
@@ -666,7 +682,9 @@
 				setTimeout(function()
 				{
 					NProgress.done();
+					
 				},4000);
+
 			})
 			var mySwiper = new Swiper('.swiper-container', {
 				speed:1000,

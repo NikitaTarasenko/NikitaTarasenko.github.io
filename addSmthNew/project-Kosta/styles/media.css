@@ -112,6 +112,14 @@
 		 background-position: 50% 10%;
 		 background-size: 250%;
 		}
+		.brMob
+		{
+			display: block;
+			padding: 0;
+			margin: 0;
+			height: 0;
+			width: 0;
+		}
 		.navmenumob
 		{
 			position: absolute;
@@ -447,7 +455,7 @@
 		{
 			max-width: 50vw;
 			height: 100%;
-
+			align-items: center;
 
 		}
 		#last

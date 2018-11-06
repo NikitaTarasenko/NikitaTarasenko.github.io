@@ -1,19 +1,4 @@
- 	// console.log("c1");
-		// document.querySelector("#MyVideo").src = " styles/video/videoMain1-2.mp4";
-		// setTimeout(()=>
-		// {
-		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain2-2.mp4";
-		// },2000);
-		// setTimeout(()=>
-		// {
-		// 	document.querySelector("#MyVideo").src = " styles/video/videoMain3-2.mp4";
-		// },4000);
-		console.log("750");
-		
 
-		// document.getElementById('my_iframe1').src = "styles/video/videoMain1-2.mp4";
-		// document.getElementById('my_iframe2').src = "styles/video/videoMain2-2.mp4";
-		// document.getElementById('my_iframe3').src = "styles/video/videoMain3-2.mp4";
 	
 	
 
@@ -25,14 +10,12 @@ window.onload = function ()
 		
 		setTimeout(function()
 		{
-			if(!preloader.classList.contains('done'))
-			{
-				preloader.classList.add('done');
+			// if(!preloader.classList.contains('done'))
+			// {
+			// 	preloader.classList.add('done');
 				
-				// document.getElementById("MyVideoForLoad2").classList.add("displayNone");
-				// document.getElementById("MyVideoForLoad3").classList.add("displayNone");
 			
-			}
+			// }
 
 		// 		if(!detectmob() || (!detectmob2())){
 		// document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
@@ -46,7 +29,7 @@ window.onload = function ()
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
 
-		},2000);
+		},4000);
 		setTimeout(()=>{
 				animeActiveVideoList(listLines1,lineWidth1);
 			},2800);
@@ -61,17 +44,18 @@ window.onload = function ()
 		
 		 
 }
- 		// setTimeout(()=>
- 		// {
- 		// 	document.getElementById("MyVideo").classList.add("displayNone");
- 		// },12000)
- 		// setTimeout(()=>
- 		// {
- 		// 	document.getElementById("MyVideo").classList.remove("displayNone");
- 		// },22000)
 
-		
+	const man1 = document.getElementById("manL1");
+	const man2 = document.getElementById("manL2");
+	const man3 = document.getElementById("manL3");
+	const text1 = document.getElementById("demo1");
+	const text2 = document.getElementById("demo2");
+	const text3 = document.getElementById("demo3");
 	
+	
+ 		
+		
+
 
 
 function underlineIt()
@@ -79,10 +63,21 @@ function underlineIt()
 	const main = document.getElementById('mainSection');
 	const arrayButtons = document.querySelectorAll("#nav a");
 	const arrayUndelines = document.querySelectorAll("#navL");
-	
+	const mainBlock = document.getElementById("mainBlock");
 	let prev = 0;
 	let prev2 = 0;
 
+	arrayButtons.forEach((el,index)=>
+	{
+		el.addEventListener("mouseenter",()=>
+		{
+			arrayUndelines[index].classList.add("underline");
+		})
+		el.addEventListener("mouseleave",()=>
+		{
+			arrayUndelines[index].classList.remove("underline");
+		})
+	})
 	// for(let b = 0;b<arrayButtons.length;b++)
 	// {
 		
@@ -92,12 +87,11 @@ function underlineIt()
 	// 		arrayUndelines[b].classList.add('underline');
 	// 		prev = b;
 	// 		arrayButtons[b].addEventListener("mouseleave", ()=>
-	// 	{
-			
-	// 		arrayButtons[b].classList.remove("underline2");
+	// 		{
 
-	// 	 console.log(arrayButtons[b])
-	// 	})
+	// 			arrayButtons[b].classList.remove("underline2");
+
+	// 		})
 	// 	});
 		
 
@@ -125,6 +119,57 @@ function underlineIt()
 
 }
 underlineIt();
+
+
+let FirstEnter = 0;
+function aboutBlockAnime()
+{
+	var durationDelay =0;
+	if(FirstEnter==0)
+	{
+		durationDelay=200;
+	}
+	else
+	{
+		durationDelay=1000;
+	}
+	setTimeout(()=>
+	{
+		
+		 	man1.classList.add("man-logo-Anime");
+		 	text1.classList.add("man-title-Anime");
+		
+		
+		 
+			man2.classList.add("man-logo-Anime2");
+			text2.classList.add("man-title-Anime2");
+	
+		
+	
+				man3.classList.add("man-logo-Anime3");
+				text3.classList.add("man-title-Anime3");
+		
+	
+	},durationDelay);
+	FirstEnter++;
+}
+function aboutAnimeOff()
+{
+	if(man1.classList.contains("man-logo-Anime"))
+	{
+	setTimeout(()=>
+	{
+		 
+		man1.classList.remove("man-logo-Anime");
+		man2.classList.remove("man-logo-Anime2");
+		man3.classList.remove("man-logo-Anime3");
+		text1.classList.remove("man-title-Anime");
+		text2.classList.remove("man-title-Anime2");
+		text3.classList.remove("man-title-Anime3");
+	},100);
+}
+
+}
 
 function changeNameOfTrack(name)
 {
@@ -291,23 +336,26 @@ let changerArrayL2 = [lineWidth1,lineWidth2,lineWidth3,lineWidth1];
 function animeActiveVideoList(l1,l2)
 {
 	
+	 
 	l1.classList.remove('classForChangerAnimeOff');	
 	l2.classList.remove("changingLineAnimeOff");
 	l1.classList.remove('staticClassForChangerOff');
 	l2.classList.remove("staticChangingLineOff");
 
-	
-	
+	 
 	
 	l1.classList.add("classForChangerAnime");
 	l2.classList.add("changingLineAnime");
+	 
 	setTimeout(function()
 {
+	// if(listLines1.classList.contains("classForChangerAnime"))
+	// {
 	l1.classList.remove('classForChangerAnime');
 	l2.classList.remove("changingLineAnime");
 	l1.classList.add("staticClassForChanger");
 	l2.classList.add("staticChangingLine");
-
+// }
 
 },995);
 
@@ -344,20 +392,7 @@ let counterAnimeLines = 0;
 
 function topBotAnime(){
 
-	// setTimeout(()=>
-	// {
-	// 	if(counterAnimeLines==0||counterAnimeLines==2)
-	// 	{
-	// 		topLine.classList.add("animeLineForward");
-	// 		botLine.classList.add("animeLineReverse");
-	// 	}
-	// 	else
-	// 	{
-	// 		topLine.classList.add("animeLineReverse");
-	// 		botLine.classList.add("animeLineForward");
-	// 	}
-		
-	// },0);
+ 
 	if(arrayVideoDuration[counterVideo]==12000)
 	{
 		setTimeout(()=>
@@ -409,29 +444,150 @@ function topBotAnime(){
 
 		},arrayVideoDuration[counterVideo]);
 	}
-	// setTimeout(()=>
-	// {
-	// 	topLine.classList.remove("animeLineForward");
-	// 	botLine.classList.remove("animeLineReverse");
-		
-	// 	topLine.classList.remove("animeLineReverse");
-	// 	botLine.classList.remove("animeLineForward");
-	
-	
-		
-	// 	if(counterAnimeLines<3)
-	// {
-	// 	counterAnimeLines++;
-	// 	topBotAnime();
-	// }
-	// else
-	// {
-	// 	counterAnimeLines=0;
-	// 	topBotAnime();
-	// }
-	// },8000);
-	
+	 
 }
+const photoLink = document.getElementById("photoLink");
+const videoLink = document.getElementById("videoLink");
+const twoBlocks = document.getElementById("twoBlocks");
+ 
+	photoLink.addEventListener("mouseenter",(e)=>
+	{
+		e.stopPropagation();
+		photoLink.classList.remove("widerBack");
+		photoLink.classList.add("photoLink_wider");
+	});
+	photoLink.addEventListener("mouseleave",(e)=>
+	{
+		e.stopPropagation();
+		photoLink.classList.add("widerBack");
+		setTimeout(()=>
+		{
+			photoLink.classList.remove("photoLink_wider");	
+		},600)
+		
+	});
+
+
+	videoLink.addEventListener("mouseenter",()=>
+	{
+		videoLink.classList.remove("widerBack");
+		videoLink.classList.add("videoLink_wider");
+	});
+	videoLink.addEventListener("mouseleave",()=>
+	{
+		videoLink.classList.add("widerBack");
+		setTimeout(()=>
+		{
+			videoLink.classList.remove("videoLink_wider");	
+		},600)
+	});
+ 
+
+
+function effect3dHover()
+{
+		let h1Photo = document.querySelector("#photoLink h1");
+		let h1Video = document.querySelector("#videoLink h1");
+		var mouseLeft = function(e){
+			e.stopPropagation();
+			let x1 = e.clientX/innerWidth;
+			let y1 = e.clientY/innerHeight;
+
+			let move_x;
+   			let move_y;
+   			move_y = (y1<0.5) ? '25px' : '-25px';
+   			move_x = (x1>0.3) ? '-35px' : '35px';
+   // 			if(y1<0.34) 
+   // 			{
+   // 			 move_x ='0px';
+   // 			 move_y = "-20px";
+   // 			}
+   // 			if(y1>0.69) 
+   // 			{
+   // 			 move_x ='0px';
+   // 			 move_y = "20px";
+   // 			}
+   // 			if(x1<0.16) 
+   // 			{
+   // 			 move_x ='-30px';
+   // 			 move_y = "0px";
+   // 			}
+   // 			if(x1>0.4) 
+   // 			{
+   // 			 move_x ='30px';
+   // 			 move_y = "0px";
+   // 			}
+   // 			if(x1>0.38&&y1>0.68)
+   // 			{
+   // 				move_x ='-35px';
+   // 				move_y = "-20px";
+   // 			}
+   // 			if(x1>0.19&&y1>0.38)
+   // 			{
+   // 				move_x ='35px';
+   // 				move_y = "20px";
+   // 			}
+
+
+			// if(x1>0.38&&y1>0.4)
+   // 			{
+   // 				move_x ='-35px';
+   // 				move_y = "20px";
+   // 			}
+   // 			if(x1<0.17&&y1>0.66)
+   // 			{
+   // 				move_x ='35px';
+   // 				move_y = "25px";
+   // 			}
+   // 			if(x1<0.19&&y1<0.4)
+   // 			{
+   // 				move_x ='35px';
+   // 				move_y = "0px";
+   // 			}
+   // 			if(x1>0.4&&y1>0.6)
+   // 			{
+   // 				move_x ='-35px';
+   // 				move_y = "0px";
+   // 			}
+
+			h1Photo.style.textShadow = `${move_x} ${move_y} 130px #fff	`;
+
+			// console.log(x1 + "and" + y1);
+		
+		}
+		h1Photo.addEventListener("mousemove",mouseLeft);
+
+		var mouseRight = function(e){
+			e.stopPropagation();
+			let x2 = e.clientX/innerWidth;
+			let y2 = e.clientY/innerHeight;
+
+			let move_x2 = (x2>0.5) ? '-15px' : '15px';
+   			let move_y2 = (y2>0.5) ? '-10px' : '10px';
+   			// if(x2<0.5&&y2)
+   			if(x2<0.3) 
+   			{
+
+   			 move_x ='-35px';
+   			}
+			h1Video.style.textShadow = `${move_x2} ${move_y2} 120px #fff	`;
+
+				// console.log(x2 + "and" + y2);
+		}
+		h1Video.addEventListener("mousemove",mouseRight);
+		
+		photoLink.addEventListener("mouseleave",(e)=>
+		{
+			h1Photo.style.textShadow = `10px 10px 150px #fff	`;
+			
+		});
+		videoLink.addEventListener("mouseleave",(e)=>
+		{
+		
+			h1Video.style.textShadow = `10px 10px 150px #fff	`;
+		});
+}
+ effect3dHover();
 
 function detectmob2() {
    if(window.innerWidth <= 890|| window.innerHeight <= 600 ) {
@@ -702,9 +858,9 @@ const en2 = document.querySelector("#en2");
 const ua2 = document.querySelector("#ua2");
 const ru2 = document.querySelector("#ru2");
 
-const en3 = document.querySelector("#en3");
-const ua3 = document.querySelector("#ua3");
-const ru3 = document.querySelector("#ru3");
+const en3 = document.querySelector("#en3_1");
+const ua3 = document.querySelector("#ua3_1");
+const ru3 = document.querySelector("#ru3_1");
 
 const en4 = document.querySelector("#en4");
 const ua4 = document.querySelector("#ua4");

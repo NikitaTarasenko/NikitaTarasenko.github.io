@@ -414,7 +414,7 @@ html
 		height:1px;
 		background-color: #fff;
 		z-index: 1000;
-		animation: 1s linear pressedButton;
+		animation: 0.6s linear pressedButton;
 		
 	}
 	.underline2
@@ -493,7 +493,123 @@ html
 		background: grey;
 		*/
 	}
+	.twoBlocks
+	{
+		display: flex;
+		height: 100%;
+		width: 100%;
+		background-color: #000;
+	}
+	.twoBlocks h1
+	{
+		display: block;
+		color: #fff;
+		
+	}
+	.twoBlocks a
+	{
 
+	}
+	.videoLink
+	{
+		display: flex;
+		position: relative;
+	 	font-size:20px;
+		width: 50%;
+		height: 100%;
+		 
+	/*	border-left: 1px solid #fff;*/
+	}
+	.photoLink
+	{
+		display: flex;
+		 position: relative;
+		font-size:20px;
+		
+		width: 50%;
+		height: 100%;
+		 
+	}
+	.photoLink h1
+	{
+		display: block;
+		 padding:  200px 100px; 
+		 text-shadow: 5px  5px 70px grey;
+	}
+	.videoLink h1
+	{
+		display: block;
+		 padding:  200px 100px; 
+		 text-shadow: 5px  5px 50px grey;
+		 
+	}
+	.photoLink_wider
+	{
+		display: flex;
+		height: 100%;
+		width: 53%;
+		font-size:25px;
+		animation: 0.6s ease-in-out wider;
+	}
+	.videoLink_wider
+	{
+		
+		display: flex;
+		height: 100%;
+		width: 53%;
+		font-size:25px;
+		animation:  0.6s ease-in-out wider;
+	}
+	.widerBack
+	{
+		animation: 0.6s ease-out widerBack;
+	}
+	@keyframes wider
+	{
+		from
+		{
+			font-size:20px;
+			width: 50%;
+		}
+		to
+		{
+			font-size:25px;
+			width: 53%;
+		}
+	}
+	@keyframes widerBack
+	{
+		from
+		{
+			font-size: 25px;
+			width: 53%;
+		}
+		to
+		{
+			font-size:20px;
+			width: 50%;
+		}
+	}
+	.photoLink a
+	{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	 
+	 
+	}
+	.videoLink a
+	{
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+	 
+	 
+	}
 	.works-container
 	{
 		overflow-y: scroll;
@@ -916,7 +1032,13 @@ html
 	width: 900px;
 	margin: 0 auto;
 	flex-wrap: wrap;
+	justify-content: center;
 	 
+}
+.brMob
+{
+	display: none;
+	word-wrap: break-word;
 }
 .ex
 {
@@ -928,7 +1050,7 @@ html
 }
 .c1
 {
-	background-image: url("../styles/images/c1.png");
+	background-image: url("../styles/images/allStars.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: 50% 50%;
@@ -936,7 +1058,7 @@ html
 
 .c2
 {
-	background-image: url("../styles/images/c2.png");
+	background-image: url("../styles/images/Kyivstar.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	 
@@ -1387,6 +1509,7 @@ html
 }
 .man1
 {
+
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -1399,21 +1522,101 @@ html
 
 .man1-logo
 {
+	
+	position: relative;
+	transition: 1s;
 	width: 300px;
 	 
 	height: 300px;
 	margin:0 auto;
-	
+	opacity: 0;
 	background-image: url("..//styles/images/kosta1.png");
 	background-repeat: no-repeat;
 	background-position: 50% 0%;
 	background-size: cover;
 }
+.man3-logo
+{
+	position: relative;
+	transition: 1s;
+	width: 300px;
+	height:300px;
+	margin:0 auto;
+	 opacity: 0;
+	background-image: url("..//styles/images/ryaba.png");
+	background-repeat: no-repeat;
+	background-position: 60% 60%;
+	background-size: 125%;
+}
 
+.man2-logo
+{
+	position: relative;
+	transition: 1s;
+	width: 300px;
+	height:300px;
+	margin:0 auto;
+	 opacity: 0;
+	background-image: url("..//styles/images/Lesha1.png");
+	background-repeat: no-repeat;
+	background-position: 50% 0%;
+	background-size: contain;
+}
+.man-logo-Anime
+{
+	 
+	opacity: 1;
+	animation: 1.2s linear aboutAnime;
+}
+
+.man-logo-Anime2
+{
+	 
+	opacity: 1;
+	animation: 1.3s linear aboutAnime;
+	 
+}
+
+.man-logo-Anime3
+{
+	 
+	opacity: 1;
+	animation: 1.4s linear aboutAnime;
+	 
+}
+@keyframes aboutAnime
+{
+	 0% { transform: translate(0px,35px) rotate(0deg) ; opacity: 0;  }
+   100% { transform: translate(0px,0px) rotate(0deg) ; opacity: 1;  }
+}
 .man-title
 {
+	 transition: 1s;
+	overflow: hidden;
 	text-align: center;
 	color: #fff;
+	opacity: 0;
+}
+.man-title-Anime
+{
+	opacity: 1;
+	animation: 1s linear textAnime;
+}
+.man-title-Anime2
+{
+	opacity: 1;
+	animation: 1.2s linear textAnime;
+}
+.man-title-Anime3
+{
+	opacity: 1;
+	animation: 1.4s linear textAnime;
+}
+@keyframes textAnime
+{
+
+   0% { transform: translate(0px,50px) rotate(0deg) ; opacity: 0;  }
+   100% { transform: translate(0px,0px) rotate(0deg) ; opacity: 1;  }
 
 }
 .man2
@@ -1440,29 +1643,7 @@ html
 
 	background: #000;
 }
-.man3-logo
-{
-	width: 300px;
-	height:300px;
-	margin:0 auto;
-	 
-	background-image: url("..//styles/images/ryaba.png");
-	background-repeat: no-repeat;
-	background-position: 60% 60%;
-	background-size: 125%;
-}
 
-.man2-logo
-{
-	width: 300px;
-	height:300px;
-	margin:0 auto;
-	 
-	background-image: url("..//styles/images/Lesha1.png");
-	background-repeat: no-repeat;
-	background-position: 50% 0%;
-	background-size: contain;
-}
 
 .man-title
 {
