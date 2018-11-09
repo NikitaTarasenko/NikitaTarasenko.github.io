@@ -1,15 +1,44 @@
 
-	
-	
+	const main = document.getElementById('mainSection');
+	const arrayButtons = document.querySelectorAll("#nav a");
+	const arrayUndelines = document.querySelectorAll("#navL");
+	const mainBlock = document.getElementById("mainBlock");	
+	let prev = 0;
+	let prev2 = 0;
 
 window.onload = function ()
 {
 	 
 		preloader = document.getElementById('page-preloader');
 
-		
 		setTimeout(function()
 		{
+			if(window.location.href.indexOf("#main") > -1) {
+		       mySwiper.slideTo(1);
+
+		    }
+		if(window.location.href.indexOf("#about") > -1) {
+
+		       mySwiper.slideTo(2);
+		       arrayUndelines[0].classList.add('underline2');
+		       prev2=0;
+		       	aboutBlockAnime();
+		    }
+		if(window.location.href.indexOf("#work") > -1) {
+		       mySwiper.slideTo(3);
+		       arrayUndelines[1].classList.add('underline2');
+		       prev2=1;
+		    }
+		  if(window.location.href.indexOf("#contacts") > -1) {
+		       mySwiper.slideTo(4);
+		       arrayUndelines[2].classList.add('underline2');
+		       prev2=2;
+		   }
+		   if(window.location.href.indexOf("#clients") > -1) {
+		       mySwiper.slideTo(5);
+		       arrayUndelines[3].classList.add('underline2');
+		       prev2=3;
+		    }
 			// if(!preloader.classList.contains('done'))
 			// {
 			// 	preloader.classList.add('done');
@@ -24,7 +53,7 @@ window.onload = function ()
 		// document.getElementById("MyVideo4").src = "styles/video/GO.mp4";
 		// document.getElementById("MyVideo5").src = "styles/video/Gangsta_sport.mp4";
 		// }
-			addAnimationFirst();
+			
 		 
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
@@ -37,7 +66,7 @@ window.onload = function ()
 				nonActiveVideoList(listLines1,lineWidth1);
 				counterChanger=0;
 			},11200);
-
+		addAnimationFirst();
 		videoTimer();
 		topBotAnime();
 		
@@ -60,12 +89,8 @@ window.onload = function ()
 
 function underlineIt()
 {	
-	const main = document.getElementById('mainSection');
-	const arrayButtons = document.querySelectorAll("#nav a");
-	const arrayUndelines = document.querySelectorAll("#navL");
-	const mainBlock = document.getElementById("mainBlock");
-	let prev = 0;
-	let prev2 = 0;
+	
+	
 
 	arrayButtons.forEach((el,index)=>
 	{
@@ -127,11 +152,11 @@ function aboutBlockAnime()
 	var durationDelay =0;
 	if(FirstEnter==0)
 	{
-		durationDelay=200;
+		durationDelay=50;
 	}
 	else
 	{
-		durationDelay=1000;
+		durationDelay=800;
 	}
 	setTimeout(()=>
 	{
@@ -155,6 +180,7 @@ function aboutBlockAnime()
 }
 function aboutAnimeOff()
 {
+	FirstEnter++;
 	if(man1.classList.contains("man-logo-Anime"))
 	{
 	setTimeout(()=>
@@ -587,7 +613,7 @@ function effect3dHover()
 			h1Video.style.textShadow = `10px 10px 150px #fff	`;
 		});
 }
- effect3dHover();
+ // effect3dHover();
 
 function detectmob2() {
    if(window.innerWidth <= 890|| window.innerHeight <= 600 ) {
@@ -848,7 +874,7 @@ function addAnimationFirst()
 				lang_main.classList.add("class_z-index_900");
 			 
 				 
-			},9100);
+			},11100);
 }
 const en = document.querySelector("#en");
 const ua = document.querySelector("#ua");

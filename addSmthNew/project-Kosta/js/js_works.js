@@ -1,10 +1,10 @@
-	document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
-		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
-		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		document.getElementById("MyVideo4").src = "styles/video/GO.mp4";
-		document.getElementById("MyVideo5").src = "styles/video/Gangsta_sport.mp4";
+// 		document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
+// 		document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
+// 		document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
+// 		document.getElementById("MyVideo4").src = "styles/video/GO.mp4";
+// 		document.getElementById("MyVideo5").src = "styles/video/Gangsta_sport.mp4";
 
-
+ 
 
 			const video1  = document.querySelector("#MyVideo1");
 			const video2  = document.querySelector("#MyVideo2");
@@ -60,7 +60,7 @@
 
 
 			const arrowTop = document.querySelector("#arrowUp");
-			arrowTop.classList.add("displayNone");
+			// arrowTop.classList.add("displayNone");
 
 		
 		 	 
@@ -68,7 +68,7 @@
 
 			$('#wc').scroll(function(){
 
-				if ( ($(this).scrollTop()+$('#wc').height()) > $("#woman").offset().top)
+				if ( ($(this).scrollTop()+$('#wc').height()) > ($('#wc').height())*2)
 				{
 					arrowTop.classList.remove("displayNone");
 
@@ -92,9 +92,74 @@
 			});
        		
 
+			function openWind(src)
+			{
+				location.href = `Oko-Prodaction.html${src}`;
+			 
+			}
 
+		function underlineIt()
+{	
+	const main = document.getElementById('mainSection');
+	const arrayButtons = document.querySelectorAll("#nav a");
+	const arrayUndelines = document.querySelectorAll("#navL");
+	const mainBlock = document.getElementById("mainBlock");
+	let prev = 0;
+	let prev2 = 0;
 
-	
+	arrayButtons.forEach((el,index)=>
+	{
+		el.addEventListener("mouseenter",()=>
+		{
+			arrayUndelines[index].classList.add("underline");
+		})
+		el.addEventListener("mouseleave",()=>
+		{
+			arrayUndelines[index].classList.remove("underline");
+		})
+	})
+	// for(let b = 0;b<arrayButtons.length;b++)
+	// {
+		
+	// 	arrayButtons[b].addEventListener('mouseenter', function()
+	// 	{
+	// 		arrayUndelines[prev].classList.remove('underline');
+	// 		arrayUndelines[b].classList.add('underline');
+	// 		prev = b;
+	// 		arrayButtons[b].addEventListener("mouseleave", ()=>
+	// 		{
+
+	// 			arrayButtons[b].classList.remove("underline2");
+
+	// 		})
+	// 	});
+		
+
+	// 	main.addEventListener('mouseenter', function()
+	// 	{
+	// 		arrayUndelines[b].classList.remove('underline');
+	// 	});
+
+	// }
+
+	// for(let b2 = 0;b2<arrayButtons.length;b2++)
+	// {
+		
+	// 		arrayButtons[b2].addEventListener('click', function()
+	// 	{
+	// 		arrayUndelines[prev2].classList.remove('underline2');
+	// 		arrayUndelines[b2].classList.add('underline2');
+	// 		prev2 = b2;
+	// 	});
+	// 	main.addEventListener('click', function()
+	// 	{
+	// 		arrayUndelines[b2].classList.remove('underline2');
+	// 	});
+	// }
+
+}
+underlineIt();
+
 
 
  			function FirstPartHoverOn(top,bot,mid,vAbs,video)
@@ -638,7 +703,7 @@
         init();
 
 			const closerModal = document.querySelector(".video-closer");
-
+			closerModal.classList.add('displayNone');
 			const videoModal_1 = document.querySelector("#video_modal1");
 
 
@@ -675,6 +740,7 @@
 function modalWindows(blockHover,curSrc)
 {
 		videoModal_1.classList.add('makeitDisapir');
+
 	 		if(!detectmob()||!detectmob2())
 	 		{
 				 
@@ -780,3 +846,117 @@ function ChangingLang(en,ru,ua)
  
 
 }
+			
+		
+const vb1 = document.getElementById("vb11");
+const vb2 = document.getElementById("vb2");
+const vb3 = document.getElementById("vb3");
+const vb4 = document.getElementById("vb4");
+const vb5 = document.getElementById("vb5");
+
+// vb1.classList.add("displayNone");
+// vb1.classList.add("displayNoneAnime")
+vb2.classList.add("displayNone");
+vb3.classList.add("displayNone");
+vb4.classList.add("displayNone");
+vb5.classList.add("displayNone");
+
+
+				$('#wc').scroll(function(){
+				
+				if(($(this).scrollTop()+$('#wc').height()  > $('#wc').height())&&(($(this).scrollTop()+$('#wc').height()) < (($('#wc').height())*2)-10) )
+				{
+					vb1.classList.remove("displayNone");
+					vb1.classList.add("displayNoneAnime")
+					vb2.classList.add("displayNone")
+					console.log("bin1")
+				}
+					if(($(this).scrollTop()+$('#wc').height() > (($('#wc').height())*2)+100)&&(($(this).scrollTop()+$('#wc').height()) <= (($('#wc').height())*3)-10))
+				{
+
+					vb1.classList.add("displayNone");
+					vb2.classList.remove("displayNone");
+					vb2.classList.add("displayNoneAnime")
+					vb3.classList.add("displayNone");
+					console.log("bin2")
+				}
+					if(($(this).scrollTop()+$('#wc').height() >= (($('#wc').height())*3)+100)&&(($(this).scrollTop()+$('#wc').height()) <= (($('#wc').height())*4)-10))
+				{
+					vb2.classList.add("displayNone");
+					vb3.classList.remove("displayNone");
+					vb3.classList.add("displayNoneAnime")
+					vb4.classList.add("displayNone");
+					console.log("bin3")
+				}
+					if(($(this).scrollTop()+$('#wc').height() >= (($('#wc').height())*4)+100)&&(($(this).scrollTop()+$('#wc').height()) <= (($('#wc').height())*5)+100))
+				{
+					vb3.classList.add("displayNone");	
+					vb4.classList.remove("displayNone");
+					vb4.classList.add("displayNoneAnime")
+					vb5.classList.add("displayNone");
+					console.log("bin4")
+				}
+					if(($(this).scrollTop()+$('#wc').height() >= (($('#wc').height())*5)+300)&&(($(this).scrollTop()+$('#wc').height()) <= (($('#wc').height())*6)-10))
+				{
+					vb4.classList.add("displayNone");
+					vb5.classList.remove("displayNone");
+					vb5.classList.add("displayNoneAnime")
+					console.log("bin5")
+				}
+				// if ( ($(this).scrollTop()+$('#wc').height()) > $("#b1").offset().top)
+				// {	
+
+				// 	console.log("1")
+				// }
+
+				// if ( ($(this).scrollTop()+$('#wc').height()) > $("#b2").offset().top)
+				// {	
+
+				// 	console.log("2")
+				// }
+
+				// if ( ($(this).scrollTop()+$('#wc').height()) > $("#b3").offset().top)
+				// {	
+
+				// 	console.log("3")
+				// }
+				 
+			});
+			// console.log($("#b1").offset().top)
+			// console.log($("#b2").offset().top)
+			// console.log($("#b3").offset().top)
+			// console.log(($('#wc').height())*2)
+
+
+
+
+
+
+
+			function detectmob2() {
+				if(window.innerWidth <= 890|| window.innerHeight <= 600 ) {
+
+					return true;
+				} else {
+
+					return false;
+				}
+			}
+
+			function detectmob() { 
+				if( navigator.userAgent.match(/Android/i)
+					|| navigator.userAgent.match(/webOS/i)
+					|| navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)
+					|| navigator.userAgent.match(/BlackBerry/i)
+					|| navigator.userAgent.match(/Windows Phone/i)
+					){
+
+					return true;
+			}
+			else {
+
+				return false;
+			}
+		}

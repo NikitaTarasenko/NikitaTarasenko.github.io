@@ -4,14 +4,22 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<title>Works</title>
-	<link rel="shortcut icon" href="styles/images/icon.ico" type="image/x-icon">
+	<title>Videos</title>
+	<link rel="shortcut icon" href="styles/images/black.ico" type="image/x-icon">
 	<link rel="stylesheet" type="text/css" href="styles/styles-K.css">
 	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	<link rel="stylesheet" type="text/css" href="npbar/nprogress.css">
 	
 
 </head>
 <body>
+	<div class="preloader" id="page-preloader">
+
+		 
+		<div class="loader-2" id="loader_line2">
+		</div>
+		
+	</div>
 	<header>
 			<div class="burger makeItDisapir visb_mob">
 				<a href="#" class="burger-btn">
@@ -43,17 +51,17 @@
 
 
 			<div class="nav-left">
-				<a onclick="mySwiper.slideTo(1)" href="#main" id="mainSection"><div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> </a>
+				<a onclick="openWind('#main')" href="#main" id="mainSection"><div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> </a>
 			</div>
 			<div class="nav-right">
 				<div class="nav" >
 				
 				<ul id="nav">
 				<!-- 	<li><a onclick="mySwiper.slideTo(1)" href="#"><img src="styles/images/logomini1.png" class="logo-main"></a></li> -->
-					<li><a class="relative" onclick="mySwiper.slideTo(2)" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(3)" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(4)" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3" id="navL"></div></p></a></li>
-					<li><a  class="relative" onclick="mySwiper.slideTo(5)" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="openWind('#about')" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="openWind('#works')" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="openWind('#contacts')" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3" id="navL"></div></p></a></li>
+					<li><a  class="relative" onclick="openWind('#clients')" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
 					
 				</ul>
 			</div>
@@ -61,13 +69,17 @@
 		 
 
 		</div>
-		</div>
- 
-					 
+		</div>			 
 		 
 	</header>
+
+
+
 	<div class="hero"> 
-		<div class="changer_lang">
+		<div class="swiper-container" >
+	
+	<div class="swiper-slide" >
+			<div class="changer_lang">
 			<div class="lang_items class_z-index_900 ">
 				<ul>
 					<li><div id="en3">EN</div></li>
@@ -76,9 +88,8 @@
 				</ul>
 			</div>
 		</div>
-	<div class="swiper-slide" >
-		
 		<div class="works-container" id="wc">
+			
 
 
 			<div class="video-block1-modalVV " id="video_modal1">
@@ -89,7 +100,7 @@
 					<iframe class="iFrame" src="https://player.vimeo.com/video/295411343" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen id="embed"></iframe>
 				</div>
 
-				<div class="closer_absolute">
+				<div class="closer_absolute  " >
 					<div class="video-closer">
 						<span class="span1"> </span>
 						<span class="span2"> </span>
@@ -97,10 +108,290 @@
 				</div>
 			</div>
 
-			<div class="works_arrowUp" id="arrowUp">
+			<div class="works_arrowUp displayNone" id="arrowUp">
 				<i class="arrowUp"></i>
 			</div>
+		 
+			<div class="works-contain" >
 
+				<div class="one_block" id="b1">
+				<div class="video-block1 displayNone" id="vb11">
+					<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo1" muted>
+
+						<source src="styles/video/videoMain1.mp4" type="video/mp4" >   
+
+						</source>
+
+					</video>
+					<div class="video_block1_mob">
+
+					</div>
+
+					<div class="video-absolute" id="videoAbsol1">
+						<div class="top_part firstV makeItDisapir">
+							<p>03:42</p>
+						</div>
+						<div class="mid_part">
+							<h1>UKRAINE</h1>
+						</div>
+						<div class="bot_part  makeItDisapir">
+							<div class="bot_part_content">
+								<div class="bpc_title">
+									<h3 class="rel_for_eq">Ukraine
+										<div class="myEqualizer">
+											<div class="myEqualizer_container">
+												<div class="waves wave1"></div>
+												<div class="waves wave2"></div>
+												<div class="waves wave3"></div>
+												<div class="waves wave4"></div>
+											</div>
+										</div></h3><p>TATA</p>
+									</div>
+
+									<div class="name_descr">
+										<div class="left_descr">
+											<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
+											<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
+										</div>
+										<div class="right_descr">
+											<p>OKO</p>
+											<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="video-absolute-Second" id="videoAbsol1Second">
+
+						</div>
+
+					</div>
+				</div>
+
+
+
+
+
+				<div class="two_block " id="b2">
+					<div class="video-block2" id="vb2">
+						<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo2" muted>
+
+							<source src="styles/video/videoMain2.mp4" type="video/mp4" >   
+
+							</source>
+
+						</video>
+						<div class="video_block2_mob">
+
+						</div>
+						<div class="video-absolute" id="videoAbsol2">
+							<div class="top_part makeItDisapir">
+								<p>00:52</p>
+							</div>
+							<div class="mid_part">
+								<h1>KYIV</h1>
+							</div>
+							<div class="bot_part  makeItDisapir">
+								<div class="bot_part_content">
+									<div class="bpc_title">
+										<h3 class="rel_for_eq">Kyiv
+											<div class="myEqualizer">
+												<div class="myEqualizer_container">
+													<div class="waves wave1"></div>
+													<div class="waves wave2"></div>
+													<div class="waves wave3"></div>
+													<div class="waves wave4"></div>
+												</div>
+											</h3><p>TATA</p>
+										</div>
+										<div class="name_descr">
+											<div class="left_descr">
+												<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
+												<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
+											</div>
+											<div class="right_descr">
+												<p>OKO</p>
+												<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="video-absolute-Second" id="videoAbsol2Second">
+
+							</div>
+						</div>
+					</div>
+
+
+					<div class="three_block" id="b3">
+						<div class="video-block3" id="vb3">
+							<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo3" muted>
+
+								<source src="styles/video/videoMain33.mp4" type="video/mp4" >   
+
+								</source>
+
+							</video>
+							<div class="video_block3_mob">
+
+							</div>
+							<div class="video-absolute" id="videoAbsol3">
+
+								<div class="top_part makeItDisapir">
+									<p>02:12</p>
+								</div>
+								<div class="mid_part" id="woman">
+									<h1>WOMAN</h1>
+								</div>
+								<div class="bot_part  makeItDisapir">
+									<div class="bot_part_content">
+										<div class="bpc_title">
+											<h3 class="rel_for_eq">Beautifull
+												<div class="myEqualizer">
+													<div class="myEqualizer_container">
+														<div class="waves wave1"></div>
+														<div class="waves wave2"></div>
+														<div class="waves wave3"></div>
+														<div class="waves wave4"></div>
+													</div>
+												</h3><p>TATA</p>
+											</div>
+											<div class="name_descr">
+												<div class="left_descr">
+													<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
+													<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
+												</div>
+												<div class="right_descr">
+													<p>OKO</p>
+													<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="video-absolute-Second" id="videoAbsol3Second">
+
+								</div>
+							</div>
+						</div>
+
+
+						<div class="four_block" id="b4">
+							<div class="video-block4 " id="vb4">
+								<video width="100%" height="100%"  preload="none"   loop="loop"  id="MyVideo4" muted>
+
+									<source src="styles/video/GO.mp4" type="video/mp4" >   
+
+									</source>
+
+								</video>
+								<div class="video_block4_mob">
+
+								</div>
+								<div class="video-absolute" id="videoAbsol4">
+
+									<div class="top_part makeItDisapir">
+										<p>00:54</p>
+									</div>
+									<div class="mid_part"  >
+										<h1>GO</h1>
+									</div>
+									<div class="bot_part  makeItDisapir">
+										<div class="bot_part_content">
+											<div class="bpc_title">
+												<h3 class="rel_for_eq TRX3 ">GO
+													<div class="myEqualizer">
+														<div class="myEqualizer_container">
+															<div class="waves wave1"></div>
+															<div class="waves wave2"></div>
+															<div class="waves wave3"></div>
+															<div class="waves wave4"></div>
+														</div>
+													</h3><p>TATA</p>
+												</div>
+												<div class="name_descr">
+													<div class="left_descr">
+														<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
+														<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
+													</div>
+													<div class="right_descr">
+														<p>OKO</p>
+														<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</div>
+									<div class="video-absolute-Second" id="videoAbsol4Second">
+
+									</div>
+								</div>
+							</div>
+
+							<div class="five_block" id="b5">
+								<div class="video-block5" id="vb5">
+									<video width="100%" height="100%"  preload="none"   loop="loop"  id="MyVideo5" muted>
+
+										<source src="styles/video/Gangsta_sport.mp4" type="video/mp4" >   
+
+										</source>
+
+									</video>
+									<div class="video_block5_mob">
+
+									</div>
+									<div class="video-absolute" id="videoAbsol5">
+
+										<div class="top_part makeItDisapir">
+											<p>00:59</p>
+										</div>
+										<div class="mid_part" >
+											<h1>GANGSTA SPORT</h1>
+										</div>
+										<div class="bot_part  gang makeItDisapir">
+											<div class="bot_part_content gang">
+												<div class="bpc_title">
+													<h3 class="rel_for_eq gang">GANGSTA SPORT
+														<div class="myEqualizer">
+															<div class="myEqualizer_container">
+																<div class="waves wave1"></div>
+																<div class="waves wave2"></div>
+																<div class="waves wave3"></div>
+																<div class="waves wave4"></div>
+															</div>
+														</h3><p>TATA</p>
+													</div>
+													<div class="name_descr">
+														<div class="left_descr">
+															<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
+															<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
+														</div>
+														<div class="right_descr">
+															<p>OKO</p>
+															<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="video-absolute-Second" id="videoAbsol5Second">
+
+										</div>
+									</div>
+								</div>
+
+
+
+
+
+								</div>
+							</div> 
+<!-- 
 			<div class="works-contain" >
 				<div class="video-block1">
 					<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo1" muted>
@@ -373,12 +664,61 @@
 
 
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
-
+				</div>
+			</div>
+	<footer>
+			 
+			 <div class="footer_continer">
+			 	 
+			 	<ul>
+			 		<li><a href="https://www.instagram.com/khvostatyy/?utm_source=ig_profile_share&igshid=84enr80321g6" target="_blank"><div class="insta"></div></a></li>
+			 		<li><a href="https://www.facebook.com/groups/597862140611657/" target="_blank"><div class="face"></div></a></li>
+			 	</ul>
+			 </div>
+			  
+		</footer>
 						<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 						<script src="https://player.vimeo.com/api/player.js"></script>
+						<script type="text/javascript" src="npbar/nprogress.js"></script>
 						<script src="js/js_works.js"></script>
+
+						
+					<script type="text/javascript">
+						$(document).ready(function()
+						{
+							NProgress.start();
+						})
+						$(window).load(function()
+						{
+							setTimeout(()=>
+							{
+								NProgress.set(0.4);
+							},1000);
+							setTimeout(()=>
+							{
+								NProgress.set(0.6);
+							},2000);
+							setTimeout(()=>
+							{
+								NProgress.set(0.8);
+							},3000);
+							setTimeout(function()
+							{
+								NProgress.done();
+								// document.getElementById("vb1").remove("displayNone");
+								// document.getElementById("vb1").add("displayNoneAnime");
+								setTimeout(()=>
+								{
+									 document.getElementById("vb11").classList.remove("displayNone");
+  									document.getElementById("vb11").classList.add("displayNoneAnime");
+								},700);
+								
+							},4000);
+
+						})
+					</script>
 					</body>
 					</html>
