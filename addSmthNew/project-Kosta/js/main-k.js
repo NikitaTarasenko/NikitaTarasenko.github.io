@@ -345,7 +345,7 @@ google.maps.event.addDomListener(window, "load", initMap);
 // });
 // });
 var video = document.getElementById('MyVideo');
-var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain2-2.mp4", "styles/video/videoMain3-2.mp4" ];
+var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain1-2.mp4", "styles/video/videoMain1-2.mp4" ];
 var arrayImages = ["url('styles/images/mobMain1.png')","url('styles/images/mobMain2.png')","url('styles/images/mobMain3.png')"]
 var arrayImagePos = ["mob_backgr_pos1","mob_backgr_pos2","mob_backgr_pos3"];
 var arrayVideoDuration = ["12000","9400","8300"];
@@ -665,7 +665,7 @@ function videoTimer()
 	{
 		 
 		 
-			video.src = arrayVideo[counterVideo];
+			// video.src = arrayVideo[counterVideo];
 		 
 	topBotAnime();
 	changeNameOfTrack(arrayVideoNames[counterVideo]);
