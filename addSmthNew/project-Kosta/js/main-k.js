@@ -1,14 +1,30 @@
 
-	const main = document.getElementById('mainSection');
-	const arrayButtons = document.querySelectorAll("#nav a");
-	const arrayUndelines = document.querySelectorAll("#navL");
-	const mainBlock = document.getElementById("mainBlock");	
-	let prev = 0;
-	let prev2 = 0;
 
+$(document).ready(function()
+{
+	NProgress.start();
+})
+ 
 window.onload = function ()
 {
-	 
+	 	setTimeout(()=>
+				{
+					NProgress.set(0.4);
+				},1000);
+				setTimeout(()=>
+				{
+					NProgress.set(0.6);
+				},2000);
+				setTimeout(()=>
+				{
+					NProgress.set(0.8);
+				},3000);
+				setTimeout(function()
+				{
+					NProgress.done();
+					document.getElementById("head").classList.remove("displayNone");
+				},4000);
+
 		preloader = document.getElementById('page-preloader');
 
 		setTimeout(function()
@@ -43,17 +59,7 @@ window.onload = function ()
 			// {
 			// 	preloader.classList.add('done');
 				
-			
-			// }
 
-		// 		if(!detectmob() || (!detectmob2())){
-		// document.getElementById("MyVideo1").src = "styles/video/videoMain1.mp4";
-		// document.getElementById("MyVideo2").src = "styles/video/videoMain2.mp4";
-		// document.getElementById("MyVideo3").src = "styles/video/videoMain33.mp4";
-		// document.getElementById("MyVideo4").src = "styles/video/GO.mp4";
-		// document.getElementById("MyVideo5").src = "styles/video/Gangsta_sport.mp4";
-		// }
-			
 		 
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
@@ -73,6 +79,13 @@ window.onload = function ()
 		
 		 
 }
+
+	const main = document.getElementById('mainSection');
+	const arrayButtons = document.querySelectorAll("#nav a");
+	const arrayUndelines = document.querySelectorAll("#navL");
+	const mainBlock = document.getElementById("mainBlock");	
+	let prev = 0;
+	let prev2 = 0;
 
 	const man1 = document.getElementById("manL1");
 	const man2 = document.getElementById("manL2");
@@ -332,7 +345,7 @@ google.maps.event.addDomListener(window, "load", initMap);
 // });
 // });
 var video = document.getElementById('MyVideo');
-var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain1-2.mp4", "styles/video/videoMain1-2.mp4" ];
+var arrayVideo = [" styles/video/videoMain1-2.mp4", " styles/video/videoMain2-2.mp4", "styles/video/videoMain3-2.mp4" ];
 var arrayImages = ["url('styles/images/mobMain1.png')","url('styles/images/mobMain2.png')","url('styles/images/mobMain3.png')"]
 var arrayImagePos = ["mob_backgr_pos1","mob_backgr_pos2","mob_backgr_pos3"];
 var arrayVideoDuration = ["12000","9400","8300"];
@@ -472,147 +485,147 @@ function topBotAnime(){
 	}
 	 
 }
-const photoLink = document.getElementById("photoLink");
-const videoLink = document.getElementById("videoLink");
-const twoBlocks = document.getElementById("twoBlocks");
+// const photoLink = document.getElementById("photoLink");
+// const videoLink = document.getElementById("videoLink");
+// const twoBlocks = document.getElementById("twoBlocks");
  
-	photoLink.addEventListener("mouseenter",(e)=>
-	{
-		e.stopPropagation();
-		photoLink.classList.remove("widerBack");
-		photoLink.classList.add("photoLink_wider");
-	});
-	photoLink.addEventListener("mouseleave",(e)=>
-	{
-		e.stopPropagation();
-		photoLink.classList.add("widerBack");
-		setTimeout(()=>
-		{
-			photoLink.classList.remove("photoLink_wider");	
-		},600)
+// 	photoLink.addEventListener("mouseenter",(e)=>
+// 	{
+// 		e.stopPropagation();
+// 		photoLink.classList.remove("widerBack");
+// 		photoLink.classList.add("photoLink_wider");
+// 	});
+// 	photoLink.addEventListener("mouseleave",(e)=>
+// 	{
+// 		e.stopPropagation();
+// 		photoLink.classList.add("widerBack");
+// 		setTimeout(()=>
+// 		{
+// 			photoLink.classList.remove("photoLink_wider");	
+// 		},600)
 		
-	});
+// 	});
 
 
-	videoLink.addEventListener("mouseenter",()=>
-	{
-		videoLink.classList.remove("widerBack");
-		videoLink.classList.add("videoLink_wider");
-	});
-	videoLink.addEventListener("mouseleave",()=>
-	{
-		videoLink.classList.add("widerBack");
-		setTimeout(()=>
-		{
-			videoLink.classList.remove("videoLink_wider");	
-		},600)
-	});
+// 	videoLink.addEventListener("mouseenter",()=>
+// 	{
+// 		videoLink.classList.remove("widerBack");
+// 		videoLink.classList.add("videoLink_wider");
+// 	});
+// 	videoLink.addEventListener("mouseleave",()=>
+// 	{
+// 		videoLink.classList.add("widerBack");
+// 		setTimeout(()=>
+// 		{
+// 			videoLink.classList.remove("videoLink_wider");	
+// 		},600)
+// 	});
  
 
 
-function effect3dHover()
-{
-		let h1Photo = document.querySelector("#photoLink h1");
-		let h1Video = document.querySelector("#videoLink h1");
-		var mouseLeft = function(e){
-			e.stopPropagation();
-			let x1 = e.clientX/innerWidth;
-			let y1 = e.clientY/innerHeight;
+// function effect3dHover()
+// {
+// 		let h1Photo = document.querySelector("#photoLink h1");
+// 		let h1Video = document.querySelector("#videoLink h1");
+// 		var mouseLeft = function(e){
+// 			e.stopPropagation();
+// 			let x1 = e.clientX/innerWidth;
+// 			let y1 = e.clientY/innerHeight;
 
-			let move_x;
-   			let move_y;
-   			move_y = (y1<0.5) ? '25px' : '-25px';
-   			move_x = (x1>0.3) ? '-35px' : '35px';
-   // 			if(y1<0.34) 
-   // 			{
-   // 			 move_x ='0px';
-   // 			 move_y = "-20px";
-   // 			}
-   // 			if(y1>0.69) 
-   // 			{
-   // 			 move_x ='0px';
-   // 			 move_y = "20px";
-   // 			}
-   // 			if(x1<0.16) 
-   // 			{
-   // 			 move_x ='-30px';
-   // 			 move_y = "0px";
-   // 			}
-   // 			if(x1>0.4) 
-   // 			{
-   // 			 move_x ='30px';
-   // 			 move_y = "0px";
-   // 			}
-   // 			if(x1>0.38&&y1>0.68)
-   // 			{
-   // 				move_x ='-35px';
-   // 				move_y = "-20px";
-   // 			}
-   // 			if(x1>0.19&&y1>0.38)
-   // 			{
-   // 				move_x ='35px';
-   // 				move_y = "20px";
-   // 			}
+// 			let move_x;
+//    			let move_y;
+//    			move_y = (y1<0.5) ? '25px' : '-25px';
+//    			move_x = (x1>0.3) ? '-35px' : '35px';
+//    // 			if(y1<0.34) 
+//    // 			{
+//    // 			 move_x ='0px';
+//    // 			 move_y = "-20px";
+//    // 			}
+//    // 			if(y1>0.69) 
+//    // 			{
+//    // 			 move_x ='0px';
+//    // 			 move_y = "20px";
+//    // 			}
+//    // 			if(x1<0.16) 
+//    // 			{
+//    // 			 move_x ='-30px';
+//    // 			 move_y = "0px";
+//    // 			}
+//    // 			if(x1>0.4) 
+//    // 			{
+//    // 			 move_x ='30px';
+//    // 			 move_y = "0px";
+//    // 			}
+//    // 			if(x1>0.38&&y1>0.68)
+//    // 			{
+//    // 				move_x ='-35px';
+//    // 				move_y = "-20px";
+//    // 			}
+//    // 			if(x1>0.19&&y1>0.38)
+//    // 			{
+//    // 				move_x ='35px';
+//    // 				move_y = "20px";
+//    // 			}
 
 
-			// if(x1>0.38&&y1>0.4)
-   // 			{
-   // 				move_x ='-35px';
-   // 				move_y = "20px";
-   // 			}
-   // 			if(x1<0.17&&y1>0.66)
-   // 			{
-   // 				move_x ='35px';
-   // 				move_y = "25px";
-   // 			}
-   // 			if(x1<0.19&&y1<0.4)
-   // 			{
-   // 				move_x ='35px';
-   // 				move_y = "0px";
-   // 			}
-   // 			if(x1>0.4&&y1>0.6)
-   // 			{
-   // 				move_x ='-35px';
-   // 				move_y = "0px";
-   // 			}
+// 			// if(x1>0.38&&y1>0.4)
+//    // 			{
+//    // 				move_x ='-35px';
+//    // 				move_y = "20px";
+//    // 			}
+//    // 			if(x1<0.17&&y1>0.66)
+//    // 			{
+//    // 				move_x ='35px';
+//    // 				move_y = "25px";
+//    // 			}
+//    // 			if(x1<0.19&&y1<0.4)
+//    // 			{
+//    // 				move_x ='35px';
+//    // 				move_y = "0px";
+//    // 			}
+//    // 			if(x1>0.4&&y1>0.6)
+//    // 			{
+//    // 				move_x ='-35px';
+//    // 				move_y = "0px";
+//    // 			}
 
-			h1Photo.style.textShadow = `${move_x} ${move_y} 130px #fff	`;
+// 			h1Photo.style.textShadow = `${move_x} ${move_y} 130px #fff	`;
 
-			// console.log(x1 + "and" + y1);
+// 			// console.log(x1 + "and" + y1);
 		
-		}
-		h1Photo.addEventListener("mousemove",mouseLeft);
+// 		}
+// 		h1Photo.addEventListener("mousemove",mouseLeft);
 
-		var mouseRight = function(e){
-			e.stopPropagation();
-			let x2 = e.clientX/innerWidth;
-			let y2 = e.clientY/innerHeight;
+// 		var mouseRight = function(e){
+// 			e.stopPropagation();
+// 			let x2 = e.clientX/innerWidth;
+// 			let y2 = e.clientY/innerHeight;
 
-			let move_x2 = (x2>0.5) ? '-15px' : '15px';
-   			let move_y2 = (y2>0.5) ? '-10px' : '10px';
-   			// if(x2<0.5&&y2)
-   			if(x2<0.3) 
-   			{
+// 			let move_x2 = (x2>0.5) ? '-15px' : '15px';
+//    			let move_y2 = (y2>0.5) ? '-10px' : '10px';
+//    			// if(x2<0.5&&y2)
+//    			if(x2<0.3) 
+//    			{
 
-   			 move_x ='-35px';
-   			}
-			h1Video.style.textShadow = `${move_x2} ${move_y2} 120px #fff	`;
+//    			 move_x ='-35px';
+//    			}
+// 			h1Video.style.textShadow = `${move_x2} ${move_y2} 120px #fff	`;
 
-				// console.log(x2 + "and" + y2);
-		}
-		h1Video.addEventListener("mousemove",mouseRight);
+// 				// console.log(x2 + "and" + y2);
+// 		}
+// 		h1Video.addEventListener("mousemove",mouseRight);
 		
-		photoLink.addEventListener("mouseleave",(e)=>
-		{
-			h1Photo.style.textShadow = `10px 10px 150px #fff	`;
+// 		photoLink.addEventListener("mouseleave",(e)=>
+// 		{
+// 			h1Photo.style.textShadow = `10px 10px 150px #fff	`;
 			
-		});
-		videoLink.addEventListener("mouseleave",(e)=>
-		{
+// 		});
+// 		videoLink.addEventListener("mouseleave",(e)=>
+// 		{
 		
-			h1Video.style.textShadow = `10px 10px 150px #fff	`;
-		});
-}
+// 			h1Video.style.textShadow = `10px 10px 150px #fff	`;
+// 		});
+// }
  // effect3dHover();
 
 function detectmob2() {

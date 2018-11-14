@@ -14,6 +14,7 @@
 
 	<link rel="stylesheet" href="swiper-master/dist/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="npbar/nprogress.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
 	<!-- <link rel="stylesheet" type="text/css" href="styles/slick-1.8.0.css"> -->
 	
 </head>
@@ -75,7 +76,7 @@
 					
 				</ul>
 			</div>
-
+			
 
 
 
@@ -95,13 +96,25 @@
 					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
 					
 				</ul>
+
 			</div>
 		
-		 
+		
 
 		</div>
-		</div>
+		<!-- <a href="#order"> <div class="nav__btn-order">
+				ORDER
+			</div>
+			</a>
+		 
+ 		<a href="#order"> <div class="nav__btn-order2  ">
+				ORDER2
+			</div>
+			</a> -->
  
+
+
+		</div>
 					 
 		 
 	</header>
@@ -158,9 +171,9 @@
 
 					<div class="videoChangerBlock">
 						<div class="changer">
-							<div class="changerItems"><div id="listLines1" class="changerLines">| </div><p class="changer_dot changer_dotAnime">&nbsp.</p><div id="chgLine1" class="changingLine "></div></div>
-							<div class="changerItems"><div id="listLines2" class="changerLines">|| </div><p class="changer_dot changer_dotAnime">&nbsp.</p><div  id="chgLine2" class="changingLine"></div></div>
-							<div class="changerItems"><div id="listLines3" class="changerLines">||| </div><p class="changer_dot changer_dotAnime">&nbsp.</p><div  id="chgLine3" class="changingLine"></div></div>
+							<div class="changerItems"><div id="listLines1" class="changerLines">| </div><p class="changer_dot changer_dotAnime">&nbsp</p><div id="chgLine1" class="changingLine "></div></div>
+							<div class="changerItems"><div id="listLines2" class="changerLines">|| </div><p class="changer_dot changer_dotAnime">&nbsp</p><div  id="chgLine2" class="changingLine"></div></div>
+							<div class="changerItems"><div id="listLines3" class="changerLines">||| </div><p class="changer_dot changer_dotAnime">&nbsp</p><div  id="chgLine3" class="changingLine"></div></div>
 						</div>
 					</div>
 					
@@ -215,7 +228,7 @@
 						<div class="about-container">
 							<div class="man1" >
 								<div class="man1-logo" id="manL1">
-									
+
 								</div>
 								<div class="man-title" id="demo1">
 									<h1 data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</h1>
@@ -229,7 +242,7 @@
 								</div>
 								<div class="man-title"  id="demo2">
 									<h1 data-en="OLEKSIY MYKOLENKO" data-ru="АЛЕКСЕЙ МИКОЛЕНКО" data-ua="ОЛЕКСІЙ МИКОЛЕНКО">OLEKSIY MYKOLENKO</h1>
-									<p data-en="general screenwriter" data-ru="главный сценарист" data-ua="головний сценарист">general screenwriter</p>
+									<p data-en="general cinematography" data-ru="главный сценарист" data-ua="головний сценарист">general screenwriter</p>
 									<a href="https://www.instagram.com/tramontanin/" onclick='window.open("https://www.instagram.com/tramontanin/");return false;'><p>@TRAMONTANIN</p></a>
 								</div>
 							</div>
@@ -661,31 +674,7 @@
 
 		<script type="text/javascript">
 			
-			$(document).ready(function()
-			{
-				NProgress.start();
-			})
-			$(window).load(function()
-			{
-				setTimeout(()=>
-				{
-					NProgress.set(0.4);
-				},1000);
-				setTimeout(()=>
-				{
-					NProgress.set(0.6);
-				},2000);
-				setTimeout(()=>
-				{
-					NProgress.set(0.8);
-				},3000);
-				setTimeout(function()
-				{
-					NProgress.done();
-					document.getElementById("head").classList.remove("displayNone");
-				},4000);
-
-			})
+		
 			var mySwiper = new Swiper('.swiper-container', {
 				speed:1000,
 				spaceBetween: 30,
