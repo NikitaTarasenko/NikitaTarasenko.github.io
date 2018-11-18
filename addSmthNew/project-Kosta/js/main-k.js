@@ -5,10 +5,10 @@ $(document).ready(function()
 	NProgress.start();
 })
 
-window.onload = function ()
-{
 
-	if ( document.getElementById("MyVideo").readyState >= 2 ) {
+if ( document.getElementById("MyVideo").readyState >= 2 ) {
+
+
     // it's loaded
     console.log("loaded1");
     setTimeout(()=>
@@ -30,7 +30,7 @@ window.onload = function ()
     		console.log("loaded2");
 			 
     },4000);
-    }
+    
 
 
     preloader = document.getElementById('page-preloader');
