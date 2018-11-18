@@ -4,87 +4,82 @@ $(document).ready(function()
 {
 	NProgress.start();
 })
- 
+
 window.onload = function ()
 {
 
-	 
-if ( document.getElementById("MyVideo").readyState === 4 ) {
+	
+	if ( document.getElementById("MyVideo").readyState === 4 ) {
     // it's loaded
-  			  setTimeout(()=>
-				{
-					NProgress.set(0.4);
-				},1000);
-				setTimeout(()=>
-				{
-					NProgress.set(0.6);
-				},2000);
-				setTimeout(()=>
-				{
-					NProgress.set(0.8);
-				},3000);
-				setTimeout(function()
-				{
-					NProgress.done();
-					document.getElementById("head").classList.remove("displayNone");
-				},4000);
+    setTimeout(()=>
+    {
+    	NProgress.set(0.4);
+    },1000);
+    setTimeout(()=>
+    {
+    	NProgress.set(0.6);
+    },2000);
+    setTimeout(()=>
+    {
+    	NProgress.set(0.8);
+    },3000);
+    setTimeout(function()
+    {
+    	NProgress.done();
+    	document.getElementById("head").classList.remove("displayNone");
+    },4000);
 
-}
-	 	
+    preloader = document.getElementById('page-preloader');
 
-		preloader = document.getElementById('page-preloader');
+    setTimeout(function()
+    {
+    	if(window.location.href.indexOf("#main") > -1) {
+    		mySwiper.slideTo(1);
 
-		setTimeout(function()
-		{
-			if(window.location.href.indexOf("#main") > -1) {
-		       mySwiper.slideTo(1);
+    	}
+    	if(window.location.href.indexOf("#about") > -1) {
 
-		    }
-		if(window.location.href.indexOf("#about") > -1) {
-
-		       mySwiper.slideTo(2);
-		       arrayUndelines[0].classList.add('underline2');
-		       prev2=0;
-		       	aboutBlockAnime();
-		    }
-		if(window.location.href.indexOf("#work") > -1) {
-		       mySwiper.slideTo(3);
-		       arrayUndelines[1].classList.add('underline2');
-		       prev2=1;
-		    }
-		  if(window.location.href.indexOf("#contacts") > -1) {
-		       mySwiper.slideTo(4);
-		       arrayUndelines[2].classList.add('underline2');
-		       prev2=2;
-		   }
-		   if(window.location.href.indexOf("#clients") > -1) {
-		       mySwiper.slideTo(5);
-		       arrayUndelines[3].classList.add('underline2');
-		       prev2=3;
-		    }
+    		mySwiper.slideTo(2);
+    		arrayUndelines[0].classList.add('underline2');
+    		prev2=0;
+    		aboutBlockAnime();
+    	}
+    	if(window.location.href.indexOf("#work") > -1) {
+    		mySwiper.slideTo(3);
+    		arrayUndelines[1].classList.add('underline2');
+    		prev2=1;
+    	}
+    	if(window.location.href.indexOf("#contacts") > -1) {
+    		mySwiper.slideTo(4);
+    		arrayUndelines[2].classList.add('underline2');
+    		prev2=2;
+    	}
+    	if(window.location.href.indexOf("#clients") > -1) {
+    		mySwiper.slideTo(5);
+    		arrayUndelines[3].classList.add('underline2');
+    		prev2=3;
+    	}
 			// if(!preloader.classList.contains('done'))
 			// {
 			// 	preloader.classList.add('done');
-				
 
-		 
+
+
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
 
 		},4000);
-		setTimeout(()=>{
-				animeActiveVideoList(listLines1,lineWidth1);
-			},2800);
-	setTimeout(()=>{
-				nonActiveVideoList(listLines1,lineWidth1);
-				counterChanger=0;
-			},11200);
-		addAnimationFirst();
-		videoTimer();
-		topBotAnime();
-		
-		
-		 
+    setTimeout(()=>{
+    	animeActiveVideoList(listLines1,lineWidth1);
+    },2800);
+    setTimeout(()=>{
+    	nonActiveVideoList(listLines1,lineWidth1);
+    	counterChanger=0;
+    },11200);
+    addAnimationFirst();
+    videoTimer();
+    topBotAnime();
+}
 }
 
 	let selectorForMap ="г. Киев,ул. Александра Бойченко, 8";
