@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>Photo Categories</title>
+	<link rel="shortcut icon" href="styles/images/black.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="styles/styles-K.css">
+	<link rel="stylesheet" type="text/css" href="styles/media.css">
+	<link rel="stylesheet" type="text/css" href="npbar/nprogress.css">
+	
+
+</head>
+<body>
+	<div class="preloader" id="page-preloader">
+
+
+		<div class="loader-2" id="loader_line2">
+		</div>
+		
+	</div>
+	<header>
+		<div class="burger makeItDisapir visb_mob">
+			<a href="#" class="burger-btn">
+				<span></span>
+			</a>
+		</div>
+		<div class="mob_title ">
+			<!-- 	<img src="styles/images/oko.png"> -->
+		</div>
+		<div class="container">
+
+
+			<div class="navmenumob hidden_mob1" id="navmenumob" >
+				
+				<ul id="nav_mob">
+					
+					<li><a class="relative" onclick="mySwiper.slideTo(1)" href="#main"><p data-en="MAIN" data-ru="ГЛАВНАЯ" data-ua="ГОЛОВНА">MAIN<div class=" und1"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(2)" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(3)" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2"  ></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(4)" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3"  ></div></p></a></li>
+					<li><a  class="relative" onclick="mySwiper.slideTo(5)" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4"  ></div></p></a></li>
+					
+				</ul>
+			</div>
+			<a  onclick="openWind('#main')" href="#main" id="mainSection" class="mainA">
+				<div class="eye" >
+
+					<div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> 
+				</div></a>
+				<div class="nav-right">
+					<div class="nav" >
+
+						<ul id="nav">
+
+							<li><a class="relative" onclick="openWind('#about')" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
+							<li><a class="relative" onclick="openWind('#works')" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
+							<li><a class="relative" onclick="openWind('#contacts')" href="#contacts"><p  data-en="CONTACTS" data-ru="КОНТАКТЫ" data-ua="КОНТАКТИ">CONTACTS<div class=" und3" id="navL"></div></p></a></li>
+							<li><a  class="relative" onclick="openWind('#clients')" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
+							<li><a href="#order"> <div class="nav__btn-order2" data-en="CONTACT US" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">ORDER</div></a></li>
+						</ul>
+					</div>
+				</div>	
+
+			</div>	
+		</header>
+
+
+
+		<div class="hero"> 
+			<div class="swiper-container" >
+
+				<div class="swiper-slide" >
+					<div class="changer_lang">
+						<div class="lang_items class_z-index_900 ">
+							<ul>
+								<li><div id="en3">EN</div></li>
+								<li><div id="ua3">UA</div></li>
+								<li><div id="ru3">RU</div></li>
+							</ul>
+						</div>
+					</div>
+					<div class="works-container" id="wc">
+
+					</div>
+				</div>
+			</div>
+		</div>
+						<footer>
+
+							<div class="footer_continer">
+
+								<ul>
+									<li><a href="https://www.instagram.com/khvostatyy/?utm_source=ig_profile_share&igshid=84enr80321g6" target="_blank"><div class="insta"></div></a></li>
+									<li><a href="https://www.facebook.com/groups/597862140611657/" target="_blank"><div class="face"></div></a></li>
+								</ul>
+							</div>
+
+						</footer>
+						<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+						<script src="https://player.vimeo.com/api/player.js"></script>
+						<script type="text/javascript" src="npbar/nprogress.js"></script>
+						<script src="js/js_photos.js"></script>
+
+						
+						<script type="text/javascript">
+							$(document).ready(function()
+							{
+								NProgress.start();
+							})
+							$(window).load(function()
+							{
+								setTimeout(()=>
+								{
+									NProgress.set(0.4);
+								},1000);
+								setTimeout(()=>
+								{
+									NProgress.set(0.6);
+								},2000);
+								setTimeout(()=>
+								{
+									NProgress.set(0.8);
+								},3000);
+								setTimeout(function()
+								{
+									NProgress.done();
+								 
+								// setTimeout(()=>
+								// {
+								// 	document.getElementById("vb11").classList.remove("displayNone");
+								// 	document.getElementById("vb11").classList.add("displayNoneAnime");
+								// },700);
+								
+							},4000);
+
+							})
+						</script>
+					</body>
+					</html>

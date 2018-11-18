@@ -150,7 +150,66 @@ html
 		width: 0%;
 	}
 }
+@keyframes textHover2
+  {
+  	0%
+  	{
+  		background-color: rgba(255,255,255,0.8);
+  		color: #000;
+  		opacity: 1;
+  	}
+  	30%
+  	{
+  		opacity: 0.9;
+  		color: #e6e6e6;
+  		background-color: rgba(230, 230, 230,0.8);
+  	}
+  	50%
+  	{
+  		background-color: #000;
+  		color: #fff;
+  		opacity: 1;
 
+  	}
+  	80%
+  	{
+  		color:  #0d0d0d;
+  		opacity: 0.9;
+  		background-color: rgba(13, 13, 13,0.8)
+  	}
+  	100%
+  	{
+  		background-color: rgba(255,255,255,0.8);
+  		color: #000;
+  		opacity: 1;
+
+  	}
+  }
+  @keyframes textHover
+  {
+  	0%
+  	{
+  		margin-left: -110px;
+  	}
+  	40%
+  	{
+  		margin-left: -10px;
+  	}
+  	50%
+  	{
+  		margin: 0;
+
+  		color:#994d00;
+  	}
+  	60%
+  	{
+  		margin-left: 10px;
+  	}
+  	100%
+  	{
+  		margin-left: 105px;
+  	}
+  }
 /**
 {
 	border: 1px solid #fff;
@@ -285,9 +344,10 @@ html
 	{  
 		position: relative;
 		/*margin-top: 10px;*/
-		margin-left: 50px;
+		margin-left:  0px;
 		width: 80px;
 		height:80px;
+		z-index: 1;
 
 	/*	background-image: url("..//styles/images/mainLogo.png");
 		background-repeat: no-repeat;
@@ -296,6 +356,37 @@ html
 
 		/*border: 1px solid red;*/
 
+	}
+	.mainA
+	{
+		display: block;
+		width: 80px;
+		height: 80px;
+			margin-right: 50px;
+		 
+	}
+	.eye
+	{
+		width: 80px;
+		height:80px;
+		 
+	
+		 
+	}
+	.eye img
+	{
+		object-fit: cover;
+		width: 180px;
+		height:180px;
+	}
+	.mainSection img
+	{
+		position: absolute;
+		width: 230%;
+		height: 280%;
+
+		top: -25%;
+		left: -250%;
 	}
 	.mainSection img
 	{
@@ -322,7 +413,7 @@ html
 			display: inline-block;
 			color: #fff;
 			text-align: center;
-			margin: 0px  2rem 0rem 2rem;
+			margin: 0px  0.6rem 0rem 0.6rem;
 
 		}
 		.nav a
@@ -378,18 +469,7 @@ html
 		animation: 1s linear pressedButton;
 		}*/
 
-		.container
-		{
-			display: flex;
-			justify-content: center;
-
-
-			max-width: 91rem;
-
-			margin: 0 auto;
-			margin-top: -1rem;
-
-		}
+		
 		.nav__btn-order
 		{
 			display: flex;
@@ -412,17 +492,17 @@ html
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			width: 90px;
+			width: 100%;
 			height: 20px;
 			background-color: #fff;
-
+			padding: 5px 15px;
 			/*	 border-radius: 10px;*/
-			margin-top: 15px;
+			margin-top: 12px;
 
 			overflow: hidden;
 			color: #000;
 			font-size: 13px;
-			transition: all 0.4s cubic-bezier(0.5, 0.5, 0.58, 1);
+			transition: all 0.4s cubic-bezier(0.75, 0.85, 0.98, 1);
 
 		}	
 		.nav__btn-order2:hover {
@@ -448,7 +528,7 @@ html
 			content: '';
 			color: #000 !important;
 			background:#fff;
-			transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+			transition: all 0.4s cubic-bezier(0.5, 0.3, 1.0, 1);
 
 		}
 		.nav__btn-order:hover
@@ -481,66 +561,7 @@ html
     box-shadow: 0 -10px 10px -10px #b8b894 inset;
   }
   }*/
-  @keyframes textHover2
-  {
-  	0%
-  	{
-  		background-color: rgba(255,255,255,0.8);
-  		color: #000;
-  		opacity: 1;
-  	}
-  	30%
-  	{
-  		opacity: 0.9;
-  		color: #e6e6e6;
-  		background-color: rgba(230, 230, 230,0.8);
-  	}
-  	50%
-  	{
-  		background-color: #000;
-  		color: #fff;
-  		opacity: 1;
-
-  	}
-  	80%
-  	{
-  		color:  #0d0d0d;
-  		opacity: 0.9;
-  		background-color: rgba(13, 13, 13,0.8)
-  	}
-  	100%
-  	{
-  		background-color: rgba(255,255,255,0.8);
-  		color: #000;
-  		opacity: 1;
-
-  	}
-  }
-  @keyframes textHover
-  {
-  	0%
-  	{
-  		margin-left: -110px;
-  	}
-  	40%
-  	{
-  		margin-left: -10px;
-  	}
-  	50%
-  	{
-  		margin: 0;
-
-  		color:#994d00;
-  	}
-  	60%
-  	{
-  		margin-left: 10px;
-  	}
-  	100%
-  	{
-  		margin-left: 105px;
-  	}
-  }
+  
   .nav__btn-order p
   {
   	color: #000;
@@ -554,20 +575,38 @@ html
   /*///////////////*/
 
 
+  .container
+  {
+  	display: flex;
+  	justify-content: center;
 
+
+  	max-width: 91rem;
+  	height: 100%;
+   
+  	margin: 0 auto;
+  	margin-top: -1rem;
+
+  }
 
 
 
 
   .nav-left
   {
+  	position: relative;
+  	z-index: 1;
   	width: 14%;
-
+  	margin-right: 0px;
   	height: 50px;
   }
   .nav-right
   {
-
+  	position: relative;
+  	width: 100%;
+  	height: 100%;
+  	z-index: 20;
+ 	margin-top: 0px;
   }
   .nav-lines
   {
@@ -1957,7 +1996,8 @@ height: 40%;
 	}
 	.line0
 	{
-
+		margin: 0;
+		padding: 0;
 		width: 8.1%;
 		height: 100%;
 
@@ -1966,6 +2006,8 @@ height: 40%;
 	}
 	.line1
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*border-left:  0.5px solid rgba(255,255,255,0.2);*/
@@ -1974,6 +2016,8 @@ height: 40%;
 	
 	.line2
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*	border-left:  0.5px solid rgba(255,255,255,0.2);*/
@@ -1981,6 +2025,8 @@ height: 40%;
 	}
 	.line3
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*border-left:  0.5px solid rgba(255,255,255,0.2);*/
@@ -1988,6 +2034,8 @@ height: 40%;
 	}
 	.line4
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*	border-left:  1px solid rgba(255,255,255,0.3);*/
@@ -1996,6 +2044,8 @@ height: 40%;
 	}
 	.line5
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*border-left:  0.5px solid rgba(255,255,255,0.2);*/
@@ -2003,6 +2053,8 @@ height: 40%;
 	}
 	.line6
 	{
+		margin: 0;
+		padding: 0;
 		width: 14%;
 		height: 100%;
 		/*	border-left:  0.5px solid rgba(255,255,255,0.2);*/
@@ -2010,7 +2062,9 @@ height: 40%;
 	}
 	.line7
 	{
-		width: 8%;
+		margin: 0;
+		padding: 0;
+		width: 8.1%;
 		height: 100%;
 		/*border-left:  0.5px solid rgba(255,255,255,0.2);*/
 		
@@ -2185,12 +2239,12 @@ height: 40%;
 		}
 		75%
 		{
-			transform: scaleX(1);
+			transform: scaleX(1.1);
 			background-color: #000;
 		}
 		100%
 		{
-			transform: scaleX(-0.1);
+			transform: scaleX(-0.2);
 
 			
 		}
@@ -2556,7 +2610,7 @@ height: 40%;
 	}
 
 
-	.mejs-inner,
+/*	.mejs-inner,
 	.mejs-inner div,
 	.mejs-inner a,
 	.mejs-inner span,
@@ -2690,10 +2744,10 @@ height: 40%;
 		background-repeat: no-repeat;
 		background-size: contain;
 
-		/*  background-position: -26px 0;*/
-	}
+		/*  background-position: -26px 0;}*/
+	 
 
-	.mejs-controls .mejs-unfullscreen button {
+/*	.mejs-controls .mejs-unfullscreen button {
 		width: 30px;
 		height: 21px;
 		background-image: url("../styles/images/fls.png");
@@ -2768,8 +2822,7 @@ height: 40%;
 		height: 10px;
 		top: -2px;
 
-		/* background: url(../img/handle.png);*/
-		/*border-radius:40%;*/
+		 
 		background-color: #fff;
 	}
 
@@ -2806,7 +2859,7 @@ height: 40%;
 		background: -o-linear-gradient(top, #fff 0%, #fff 100%);
 		background: -ms-linear-gradient(top, #fff 0%, #fff 100%);
 		background: linear-gradient(top, #fff 0%, #fff 100%);
-	}
+	}*/ 
 
 	.hidden_mob
 	{

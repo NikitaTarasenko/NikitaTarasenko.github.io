@@ -23,33 +23,10 @@
 	<div class="preloader" id="page-preloader">
 
 		<div class="pre-logo">
-			<!-- <div class="preloader_image">
-				
-			</div> -->
+		 
 		</div>
-		<!-- <div class="pre-title">
-			<h3>OKO</br>PRODUCTION </h3>
-		</div> -->
-		<div class="loader-2" id="loader_line2">
-	
-				<!-- <section>
-				  <div class='sk-circle-bounce'>
-				    <div class='sk-child sk-circle-1'></div>
-				    <div class='sk-child sk-circle-2'></div>
-				    <div class='sk-child sk-circle-3'></div>
-				    <div class='sk-child sk-circle-4'></div>
-				    <div class='sk-child sk-circle-5'></div>
-				    <div class='sk-child sk-circle-6'></div>
-				    <div class='sk-child sk-circle-7'></div>
-				    <div class='sk-child sk-circle-8'></div>
-				    <div class='sk-child sk-circle-9'></div>
-				    <div class='sk-child sk-circle-10'></div>
-				    <div class='sk-child sk-circle-11'></div>
-				    <div class='sk-child sk-circle-12'></div>
-				  </div>
-				</section> -->
-
-		</div>
+	 
+		 
 		
 	</div>
 	<header class="displayNone" id="head">
@@ -63,7 +40,7 @@
 			</div>
 		<div class="container">
 
-		
+		 
 			<div class="navmenumob hidden_mob1" id="navmenumob" >
 				
 				<ul id="nav_mob">
@@ -78,10 +55,26 @@
 			</div>
 			
 
+			<a onclick="mySwiper.slideTo(1);aboutAnimeOff()" href="#main" id="mainSection" class="mainA">
+				<div class="eye" >
 
+					<div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> 
+				</div></a>
+			<div class="nav-right">
+				<div class="nav" >
+				
+				<ul id="nav">
+				
+					<li><a class="relative" onclick="mySwiper.slideTo(2);aboutBlockAnime();" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff()" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff()" href="#contacts"><p  data-en="LOCATION" data-ru="МЫ ТУТ" data-ua="МИ ТУТ">LOCATION<div class=" und3" id="navL"></div></p></a></li>
+					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
+					<li><a href="#order"> <div class="nav__btn-order2" data-en="CONTACT US" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">CONTACT US</div></a></li>
+				</ul>
 
+			</div>
 
-
+<!-- 
 			<div class="nav-left">
 				<a onclick="mySwiper.slideTo(1);aboutAnimeOff()" href="#main" id="mainSection"><div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> </a>
 			</div>
@@ -98,10 +91,10 @@
 				</ul>
 
 			</div>
-		
+		 -->
 		
 
-		</div>
+			</div>
 		<!-- <a href="#order"> <div class="nav__btn-order">
 				ORDER
 			</div>
@@ -126,7 +119,7 @@
 						
 						
 					<div class="video-bg">
-						<video width="100%" height="100%"  preload="auto" autoplay="autoplay" loop="loop"  id="MyVideo" muted>
+						<video width="100%" height="100%"  preload="auto" autoplay="autoplay" loop="none"  id="MyVideo" muted>
 
 							<source src="styles/video/videoMain1-2.mp4" type="video/mp4" >  
 
@@ -271,7 +264,7 @@
 					</div>
 					<div class="twoBlocks" id="twoBlocks">
 						<div class="photoLink" id="photoLink">
-							<a href="#"><h1  data-en="PHOTOS" data-ru="ФОТО" data-ua="ФОТО">PHOTOS</h1></a>
+							<a onclick='location.href = "categories.html"' href="#categories"><h1  data-en="PHOTOS" data-ru="ФОТО" data-ua="ФОТО">PHOTOS</h1></a>
 						</div>
 						<div class="photoLink videoLink"  id="videoLink">
 							<a  onclick='location.href = "works.html"' href="#videos" ><h1 data-en="VIDEOS" data-ru="ВИДЕО" data-ua="ВІДЕО">VIDEOS</h1></a>

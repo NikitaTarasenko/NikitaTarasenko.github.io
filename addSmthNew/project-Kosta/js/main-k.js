@@ -7,7 +7,11 @@ $(document).ready(function()
  
 window.onload = function ()
 {
-	 	setTimeout(()=>
+
+	 
+if ( document.getElementById("MyVideo").readyState === 4 ) {
+    // it's loaded
+  			  setTimeout(()=>
 				{
 					NProgress.set(0.4);
 				},1000);
@@ -24,6 +28,9 @@ window.onload = function ()
 					NProgress.done();
 					document.getElementById("head").classList.remove("displayNone");
 				},4000);
+
+}
+	 	
 
 		preloader = document.getElementById('page-preloader');
 
@@ -79,6 +86,8 @@ window.onload = function ()
 		
 		 
 }
+
+	let selectorForMap ="г. Киев,ул. Александра Бойченко, 8";
 
 	const main = document.getElementById('mainSection');
 	const arrayButtons = document.querySelectorAll("#nav a");
@@ -193,6 +202,7 @@ function aboutBlockAnime()
 }
 function aboutAnimeOff()
 {
+
 	FirstEnter++;
 	if(man1.classList.contains("man-logo-Anime"))
 	{
@@ -292,7 +302,7 @@ function initMap() {
 	var marker = new google.maps.Marker({
 		position: centerLatLng,               // Координаты расположения маркера. В данном случае координаты нашего маркера совпадают с центром карты, но разумеется нам никто не мешает создать отдельную переменную и туда поместить другие координаты.
 		map: map,                             // Карта на которую нужно добавить маркер
-		title: "г. Киев,ул. Александра Бойченко, 8", // (Необязательно) Текст выводимый в момент наведения на маркер,
+		title:selectorForMap, // (Необязательно) Текст выводимый в момент наведения на маркер,
 		icon: {
 			url :"styles/images/marker.png",
 			scaledSize: new google.maps.Size(40,50)  
@@ -300,7 +310,7 @@ function initMap() {
 	});
 }
 // Ждем полной загрузки страницы, после этого запускаем initMap()
-
+//"г. Киев,ул. Александра Бойченко, 8"
 google.maps.event.addDomListener(window, "load", initMap);
 
 // jQuery(document).ready(function($) {
@@ -925,17 +935,23 @@ function ChangingLang(en,ru,ua)
 	$(en).on('click', function() {
 		$('[data-en]').each(function() {
 			$(this).text($(this).attr('data-en'));
+			selectorForMap = "KYIV,st. Alexandra Boychenko, 8";
+			initMap();
 		}); 
 	});
 
 	$(ru).on('click', function() {
 		$('[data-ru]').each(function() {
 			$(this).text($(this).attr('data-ru'));
+			selectorForMap = "г. Киев,ул. Александра Бойченко, 8";
+			initMap();
 		}); 
 	});
 	$(ua).on('click', function() {
 		$('[data-ua]').each(function() {
 			$(this).text($(this).attr('data-ua'));
+			selectorForMap = "м. Київ, вул. Олександра Бойченка, 8";
+			initMap();
 		}); 
 	});
 
