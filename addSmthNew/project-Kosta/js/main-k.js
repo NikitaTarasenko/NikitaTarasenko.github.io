@@ -8,8 +8,9 @@ $(document).ready(function()
 window.onload = function ()
 {
 
-	if ( document.getElementById("MyVideo").readyState === 4 ) {
+	if ( document.getElementById("MyVideo").readyState >= 2 ) {
     // it's loaded
+    console.log("loaded1");
     setTimeout(()=>
     {
     	NProgress.set(0.4);
@@ -24,9 +25,9 @@ window.onload = function ()
     },3000);
     setTimeout(function()
     {
-    	NProgress.done();
+    		NProgress.done();
     		document.getElementById("head").classList.remove("displayNone");
-    		console.log("loaded");
+    		console.log("loaded2");
 			 
     },4000);
     }
