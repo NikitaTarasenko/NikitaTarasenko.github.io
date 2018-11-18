@@ -8,6 +8,29 @@ $(document).ready(function()
 window.onload = function ()
 {
 
+	if ( document.getElementById("MyVideo").readyState === 4 ) {
+    // it's loaded
+    setTimeout(()=>
+    {
+    	NProgress.set(0.4);
+    },1000);
+    setTimeout(()=>
+    {
+    	NProgress.set(0.6);
+    },2000);
+    setTimeout(()=>
+    {
+    	NProgress.set(0.8);
+    },3000);
+    setTimeout(function()
+    {
+    	NProgress.done();
+    		document.getElementById("head").classList.remove("displayNone");
+    		console.log("loaded");
+			 
+    },4000);
+    }
+
 
     preloader = document.getElementById('page-preloader');
 
@@ -44,30 +67,10 @@ window.onload = function ()
 			// 	preloader.classList.add('done');
 
 
-	if ( document.getElementById("MyVideo").readyState === 4 ) {
-    // it's loaded
-    setTimeout(()=>
-    {
-    	NProgress.set(0.4);
-    },1000);
-    setTimeout(()=>
-    {
-    	NProgress.set(0.6);
-    },2000);
-    setTimeout(()=>
-    {
-    	NProgress.set(0.8);
-    },3000);
-    setTimeout(function()
-    {
-    	NProgress.done();
-    		document.getElementById("head").classList.remove("displayNone");
-    		console.log("loaded");
+ 
+
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
-    },4000);
-    }
-
 
 
 		},4000);
@@ -81,7 +84,7 @@ window.onload = function ()
     addAnimationFirst();
     videoTimer();
     topBotAnime();
-    console.log("outSet");
+
 }
 
 	let selectorForMap ="г. Киев,ул. Александра Бойченко, 8";
