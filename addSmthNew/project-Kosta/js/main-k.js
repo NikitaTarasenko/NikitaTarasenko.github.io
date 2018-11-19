@@ -6,7 +6,8 @@ $(document).ready(function()
 })
 
 
-if ( document.getElementById("MyVideo").readyState >= 2 ) {
+window.onload = function ()
+{
 
 
     // it's loaded
