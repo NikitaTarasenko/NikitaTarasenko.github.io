@@ -8,32 +8,9 @@ $(document).ready(function()
 
 window.onload = function ()
 {
+	checkVideoLoad();
 
-
-    // it's loaded
-    console.log("loaded1");
-    setTimeout(()=>
-    {
-    	NProgress.set(0.4);
-    },1000);
-    setTimeout(()=>
-    {
-    	NProgress.set(0.6);
-    },2000);
-    setTimeout(()=>
-    {
-    	NProgress.set(0.8);
-    },3000);
-    setTimeout(function()
-    {
-    		NProgress.done();
-    		document.getElementById("head").classList.remove("displayNone");
-    		console.log("loaded2");
-			 
-    },4000);
-    
-
-
+   
     preloader = document.getElementById('page-preloader');
 
     setTimeout(function()
@@ -88,6 +65,37 @@ window.onload = function ()
     topBotAnime();
 
 }
+
+
+
+	function checkVideoLoad()
+	{
+		if ( document.getElementById("MyVideo").readyState === 4 ) {
+		    // it's loaded
+		    setTimeout(()=>
+		    {
+		    	NProgress.set(0.4);
+		    },1000);
+		    setTimeout(()=>
+		    {
+		    	NProgress.set(0.6);
+		    },2000);
+		    setTimeout(()=>
+		    {
+		    	NProgress.set(0.8);
+		    },3000);
+		    setTimeout(function()
+		    {
+		    	NProgress.done();
+		    	document.getElementById("head").classList.remove("displayNone");
+		    },4000);
+		}
+		else
+		{
+			checkVideoLoad();
+		}
+
+	}
 
 	let selectorForMap ="г. Киев,ул. Александра Бойченко, 8";
 
