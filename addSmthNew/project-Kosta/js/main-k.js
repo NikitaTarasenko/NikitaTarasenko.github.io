@@ -8,7 +8,11 @@ $(document).ready(function()
 
 window.onload = function ()
 {
-	checkVideoLoad();
+	setTimeout(()=>
+	{
+		checkVideoLoad();
+	},3000);
+	
 
    
     preloader = document.getElementById('page-preloader');
@@ -92,7 +96,11 @@ window.onload = function ()
 		}
 		else
 		{
-			checkVideoLoad();
+			setTimeout(()=>
+			{
+				checkVideoLoad();
+			},1000);
+			
 		}
 
 	}
