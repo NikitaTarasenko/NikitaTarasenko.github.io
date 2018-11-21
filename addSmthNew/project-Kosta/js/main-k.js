@@ -5,7 +5,6 @@ $(document).ready(function()
 	NProgress.start();
 })
 
-
 window.onload = function ()
 {
 	setTimeout(()=>
@@ -13,8 +12,27 @@ window.onload = function ()
 		checkVideoLoad();
 	},3000);
 	
+	
+	// if ( document.getElementById("MyVideo").readyState === 4 ) {
+ //    // it's loaded
+ //    setTimeout(()=>
+ //    {
+ //    	NProgress.set(0.4);
+ //    },1000);
+ //    setTimeout(()=>
+ //    {
+ //    	NProgress.set(0.6);
+ //    },2000);
+ //    setTimeout(()=>
+ //    {
+ //    	NProgress.set(0.8);
+ //    },3000);
+ //    setTimeout(function()
+ //    {
+ //    	NProgress.done();
+ //    	document.getElementById("head").classList.remove("displayNone");
+ //    },4000);
 
-   
     preloader = document.getElementById('page-preloader');
 
     setTimeout(function()
@@ -50,11 +68,9 @@ window.onload = function ()
 			// 	preloader.classList.add('done');
 
 
- 
 
 			document.querySelector('header').classList.add('animeForHeader');
 			document.querySelector('footer').classList.add('animeForHeader');
-
 
 		},4000);
     setTimeout(()=>{
@@ -69,8 +85,6 @@ window.onload = function ()
     topBotAnime();
 
 }
-
-
 
 	function checkVideoLoad()
 	{
@@ -954,23 +968,26 @@ function ChangingLang(en,ru,ua)
 		$('[data-en]').each(function() {
 			$(this).text($(this).attr('data-en'));
 			selectorForMap = "KYIV,st. Alexandra Boychenko, 8";
-			initMap();
+			
 		}); 
+		initMap();
 	});
 
 	$(ru).on('click', function() {
 		$('[data-ru]').each(function() {
 			$(this).text($(this).attr('data-ru'));
 			selectorForMap = "г. Киев,ул. Александра Бойченко, 8";
-			initMap();
+			
 		}); 
+		initMap();
 	});
 	$(ua).on('click', function() {
 		$('[data-ua]').each(function() {
 			$(this).text($(this).attr('data-ua'));
 			selectorForMap = "м. Київ, вул. Олександра Бойченка, 8";
-			initMap();
+			
 		}); 
+		initMap();
 	});
 
  

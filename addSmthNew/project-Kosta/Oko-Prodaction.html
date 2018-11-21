@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="swiper-master/dist/css/swiper.min.css">
 	<link rel="stylesheet" type="text/css" href="npbar/nprogress.css">
 	<link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet">
+	<!-- <link rel="stylesheet" type="php" href="send.php"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="styles/slick-1.8.0.css"> -->
 	
 </head>
@@ -69,7 +70,7 @@
 					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff()" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
 					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff()" href="#contacts"><p  data-en="LOCATION" data-ru="МЫ ТУТ" data-ua="МИ ТУТ">LOCATION<div class=" und3" id="navL"></div></p></a></li>
 					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
-					<li><a href="#order"> <div class="nav__btn-order2" data-en="CONTACT US" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">ORDER</div></a></li>
+					<li><a href="#order" onclick="mySwiper.slideTo(6);aboutAnimeOff()"> <div class="nav__btn-order2" data-en="ORDER" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">ORDER</div></a></li>
 				</ul>
 
 			</div>
@@ -629,13 +630,42 @@
 					<div class="clients-container">
 						<a href="#" class="ex c1"></a>
 						<a href="#" class="ex c2"></a>
-						<!-- <a href="#" class="ex c3"></a>
-						<a href="#" class="ex c4"></a>
+						 <a href="#" class="ex c3"></a>
+						<!--<a href="#" class="ex c4"></a>
 						<a href="#" class="ex c5"></a>
 						<a href="https://www.samsung.com/ua/" class="ex c6" target="_blank"></a>
 						<a href="#" class="ex c7"></a> -->
 					</div>
 				</div>
+
+
+				<div class="swiper-slide " ><!--  *************************form************************************ -->
+			 
+					<div class="changer_lang">
+						<div class="lang_items class_z-index_900 " >
+							<ul>
+								<li><div id="en5">EN</div></li>
+								<li><div id="ua5">UA</div></li>
+								<li><div id="ru5">RU</div></li>
+							</ul>
+						</div>
+					</div>
+					
+
+					<div class="form-container">
+						<form action="..//send.php" method="post">
+
+							Ваше имя <input type="text" name="first_name"><br>
+							Email: <input type="text" name="email" required placeholder="Обязательное поле"><br>
+							Сообщение:<br><textarea rows="5" name="message" cols="30"></textarea><br>
+							<input type="submit" name="submit" value="Submit">
+							</form>
+					</div>
+
+				</div>
+
+
+
 
 			</div>
 
