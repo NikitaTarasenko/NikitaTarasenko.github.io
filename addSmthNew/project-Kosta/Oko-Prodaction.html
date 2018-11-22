@@ -655,55 +655,26 @@
 					<div class="form-container">
 					 
 
-							<form name="contactform" method="post" action="send.php">
-								<table width="450px">
-									<tr>
-										<td valign="top">
-											<label for="first_name">First Name *</label>
-										</td>
-										<td valign="top">
-											<input  type="text" name="first_name" maxlength="50" size="30">
-										</td>
-									</tr>
-									<tr>
-										<td valign="top"">
-											<label for="last_name">Last Name *</label>
-										</td>
-										<td valign="top">
-											<input  type="text" name="last_name" maxlength="50" size="30">
-										</td>
-									</tr>
-									<tr>
-										<td valign="top">
-											<label for="email">Email Address *</label>
-										</td>
-										<td valign="top">
-											<input  type="text" name="email" maxlength="80" size="30">
-										</td>
-									</tr>
-									<tr>
-										<td valign="top">
-											<label for="telephone">Telephone Number</label>
-										</td>
-										<td valign="top">
-											<input  type="text" name="telephone" maxlength="30" size="30">
-										</td>
-									</tr>
-									<tr>
-										<td valign="top">
-											<label for="comments">Comments *</label>
-										</td>
-										<td valign="top">
-											<textarea  name="comments" maxlength="1000" cols="25" rows="6"></textarea>
-										</td>
-									</tr>
-									<tr>
-										<td colspan="2" style="text-align:center">
-											<input type="submit" value="Submit">   <a href="http://www.freecontactform.com/email_form.php">Email Form</a>
-										</td>
-									</tr>
-								</table>
-							</form>
+						<form action="mail.php" method="POST">
+							<legend>Заголовок формы</legend>
+
+							<div class="form-group">
+								<label for="">Введите ваше имя</label>
+								<input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+							</div>
+							
+							<div class="form-group">
+								<label for="">Введите номер телефона</label>
+								<input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+							</div>
+							
+							<div class="form-group">
+								<label for="">Введите email</label>
+								<input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
+							</div>
+							
+							<button type="submit" class="btn btn-primary">Отправить форму</button>
+						</form>
 					</div>
 
 				</div>
