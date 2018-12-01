@@ -13,25 +13,7 @@ window.onload = function ()
 	},3000);
 	
 	
-	// if ( document.getElementById("MyVideo").readyState === 4 ) {
- //    // it's loaded
- //    setTimeout(()=>
- //    {
- //    	NProgress.set(0.4);
- //    },1000);
- //    setTimeout(()=>
- //    {
- //    	NProgress.set(0.6);
- //    },2000);
- //    setTimeout(()=>
- //    {
- //    	NProgress.set(0.8);
- //    },3000);
- //    setTimeout(function()
- //    {
- //    	NProgress.done();
- //    	document.getElementById("head").classList.remove("displayNone");
- //    },4000);
+ 
 
     preloader = document.getElementById('page-preloader');
 
