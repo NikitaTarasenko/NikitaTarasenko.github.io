@@ -7,13 +7,15 @@ $(document).ready(function()
 let FirstEnter = 0;
 window.onload = function ()
 {
+
+	if(!detectmob() || (!detectmob2())){
 	setTimeout(()=>
 	{
 		checkVideoLoad();
 		
 	},3000);
 	
- 
+ 	}
 
     preloader = document.getElementById('page-preloader');
     
@@ -118,7 +120,7 @@ document.addEventListener('visibilitychange', function(e) {
 		    	// {},100);
 		    	 
 		    	 videoTimer();
-		    	topBotAnime();
+		    	 
 		    },3500);
 		}
 		else
@@ -346,7 +348,7 @@ var arrayVideo = [" styles/video/mainFull3.mp4", " styles/video/mainFull3.mp4", 
 var arrayImages = ["url('styles/images/mobMain1.png')","url('styles/images/mobMain2.png')","url('styles/images/mobMain3.png')"]
 var secondsForCurrentTime = ["0","6.5","13.1"];
 var arrayImagePos = ["mob_backgr_pos1","mob_backgr_pos2","mob_backgr_pos3"];
-var arrayVideoDuration = ["6700","6800","6800"];
+var arrayVideoDuration = ["6310","6210","6360"];
 var arrayVideoNames = ["UKRAINE","KYIV IS MY CITY","WOMAN"];
 var arrayImagesNames = ["UKRAINE","KYIV IS MY CITY","WOMAN"];
 var counterVideo = 0;
@@ -444,46 +446,46 @@ function topBotAnime(){
 
 
 
-	if(arrayVideoDuration[counterVideo]==5500)
+	if(arrayVideoDuration[counterVideo]==6310)
 	{
 		setTimeout(()=>
 		{
-			botLine.classList.add("animeLineForward_12");
+			botLine.classList.add("animeLineForward_1");
 		},0);
 
 		setTimeout(()=>
 		{
-			botLine.classList.remove("animeLineForward_12");
+			botLine.classList.remove("animeLineForward_1");
  
-	},arrayVideoDuration[counterVideo]);
+	},arrayVideoDuration[counterVideo]-100);
 	}
-	if(arrayVideoDuration[counterVideo]==8200)
+	if(arrayVideoDuration[counterVideo]==6210)
 	{
 		setTimeout(()=>
 		{
-			botLine.classList.add("animeLineForward_9");
+			botLine.classList.add("animeLineForward_2");
 		},0);
 
 		setTimeout(()=>
 		{
-			botLine.classList.remove("animeLineForward_9");
+			botLine.classList.remove("animeLineForward_2");
 
 
-		},arrayVideoDuration[counterVideo]);
+		},arrayVideoDuration[counterVideo]-100);
 	}
-	if(arrayVideoDuration[counterVideo]==5800)
+	if(arrayVideoDuration[counterVideo]==6360)
 	{
 		setTimeout(()=>
 		{
-			botLine.classList.add("animeLineForward_8");
+			botLine.classList.add("animeLineForward_3");
 		},0);
 
 		setTimeout(()=>
 		{
-			botLine.classList.remove("animeLineForward_8");
+			botLine.classList.remove("animeLineForward_3");
 
 
-		},arrayVideoDuration[counterVideo]);
+		},arrayVideoDuration[counterVideo]-100);
 	}
 	 
 }
@@ -959,163 +961,163 @@ function ChangingLang(en,ru,ua)
 
 
  									//эквалайзер
-	(function ($) {
-    var methods = {
-        init: function (options) {
-			var p = {
-				row:7,			//кол-во столбцов
-				col:6,			//кол-во колонок
-				speed:20,		//скорость подсветки кубиков
-				freq:400,		//частота сигнала
-				on:true			//включено по умолчанию (true,false)
-			};
-			if (options) {
-				$.extend(p, options); 
-			}
-			var eqWrap = $(this).addClass('eqWrap');
-			for(c=0;c<p.col;c++){
-				var eqColEl = $('<div>').addClass('eqCol').appendTo(eqWrap); 
-				for(r=0;r<p.row;r++){
-					$('<div>').addClass('eqItem').appendTo(eqColEl); 	
-				}
-			}
-			var 
-			eqCol = $('.eqCol',eqWrap),
-			eqItem = $('.eqItem',eqWrap),
-			randomNumber = function (m,n){
-				m = parseInt(m);
-				n = parseInt(n);
-				return Math.floor( Math.random() * (n - m + 1) ) + m;
-			},
-			eqUp = function(colEl,val){
-				var 
-				speed = p.speed,
-				v = p.row - val,
-				i=p.row,
-				j=0,
-				flag2=true,
-				eachItemUp = function(){
-					$('.eqItem',colEl).eq(i-1).nextAll().stop().css({opacity:'1'});
-					if($('.eqItem',colEl).eq(i-1).css('opacity') == 1){
-						flag2 = false
-					}else{
-						flag2 = true	
-					}
-					$('.eqItem',colEl).eq(i-1).stop(true).animate({opacity:'1'},p.speed,function(){
-						if($('.eqItem',colEl).index(this) == v){
-							if(flag2){
-								eqDown(colEl,val);
-							}
-						}else{
-							i--;
-							j++;
-							if(i>v){
-								eachItemUp()	
-							}
-						}
-					})	
+// 	(function ($) {
+//     var methods = {
+//         init: function (options) {
+// 			var p = {
+// 				row:7,			//кол-во столбцов
+// 				col:6,			//кол-во колонок
+// 				speed:20,		//скорость подсветки кубиков
+// 				freq:400,		//частота сигнала
+// 				on:true			//включено по умолчанию (true,false)
+// 			};
+// 			if (options) {
+// 				$.extend(p, options); 
+// 			}
+// 			var eqWrap = $(this).addClass('eqWrap');
+// 			for(c=0;c<p.col;c++){
+// 				var eqColEl = $('<div>').addClass('eqCol').appendTo(eqWrap); 
+// 				for(r=0;r<p.row;r++){
+// 					$('<div>').addClass('eqItem').appendTo(eqColEl); 	
+// 				}
+// 			}
+// 			var 
+// 			eqCol = $('.eqCol',eqWrap),
+// 			eqItem = $('.eqItem',eqWrap),
+// 			randomNumber = function (m,n){
+// 				m = parseInt(m);
+// 				n = parseInt(n);
+// 				return Math.floor( Math.random() * (n - m + 1) ) + m;
+// 			},
+// 			eqUp = function(colEl,val){
+// 				var 
+// 				speed = p.speed,
+// 				v = p.row - val,
+// 				i=p.row,
+// 				j=0,
+// 				flag2=true,
+// 				eachItemUp = function(){
+// 					$('.eqItem',colEl).eq(i-1).nextAll().stop().css({opacity:'1'});
+// 					if($('.eqItem',colEl).eq(i-1).css('opacity') == 1){
+// 						flag2 = false
+// 					}else{
+// 						flag2 = true	
+// 					}
+// 					$('.eqItem',colEl).eq(i-1).stop(true).animate({opacity:'1'},p.speed,function(){
+// 						if($('.eqItem',colEl).index(this) == v){
+// 							if(flag2){
+// 								eqDown(colEl,val);
+// 							}
+// 						}else{
+// 							i--;
+// 							j++;
+// 							if(i>v){
+// 								eachItemUp()	
+// 							}
+// 						}
+// 					})	
 					
-				}
-				eachItemUp()
-			},
-			eqDown = function(colEl,val){
-				var 
-				v = p.row - val,
-				i = (p.row-val),
-				j = 0,
-				speed = p.speed*2,
-				eachItemDown = function(){
-					if(i == (p.row-val)){
-						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed*10)
-						setTimeout(function(){
-							i++;
-							j++;
-							if(i<p.row){
-								eachItemDown();
-							}		
-						},speed)
-					}else{
-						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed,function(){
-							i++;
-							j++;
-							if(i<p.row){
-								eachItemDown();
-							}	
-						})
-					}
-				}
-				eachItemDown();
-			},
-			eqInterval = function(){
-				eqCol.each(function(){
-					eqUp($(this),randomNumber(0,p.row))	
-				})
-			}
-			eqInterval()
-			if(p.on){
-				var eqIntervalId = setInterval(eqInterval,p.freq)
-				$(this).data({
-					'eqIntId':eqIntervalId,
-					'eqInt':eqInterval,
-					'freq':p.freq,
-					'on':p.on
-				})
-			}else{
-				$(this).data({
-					'eqIntId':eqIntervalId,
-					'eqInt':eqInterval,
-					'freq':p.freq,
-					'on':p.on
-				})
-			}
-		},start: function () {
-			if(!$(this).data('on')){
-				$(this).data('eqInt')();
-				var eqIntervalId = setInterval($(this).data('eqInt'),$(this).data('freq'));
-				$(this).data({
-					'eqIntId':eqIntervalId,
-					'on':true
-				})
-			}
-		},
-        stop: function () {
-			if($(this).data('on')){
-				clearInterval($(this).data('eqIntId'));
-				$('.eqItem',$(this)).animate({opacity:0})
-				$(this).data({
-					'on':false
-				})
-			}
-		}
-	};
-    $.fn.liEqualizer = function (method) {
-        if (methods[method]) {
-            return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof method === 'object' || !method) {
-            return methods.init.apply(this, arguments);
-        } else {
-            $.error('Метод ' + method + ' в jQuery.liEqualizer не существует');
-        }
-    };
-})(jQuery); 
+// 				}
+// 				eachItemUp()
+// 			},
+// 			eqDown = function(colEl,val){
+// 				var 
+// 				v = p.row - val,
+// 				i = (p.row-val),
+// 				j = 0,
+// 				speed = p.speed*2,
+// 				eachItemDown = function(){
+// 					if(i == (p.row-val)){
+// 						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed*10)
+// 						setTimeout(function(){
+// 							i++;
+// 							j++;
+// 							if(i<p.row){
+// 								eachItemDown();
+// 							}		
+// 						},speed)
+// 					}else{
+// 						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed,function(){
+// 							i++;
+// 							j++;
+// 							if(i<p.row){
+// 								eachItemDown();
+// 							}	
+// 						})
+// 					}
+// 				}
+// 				eachItemDown();
+// 			},
+// 			eqInterval = function(){
+// 				eqCol.each(function(){
+// 					eqUp($(this),randomNumber(0,p.row))	
+// 				})
+// 			}
+// 			eqInterval()
+// 			if(p.on){
+// 				var eqIntervalId = setInterval(eqInterval,p.freq)
+// 				$(this).data({
+// 					'eqIntId':eqIntervalId,
+// 					'eqInt':eqInterval,
+// 					'freq':p.freq,
+// 					'on':p.on
+// 				})
+// 			}else{
+// 				$(this).data({
+// 					'eqIntId':eqIntervalId,
+// 					'eqInt':eqInterval,
+// 					'freq':p.freq,
+// 					'on':p.on
+// 				})
+// 			}
+// 		},start: function () {
+// 			if(!$(this).data('on')){
+// 				$(this).data('eqInt')();
+// 				var eqIntervalId = setInterval($(this).data('eqInt'),$(this).data('freq'));
+// 				$(this).data({
+// 					'eqIntId':eqIntervalId,
+// 					'on':true
+// 				})
+// 			}
+// 		},
+//         stop: function () {
+// 			if($(this).data('on')){
+// 				clearInterval($(this).data('eqIntId'));
+// 				$('.eqItem',$(this)).animate({opacity:0})
+// 				$(this).data({
+// 					'on':false
+// 				})
+// 			}
+// 		}
+// 	};
+//     $.fn.liEqualizer = function (method) {
+//         if (methods[method]) {
+//             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+//         } else if (typeof method === 'object' || !method) {
+//             return methods.init.apply(this, arguments);
+//         } else {
+//             $.error('Метод ' + method + ' в jQuery.liEqualizer не существует');
+//         }
+//     };
+// })(jQuery); 
 
-$(function(){
-				$('.anyClass2').liEqualizer({
-		row:7,			//кол-во столбцов
-		col:4,			//кол-во колонок
-		speed:30,		//скорость подсветки кубиков
-		freq:400,		//частота сигнала
-		on:true			//включено по умолчанию (true,false)
-	});
-				$('.start').click(function(){
-					$('.anyClass2').liEqualizer('start');
-					return false;	
-				})
-				$('.stop').click(function(){
-					$('.anyClass2').liEqualizer('stop');
-					return false;	
-				})
-			});
+// $(function(){
+// 				$('.anyClass2').liEqualizer({
+// 		row:7,			//кол-во столбцов
+// 		col:4,			//кол-во колонок
+// 		speed:30,		//скорость подсветки кубиков
+// 		freq:400,		//частота сигнала
+// 		on:true			//включено по умолчанию (true,false)
+// 	});
+// 				$('.start').click(function(){
+// 					$('.anyClass2').liEqualizer('start');
+// 					return false;	
+// 				})
+// 				$('.stop').click(function(){
+// 					$('.anyClass2').liEqualizer('stop');
+// 					return false;	
+// 				})
+// 			});
 
 
 
@@ -1164,3 +1166,21 @@ var flagMob = false;
 		}
 		
 	});
+
+
+	(function($){
+  var search_button = $('.fa-search'),
+      close_button  = $('.close'),
+      input = $('.input');
+  search_button.on('click',function(){
+    $(this).parent().addClass('open');
+    close_button.fadeIn(500);
+    input.fadeIn(500);
+  });
+  
+  close_button.on('click',function(){
+    search_button.parent().removeClass('open');
+    close_button.fadeOut(500);
+    input.fadeOut(500);
+  });
+})(jQuery);

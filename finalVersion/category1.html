@@ -13,6 +13,13 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.css" />
 
 </head>
+	<div class="preloader" id="page-preloader">
+
+
+		<div class="loader-2" id="loader_line2">
+		</div>
+		
+	</div>
 	<header>
 			<div class="burger makeItDisapir visb_mob">
 				<a href="#" class="burger-btn">
@@ -114,52 +121,81 @@
   
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.2/dist/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="npbar/nprogress.js"></script>
+			 
 	<script type="text/javascript">
-		 
-function openWind(src)
-{
-	location.href = `Oko-Prodaction.html${src}`;
-
-}
-
-$.fancybox.defaults.fullScreen = {fullScreen : {
-    autoStart: true
-}
-};
-		var hero__categ1 = document.getElementById("hero__categ1");
-		var categ1__text = document.getElementById("categ1__text");
-
-
-			window.onscroll = function()
+	 
+		$(document).ready(function()
+		{
+			NProgress.start();
+		})
+		$(window).load(function()
+		{
+			setTimeout(()=>
 			{
-				
-				var x = hero__categ1.scrollTop;
-				console.log(x);
-			}
-		 		function underlineIt()
-{	
-	const main = document.getElementById('mainSection');
-	const arrayButtons = document.querySelectorAll("#nav a");
-	const arrayUndelines = document.querySelectorAll("#navL");
-	const mainBlock = document.getElementById("mainBlock");
-	let prev = 0;
-	let prev2 = 0;
+				NProgress.set(0.4);
+			},1000);
+			setTimeout(()=>
+			{
+				NProgress.set(0.6);
+			},2000);
+			setTimeout(()=>
+			{
+				NProgress.set(0.8);
+			},3000);
+			setTimeout(function()
+			{
+				NProgress.done();
 
-	arrayButtons.forEach((el,index)=>
-	{
-		el.addEventListener("mouseenter",()=>
+				startAnimeCategories();
+
+			},4000);
+
+		})	 
+		function openWind(src)
 		{
-			arrayUndelines[index].classList.add("underline");
-		})
-		el.addEventListener("mouseleave",()=>
-		{
-			arrayUndelines[index].classList.remove("underline");
-		})
-	})
+			location.href = `Oko-Prodaction.html${src}`;
+
+		}
+
+		$.fancybox.defaults.fullScreen = {fullScreen : {
+			autoStart: true
+		}
+	};
+		// var hero__categ1 = document.getElementById("hero__categ1");
+		// var categ1__text = document.getElementById("categ1__text");
 
 
-}
-underlineIt();
+		// 	window.onscroll = function()
+		// 	{
+			
+		// 		var x = hero__categ1.scrollTop;
+		// 		console.log(x);
+		// 	}
+		function underlineIt()
+		{	
+			const main = document.getElementById('mainSection');
+			const arrayButtons = document.querySelectorAll("#nav a");
+			const arrayUndelines = document.querySelectorAll("#navL");
+			const mainBlock = document.getElementById("mainBlock");
+			let prev = 0;
+			let prev2 = 0;
+
+			arrayButtons.forEach((el,index)=>
+			{
+				el.addEventListener("mouseenter",()=>
+				{
+					arrayUndelines[index].classList.add("underline");
+				})
+				el.addEventListener("mouseleave",()=>
+				{
+					arrayUndelines[index].classList.remove("underline");
+				})
+			})
+
+
+		}
+		underlineIt();
 		 
 				// categ1__text.classList.add("anime_categ1__text");
 		 
