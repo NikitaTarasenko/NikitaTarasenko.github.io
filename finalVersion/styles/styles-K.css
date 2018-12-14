@@ -5,27 +5,16 @@
 	font-family: 'Poppins', sans-serif;
 	/*font-family: AvantGardeC ;*/
 }
-/** {
-font-family: 'font18466949eef8aeb497f7fd0226125e6f';
-        src:    url('https://nomail.com.ua/files/eot/18466949eef8aeb497f7fd0226125e6f.eot?#iefix') format('embedded-opentype'),
-            url('https://nomail.com.ua/files/woff/18466949eef8aeb497f7fd0226125e6f.woff') format('woff'),
-            url('https://nomail.com.ua/files/woff2/18466949eef8aeb497f7fd0226125e6f.woff2') format('woff2');
-}
 
-*{ font-family: 'AvantGardeGothicC';  src: local('AvantGardeGothicC'), url('https://nomail.com.ua/files/woff/18466949eef8aeb497f7fd0226125e6f.woff') format('woff'); }
-
-
-
- 
-
-#avantgardegothicc { font-family:'AvantGardeGothicC'; }
-.font18466949eef8aeb497f7fd0226125e6f { font-family: 'font18466949eef8aeb497f7fd0226125e6f'; }*/
 @font-face {
 	font-family: 'Poppins', sans-serif;
 	/*font-family: AvantGardeC;  */
 	/*src: url("styles/AvantGardeC.otf"); */
 }
-
+/* remove popup btn in opera*/
+html > div[style] {
+  display: none !important;
+}
 header {  
 	display: flex;
 
