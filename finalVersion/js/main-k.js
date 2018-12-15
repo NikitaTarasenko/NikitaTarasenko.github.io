@@ -4,9 +4,10 @@ $(document).ready(function()
 {
 	NProgress.start();
 })
-let FirstEnter = 0;
+
 window.onload = function ()
 {
+
 
 	if(!detectmob() || (!detectmob2())){
 	setTimeout(()=>
@@ -15,6 +16,27 @@ window.onload = function ()
 		
 	},3000);
 	
+ 	}
+ 	else
+ 	{
+ 		 setTimeout(()=>
+		    {
+		    	NProgress.set(0.4);
+		    },1000);
+		    setTimeout(()=>
+		    {
+		    	NProgress.set(0.6);
+		    },1500);
+		    setTimeout(()=>
+		    {
+		    	NProgress.set(0.8);
+		    },2000);
+		    setTimeout(function()
+		    {
+		    	NProgress.done();
+		    	document.getElementById("head").classList.remove("displayNone");
+
+		    },3000);
  	}
 
     preloader = document.getElementById('page-preloader');
@@ -53,10 +75,7 @@ window.onload = function ()
     		arrayUndelines[4].classList.add('underline2');
     		prev2=4;
     	}
-			// if(!preloader.classList.contains('done'))
-			// {
-			// 	preloader.classList.add('done');
-
+			 
 
 
 			document.querySelector('header').classList.add('animeForHeader');
@@ -79,10 +98,13 @@ window.onload = function ()
 
 }
 
-document.addEventListener('visibilitychange', function(e) {
+	 document.addEventListener('visibilitychange', function(e) {
 	document.getElementById("MyVideo").play();
     // console.log(document.hidden);
 });
+
+ 	let FirstEnter = 0;
+
 	function checkVideoLoad()
 	{
 		if ( document.getElementById("MyVideo").readyState === 4 ) {
