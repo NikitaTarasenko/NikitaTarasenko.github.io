@@ -72,8 +72,14 @@ window.onload = function ()
     	}
     	if(window.location.href.indexOf("#order") > -1) {
     		mySwiper.slideTo(6);
+    		setTimeout(()=>
+    		{
+    				openForm();
+    			},2000);
+    	
     		arrayUndelines[4].classList.add('underline2');
     		prev2=4;
+    		
     	}
 			 
 
@@ -188,11 +194,15 @@ function underlineIt()
 
 		el.addEventListener("mouseenter",()=>
 		{
+			if(typeof arrayUndelines[index]	!== 'undefined'){
 			arrayUndelines[index].classList.add("underline");
+		}
 		})
 		el.addEventListener("mouseleave",()=>
 		{
+			if(typeof arrayUndelines[index]	!== 'undefined'){
 			arrayUndelines[index].classList.remove("underline");
+		}
 		})
 	})
  
@@ -200,15 +210,21 @@ function underlineIt()
 	for(let b2 = 0;b2<arrayButtons.length;b2++)
 	{
 		
-			arrayButtons[b2].addEventListener('click', function()
+		arrayButtons[b2].addEventListener('click', function()
 		{
-			arrayUndelines[prev2].classList.remove('underline2');
-			arrayUndelines[b2].classList.add('underline2');
-			prev2 = b2;
+			if(typeof arrayUndelines[prev2]	!== 'undefined'){
+				arrayUndelines[prev2].classList.remove('underline2');
+			}
+			if(typeof arrayUndelines[b2]	!== 'undefined'){
+				arrayUndelines[b2].classList.add('underline2');
+				prev2 = b2;
+			}
 		});
 		main.addEventListener('click', function()
 		{
-			arrayUndelines[b2].classList.remove('underline2');
+			if(typeof arrayUndelines[b2]	!== 'undefined'){
+				arrayUndelines[b2].classList.remove('underline2');
+			}
 		});
 	}
 
@@ -397,8 +413,10 @@ let changerArrayL2 = [lineWidth1,lineWidth2,lineWidth3,lineWidth1];
 function animeActiveVideoList(l1,l2)
 {
 	
-	 
-	l1.classList.remove('classForChangerAnimeOff');	
+	if(typeof l1	!== 'undefined' &&  typeof l2	!== 'undefined' ){
+		l1.classList.remove('classForChangerAnimeOff');	
+
+
 	l2.classList.remove("changingLineAnimeOff");
 	l1.classList.remove('staticClassForChangerOff');
 	l2.classList.remove("staticChangingLineOff");
@@ -407,20 +425,18 @@ function animeActiveVideoList(l1,l2)
 	
 	l1.classList.add("classForChangerAnime");
 	l2.classList.add("changingLineAnime");
-	 
+	
 	setTimeout(function()
-{
-	// if(listLines1.classList.contains("classForChangerAnime"))
-	// {
+{ 
 	l1.classList.remove('classForChangerAnime');
 	l2.classList.remove("changingLineAnime");
 	l1.classList.add("staticClassForChanger");
 	l2.classList.add("staticChangingLine");
-// }
+ 
 
 },995);
 
-
+ }
 }
 
 
@@ -953,8 +969,10 @@ function ChangingLang(en,ru,ua)
 	$(en).on('click', function() {
 		$('[data-en]').each(function() {
 			$(this).text($(this).attr('data-en'));
+
 			selectorForMap = "KYIV,st. Alexandra Boychenko, 8";
-			
+			  $('.input1').attr('placeholder', "Phone number");
+			   $('.input2').attr('placeholder', "Your Name");
 		}); 
 		initMap();
 	});
@@ -963,7 +981,9 @@ function ChangingLang(en,ru,ua)
 		$('[data-ru]').each(function() {
 			$(this).text($(this).attr('data-ru'));
 			selectorForMap = "г. Киев,ул. Александра Бойченко, 8";
-			
+			    $('.input1').attr('placeholder', "Ваше имя");
+			    $('.input2').attr('placeholder', "Ваш мобильный номер");
+	
 		}); 
 		initMap();
 	});
@@ -971,7 +991,9 @@ function ChangingLang(en,ru,ua)
 		$('[data-ua]').each(function() {
 			$(this).text($(this).attr('data-ua'));
 			selectorForMap = "м. Київ, вул. Олександра Бойченка, 8";
-			
+			   $('.input1').attr('placeholder', "Ваше ім'я");
+			    $('.input2').attr('placeholder', "Ваш мобільний номер");
+
 		}); 
 		initMap();
 	});
@@ -979,174 +1001,18 @@ function ChangingLang(en,ru,ua)
  
 
 }
-	
-
-
- 									//эквалайзер
-// 	(function ($) {
-//     var methods = {
-//         init: function (options) {
-// 			var p = {
-// 				row:7,			//кол-во столбцов
-// 				col:6,			//кол-во колонок
-// 				speed:20,		//скорость подсветки кубиков
-// 				freq:400,		//частота сигнала
-// 				on:true			//включено по умолчанию (true,false)
-// 			};
-// 			if (options) {
-// 				$.extend(p, options); 
-// 			}
-// 			var eqWrap = $(this).addClass('eqWrap');
-// 			for(c=0;c<p.col;c++){
-// 				var eqColEl = $('<div>').addClass('eqCol').appendTo(eqWrap); 
-// 				for(r=0;r<p.row;r++){
-// 					$('<div>').addClass('eqItem').appendTo(eqColEl); 	
-// 				}
-// 			}
-// 			var 
-// 			eqCol = $('.eqCol',eqWrap),
-// 			eqItem = $('.eqItem',eqWrap),
-// 			randomNumber = function (m,n){
-// 				m = parseInt(m);
-// 				n = parseInt(n);
-// 				return Math.floor( Math.random() * (n - m + 1) ) + m;
-// 			},
-// 			eqUp = function(colEl,val){
-// 				var 
-// 				speed = p.speed,
-// 				v = p.row - val,
-// 				i=p.row,
-// 				j=0,
-// 				flag2=true,
-// 				eachItemUp = function(){
-// 					$('.eqItem',colEl).eq(i-1).nextAll().stop().css({opacity:'1'});
-// 					if($('.eqItem',colEl).eq(i-1).css('opacity') == 1){
-// 						flag2 = false
-// 					}else{
-// 						flag2 = true	
-// 					}
-// 					$('.eqItem',colEl).eq(i-1).stop(true).animate({opacity:'1'},p.speed,function(){
-// 						if($('.eqItem',colEl).index(this) == v){
-// 							if(flag2){
-// 								eqDown(colEl,val);
-// 							}
-// 						}else{
-// 							i--;
-// 							j++;
-// 							if(i>v){
-// 								eachItemUp()	
-// 							}
-// 						}
-// 					})	
-					
-// 				}
-// 				eachItemUp()
-// 			},
-// 			eqDown = function(colEl,val){
-// 				var 
-// 				v = p.row - val,
-// 				i = (p.row-val),
-// 				j = 0,
-// 				speed = p.speed*2,
-// 				eachItemDown = function(){
-// 					if(i == (p.row-val)){
-// 						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed*10)
-// 						setTimeout(function(){
-// 							i++;
-// 							j++;
-// 							if(i<p.row){
-// 								eachItemDown();
-// 							}		
-// 						},speed)
-// 					}else{
-// 						$('.eqItem',colEl).eq(i).animate({opacity:'0'},speed,function(){
-// 							i++;
-// 							j++;
-// 							if(i<p.row){
-// 								eachItemDown();
-// 							}	
-// 						})
-// 					}
-// 				}
-// 				eachItemDown();
-// 			},
-// 			eqInterval = function(){
-// 				eqCol.each(function(){
-// 					eqUp($(this),randomNumber(0,p.row))	
-// 				})
-// 			}
-// 			eqInterval()
-// 			if(p.on){
-// 				var eqIntervalId = setInterval(eqInterval,p.freq)
-// 				$(this).data({
-// 					'eqIntId':eqIntervalId,
-// 					'eqInt':eqInterval,
-// 					'freq':p.freq,
-// 					'on':p.on
-// 				})
-// 			}else{
-// 				$(this).data({
-// 					'eqIntId':eqIntervalId,
-// 					'eqInt':eqInterval,
-// 					'freq':p.freq,
-// 					'on':p.on
-// 				})
-// 			}
-// 		},start: function () {
-// 			if(!$(this).data('on')){
-// 				$(this).data('eqInt')();
-// 				var eqIntervalId = setInterval($(this).data('eqInt'),$(this).data('freq'));
-// 				$(this).data({
-// 					'eqIntId':eqIntervalId,
-// 					'on':true
-// 				})
-// 			}
-// 		},
-//         stop: function () {
-// 			if($(this).data('on')){
-// 				clearInterval($(this).data('eqIntId'));
-// 				$('.eqItem',$(this)).animate({opacity:0})
-// 				$(this).data({
-// 					'on':false
-// 				})
-// 			}
-// 		}
-// 	};
-//     $.fn.liEqualizer = function (method) {
-//         if (methods[method]) {
-//             return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-//         } else if (typeof method === 'object' || !method) {
-//             return methods.init.apply(this, arguments);
-//         } else {
-//             $.error('Метод ' + method + ' в jQuery.liEqualizer не существует');
-//         }
-//     };
-// })(jQuery); 
-
-// $(function(){
-// 				$('.anyClass2').liEqualizer({
-// 		row:7,			//кол-во столбцов
-// 		col:4,			//кол-во колонок
-// 		speed:30,		//скорость подсветки кубиков
-// 		freq:400,		//частота сигнала
-// 		on:true			//включено по умолчанию (true,false)
-// 	});
-// 				$('.start').click(function(){
-// 					$('.anyClass2').liEqualizer('start');
-// 					return false;	
-// 				})
-// 				$('.stop').click(function(){
-// 					$('.anyClass2').liEqualizer('stop');
-// 					return false;	
-// 				})
-// 			});
+	 
+  
+    
+  
+ 
 
 
 
 
-let nav_links_mob = document.querySelectorAll("#nav_mob li");
- var burgerClicked = false;
-var flagMob = false;
+	let nav_links_mob = document.querySelectorAll("#nav_mob li");
+	var burgerClicked = false;
+	var flagMob = false;
 	let bur = document.getElementById("navmenumob");
 
 	$('.burger-btn').on('click', function(e)
@@ -1190,19 +1056,77 @@ var flagMob = false;
 	});
 
 
-	(function($){
-  var search_button = $('.fa-search'),
-      close_button  = $('.close'),
-      input = $('.input');
-  search_button.on('click',function(){
-    $(this).parent().addClass('open');
-    close_button.fadeIn(500);
-    input.fadeIn(500);
-  });
-  
-  close_button.on('click',function(){
-    search_button.parent().removeClass('open');
-    close_button.fadeOut(500);
-    input.fadeOut(500);
-  });
-})(jQuery);
+ 	
+
+
+
+
+
+		function openForm(){
+
+			var search = $('.search'),
+			input1 = $('.input1'),
+			input2 = $('.input2'),
+			input3 = $('.input3'),
+			send_form = $('.send_form');
+
+
+			setTimeout(()=>{
+				search.addClass('open');
+
+
+				input1.fadeIn(800);
+				input2.fadeIn(800);
+				input3.fadeIn(800);
+				send_form.fadeIn(500);
+
+			},300);
+			
+		}
+
+
+		function closeForm(){
+
+
+			var search = $('.search'),
+			input1 = $('.input1'),
+			input2 = $('.input2'),
+			input3 = $('.input3'),
+			send_form = $('.send_form');
+
+			search.removeClass('open');
+
+			input1.fadeOut(400);
+			input2.fadeOut(400);
+			input3.fadeOut(400);
+			send_form.fadeOut(300);
+
+
+		}
+
+
+
+
+		function gradientForm(){
+			var originalBG = $(".search").css("background");
+
+			$('.search').mousemove(function(e) {
+
+				x = e.pageX - this.offsetLeft;
+				y = e.pageY - this.offsetTop;
+				xy = x + y;
+				bgWebKit = "linear-gradient(" + xy + "deg, #0184ff 11%, #f99bff 100%)";
+
+
+				$(this).css({
+					background: bgWebKit
+				});
+
+
+			}).css(function() {
+				$(this).css({
+					background: originalBG
+				});
+			});
+		}
+		gradientForm();

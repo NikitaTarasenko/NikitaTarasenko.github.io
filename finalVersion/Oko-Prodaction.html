@@ -57,7 +57,7 @@
 			</div>
 			
 
-			<a onclick="mySwiper.slideTo(1);aboutAnimeOff()" href="#main" id="mainSection" class="mainA">
+			<a onclick="mySwiper.slideTo(1);aboutAnimeOff();closeForm();" href="#main" id="mainSection" class="mainA">
 				<div class="eye" >
 
 					<div class ="mainSection"> <img src="styles/images/mainLogo.png"></div> 
@@ -67,11 +67,11 @@
 				
 				<ul id="nav">
 				
-					<li><a class="relative" onclick="mySwiper.slideTo(2);aboutBlockAnime()" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff()" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
-					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff()" href="#contacts"><p  data-en="LOCATION" data-ru="МЫ ТУТ" data-ua="МИ ТУТ">LOCATION<div class=" und3" id="navL"></div></p></a></li>
-					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff()" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
-					<li><a href="#order" onclick="mySwiper.slideTo(6);aboutAnimeOff()"> <div class="nav__btn-order2" data-en="ORDER" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">ORDER</div></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(2);aboutBlockAnime();closeForm();" href="#about"><p data-en="ABOUT" data-ru="О НАС" data-ua="ПРО НАС">ABOUT<div class=" und1" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(3);aboutAnimeOff();closeForm();" href="#works"><p  data-en="WORKS" data-ru="ПОРТФОЛИО" data-ua="ПОРТФОЛІО">WORKS<div class=" und2" id="navL"></div></p></a></li>
+					<li><a class="relative" onclick="mySwiper.slideTo(4);aboutAnimeOff();closeForm();" href="#contacts"><p  data-en="LOCATION" data-ru="МЫ ТУТ" data-ua="МИ ТУТ">LOCATION<div class=" und3" id="navL"></div></p></a></li>
+					<li><a  class="relative" onclick="mySwiper.slideTo(5);aboutAnimeOff();closeForm();" href="#clients"><p  data-en="CLIENTS" data-ru="КЛИЕНТЫ" data-ua="КЛІЄНТИ">CLIENTS<div class=" und4" id="navL"></div></p></a></li>
+					<li><a href="#order" onclick="mySwiper.slideTo(6);aboutAnimeOff();openForm()"> <div class="nav__btn-order2" data-en="ORDER" data-ru="ЗАКАЗАТЬ" data-ua="ЗАЯВКА">ORDER</div></a></li>
 				</ul>
 
 			</div>
@@ -215,6 +215,8 @@
 						</div> -->
 					</div>
 				</div>
+
+				<!-- about block -->
 				<div class="swiper-slide">
 					<div class="changer_lang">
 						<div class="lang_items class_z-index_900 ">
@@ -279,312 +281,10 @@
 							<a  onclick='location.href = "works.html"' href="#videos" ><h1 data-en="VIDEOS" data-ru="ВИДЕО" data-ua="ВІДЕО">VIDEOS</h1></a>
 						</div>
 					</div>
-					<!-- <div class="changer_lang">
-						<div class="lang_items class_z-index_900 ">
-							<ul>
-								<li><div id="en3">EN</div></li>
-								<li><div id="ua3">UA</div></li>
-								<li><div id="ru3">RU</div></li>
-							</ul>
-						</div>
-					</div>
-					<div class="works-container" id="wc">
-
-
-	 					<div class="video-block1-modalVV " id="video_modal1">
-	 						 
-
-	 							<div class="vv" id="vv">
-
-	 								<iframe class="iFrame" src="https://player.vimeo.com/video/295411343" frameborder="0" allowFullScreen mozallowfullscreen webkitAllowFullScreen id="embed"></iframe>
-	 							</div>
-	 							 
-	 							<div class="closer_absolute">
-	 								<div class="video-closer">
-	 									<span class="span1"> </span>
-	 									<span class="span2"> </span>
-	 								</div>
-	 							</div>
-	 						</div>
-	 						 
-	 						<div class="works_arrowUp" id="arrowUp">
-	 							<i class="arrowUp"></i>
-	 						</div>
-	 						
-	 					<div class="works-contain" >
-	 						<div class="video-block1">
-		 							<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo1" muted>
-
-		 								<source src="" type="video/mp4" >   
-
-		 								</source>
-		 								
-		 							</video>
-		 							<div class="video_block1_mob">
-		 									
-		 								</div>
-		 						 
-		 							<div class="video-absolute" id="videoAbsol1">
-		 						 		<div class="top_part makeItDisapir">
-		 						 			<p>03:42</p>
-		 						 		</div>
-		 						 		<div class="mid_part">
-		 						 			<h1>UKRAINE</h1>
-		 						 		</div>
-		 						 		<div class="bot_part  makeItDisapir">
-		 						 			<div class="bot_part_content">
-		 						 				<div class="bpc_title">
-		 						 					<h3 class="rel_for_eq">Ukraine
-		 						 						<div class="myEqualizer">
-		 						 							<div class="myEqualizer_container">
-		 						 								<div class="waves wave1"></div>
-		 						 								<div class="waves wave2"></div>
-		 						 								<div class="waves wave3"></div>
-		 						 								<div class="waves wave4"></div>
-		 						 							</div>
-		 						 						</div></h3><p>TATA</p>
-		 						 				</div>
-		 						 		 
-		 						 					<div class="name_descr">
-		 						 						<div class="left_descr">
-		 						 							<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
-		 						 							<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
-		 						 						</div>
-		 						 						<div class="right_descr">
-		 						 							<p>OKO</p>
-		 						 							<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
-		 						 						</div>
-		 						 					</div>
-		 						 					 
-		 						 			</div>
-		 						 		</div>
-		 						</div>
-		 						<div class="video-absolute-Second" id="videoAbsol1Second">
-		 							
-		 						</div>
-
-	 						</div>
-
-	 						
-	 					
-	 							
-
-
-	 						
-	 						<div class="video-block2">
-	 							<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo2" muted>
-
-	 								<source src="styles/video/videoMain2-2.mp4" type="video/mp4" >   
-
-	 								</source>
-
-	 							</video>
-	 							<div class="video_block2_mob">
-		 									
-		 								</div>
-	 							<div class="video-absolute" id="videoAbsol2">
-	 							 	<div class="top_part makeItDisapir">
-		 						 			<p>00:52</p>
-		 						 		</div>
-		 						 		<div class="mid_part">
-		 						 			<h1>KYIV</h1>
-		 						 		</div>
-		 						 		<div class="bot_part  makeItDisapir">
-		 						 			<div class="bot_part_content">
-		 						 				<div class="bpc_title">
-		 						 					<h3 class="rel_for_eq">Kyiv
-		 						 						<div class="myEqualizer">
-		 						 							<div class="myEqualizer_container">
-		 						 								<div class="waves wave1"></div>
-		 						 								<div class="waves wave2"></div>
-		 						 								<div class="waves wave3"></div>
-		 						 								<div class="waves wave4"></div>
-		 						 							</div>
-		 						 					</h3><p>TATA</p>
-		 						 				</div>
-		 						 				<div class="name_descr">
-		 						 						<div class="left_descr">
-		 						 							<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
-		 						 							<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
-		 						 						</div>
-		 						 						<div class="right_descr">
-		 						 							<p>OKO</p>
-		 						 							<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
-		 						 						</div>
-		 						 					</div>
-		 						 			</div>
-		 						 		</div>
-	 						</div>
-	 						<div class="video-absolute-Second" id="videoAbsol2Second">
-		 							
-		 						</div>
-	 						</div>
-
-
-	 						<div class="video-block3">
-	 							<video width="100%" height="100%"  preload="auto"   loop="loop"  id="MyVideo3" muted>
-
-	 								<source src="styles/video/videoMain3-2.mp4" type="video/mp4" >   
-
-	 								</source>
-
-	 							</video>
-	 							<div class="video_block3_mob">
-		 									
-		 								</div>
-	 							<div class="video-absolute" id="videoAbsol3">
-	 							 	
-	 							 	<div class="top_part makeItDisapir">
-		 						 			<p>02:12</p>
-		 						 		</div>
-		 						 		<div class="mid_part" id="woman">
-		 						 			<h1>WOMAN</h1>
-		 						 		</div>
-		 						 		<div class="bot_part  makeItDisapir">
-		 						 			<div class="bot_part_content">
-		 						 				<div class="bpc_title">
-		 						 					<h3 class="rel_for_eq">Beautifull
-		 						 						<div class="myEqualizer">
-		 						 							<div class="myEqualizer_container">
-		 						 								<div class="waves wave1"></div>
-		 						 								<div class="waves wave2"></div>
-		 						 								<div class="waves wave3"></div>
-		 						 								<div class="waves wave4"></div>
-		 						 							</div>
-		 						 					</h3><p>TATA</p>
-		 						 				</div>
-		 						 				<div class="name_descr">
-		 						 						<div class="left_descr">
-		 						 							<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
-		 						 							<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
-		 						 						</div>
-		 						 						<div class="right_descr">
-		 						 							<p>OKO</p>
-		 						 							<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
-		 						 						</div>
-		 						 					</div>
-		 						 			</div>
-		 						 		</div>
-
-	 							</div>
-	 							<div class="video-absolute-Second" id="videoAbsol3Second">
-		 							
-		 						</div>
-	 						</div>
-	 						
-
-
-
-	 						<div class="video-block4">
-	 							<video width="100%" height="100%"  preload="none"   loop="loop"  id="MyVideo4" muted>
-
-	 								<source src="" type="video/mp4" >   
-
-	 								</source>
-
-	 							</video>
-	 							<div class="video_block4_mob">
-		 									
-		 								</div>
-	 							<div class="video-absolute" id="videoAbsol4">
-	 							 	
-	 							 	<div class="top_part makeItDisapir">
-		 						 			<p>00:54</p>
-		 						 		</div>
-		 						 		<div class="mid_part"  >
-		 						 			<h1>GO</h1>
-		 						 		</div>
-		 						 		<div class="bot_part  makeItDisapir">
-		 						 			<div class="bot_part_content">
-		 						 				<div class="bpc_title">
-		 						 					<h3 class="rel_for_eq TRX3 ">GO
-		 						 						<div class="myEqualizer">
-		 						 							<div class="myEqualizer_container">
-		 						 								<div class="waves wave1"></div>
-		 						 								<div class="waves wave2"></div>
-		 						 								<div class="waves wave3"></div>
-		 						 								<div class="waves wave4"></div>
-		 						 							</div>
-		 						 					</h3><p>TATA</p>
-		 						 				</div>
-		 						 				<div class="name_descr">
-		 						 						<div class="left_descr">
-		 						 							<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
-		 						 							<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
-		 						 						</div>
-		 						 						<div class="right_descr">
-		 						 							<p>OKO</p>
-		 						 							<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
-		 						 						</div>
-		 						 					</div>
-		 						 			</div>
-		 						 		</div>
-
-	 							</div>
-	 							<div class="video-absolute-Second" id="videoAbsol4Second">
-		 							
-		 						</div>
-	 						</div>
-
-	 						<div class="video-block5">
-	 							<video width="100%" height="100%"  preload="none"   loop="loop"  id="MyVideo5" muted>
-
-	 								<source src="" type="video/mp4" >   
-
-	 								</source>
-
-	 							</video>
-	 							<div class="video_block5_mob">
-		 									
-		 								</div>
-	 							<div class="video-absolute" id="videoAbsol5">
-	 							 	
-	 							 	<div class="top_part makeItDisapir">
-		 						 			<p>00:59</p>
-		 						 		</div>
-		 						 		<div class="mid_part" >
-		 						 			<h1>GANGSTA SPORT</h1>
-		 						 		</div>
-		 						 		<div class="bot_part  makeItDisapir">
-		 						 			<div class="bot_part_content">
-		 						 				<div class="bpc_title">
-		 						 					<h3 class="rel_for_eq">GANGSTA SPORT
-		 						 						<div class="myEqualizer">
-		 						 							<div class="myEqualizer_container">
-		 						 								<div class="waves wave1"></div>
-		 						 								<div class="waves wave2"></div>
-		 						 								<div class="waves wave3"></div>
-		 						 								<div class="waves wave4"></div>
-		 						 							</div>
-		 						 					</h3><p>TATA</p>
-		 						 				</div>
-		 						 				<div class="name_descr">
-		 						 						<div class="left_descr">
-		 						 							<p data-en="Production" data-ru="Производство" data-ua="Виробництво">Prodaction</p>
-		 						 							<p  data-en="Director" data-ru="Режиссер" data-ua="Режисер">Director</p>
-		 						 						</div>
-		 						 						<div class="right_descr">
-		 						 							<p>OKO</p>
-		 						 							<P data-en="KOSTIANTIN MELNIK" data-ru="КОНСТАНТИН МЕЛЬНИК" data-ua="КОСТЯНТИН МЕЛЬНИК">KOSTIANTIN MELNIK</P>
-		 						 						</div>
-		 						 					</div>
-		 						 			</div>
-		 						 		</div>
-
-	 							</div>
-	 							<div class="video-absolute-Second" id="videoAbsol5Second">
-		 							
-		 						</div>
-	 						</div>
-	 						
-
-
-
-
-	 						 
-	 					</div>
-	 				</div>-->
+				
 				</div> 
+
+				<!-- Map -->
 				<div class="swiper-slide relative">
 
 					<div class="changer_lang">
@@ -650,7 +350,7 @@
 				</div>
 
 
-				<div class="swiper-slide " ><!--  *************************form************************************ -->
+				<div class="swiper-slide " style="" ><!--  *************************form************************************ -->
 			 
 					<div class="changer_lang">
 						<div class="lang_items class_z-index_900 " >
@@ -672,32 +372,29 @@
 							<i class="fa fa-search">eqweqwe</i>
 							<input type="text" class="input">
 						</div> -->
-					<div class="form-container">
 
+						<div class="form_body">
 
-						<form action="mail.php" method="POST">
-							<h1>Заявка</h1>
+							<div class="search">
+								<!-- <div class="popup_btn">
 
-							<div class="inputs">
-								<input type="text" class="form-control" id="" name="user_name" placeholder="YOUR Name"  >
+								</div> -->
 
+								<form class="inputs" action="mail.php" method="POST">
+									<input type="text" class="form-control input1" id="" name="user_name"  placeholder="Your Name"  >
+									<input type="text" class="form-control input2" id="" name="user_phone"  placeholder="Phone number">
+									<input type="text" class="form-control input3" id="" name="user_email" placeholder="E-mail">
 
+									<button type="submit" class="send_form" data-en="Send" data-ru="Отправить" data-ua="Відправити">Send</button>
+								</form>
 
-								<input type="text" class="form-control" id="" name="user_phone" placeholder="phone number">
-
-
-								<input type="text" class="form-control" id="" name="user_email" placeholder="E-mail">
 							</div>
-							
-							<button type="submit" class="form-btn">Отправить форму</button>
-						</form>
-						
-					</div>
 
-					<div class="form_behind" id="form_behind">
-
-					</div>
-				</div>
+						</div>	
+						<!-- <div class="close" id="close_form">
+								<button type="submit" >close</button>
+							</div>		 -->
+		</div>
 
 
 			</div>
@@ -743,6 +440,8 @@
 			});
 
 
+			
+	
 		</script>
 
 	</body>

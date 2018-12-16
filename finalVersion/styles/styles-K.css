@@ -1119,7 +1119,7 @@ html
 .waves
 {
 	position: absolute;
-	min-width: 1px;
+	min-width: 1.4px;
 	height: 100%;
 	background-color: #fff;
 }
@@ -1993,22 +1993,10 @@ height: 40%;
 		opacity: 0;
 		background-image: url("..//styles/images/kosta1.png");
 		background-repeat: no-repeat;
-		background-position: 50% 0%;
+		background-position: 50% -5%;
 		background-size: cover;
 	}
-	.man3-logo
-	{
-		position: relative;
-		transition: 1s;
-		width: 300px;
-		height:300px;
-		margin:0 auto;
-		opacity: 0;
-		background-image: url("..//styles/images/ryaba.png");
-		background-repeat: no-repeat;
-		background-position: 60% 60%;
-		background-size: 125%;
-	}
+
 
 	.man2-logo
 	{
@@ -2018,11 +2006,26 @@ height: 40%;
 		height:300px;
 		margin:0 auto;
 		opacity: 0;
-		background-image: url("..//styles/images/Lesha1.png");
+		background-image: url("..//styles/images/oleksNew.png");
 		background-repeat: no-repeat;
 		background-position: 50% 0%;
 		background-size: contain;
 	}
+
+		.man3-logo
+	{
+		position: relative;
+		transition: 1s;
+		width: 300px;
+		height:300px;
+		margin:0 auto;
+		opacity: 0;
+		background-image: url("..//styles/images/ryabaNew.png");
+		background-repeat: no-repeat;
+		background-position: 50% 10%;
+		background-size: 110%;
+	}
+
 	.man-logo-Anime
 	{
 
@@ -3470,7 +3473,7 @@ height: 40%;
 }
 
 
-
+/*
  .form-container
 { 
 	position: relative;
@@ -3480,7 +3483,7 @@ height: 40%;
 	height: 60vh;
 	border-radius: 3px;
 	background-color: #0aa994;
-	/*background-color: #94f9eb;*/
+	 
 	z-index: 10000;
 	color: #fff;
 }
@@ -3494,7 +3497,7 @@ height: 40%;
  	content: "";
 
  }*/
-.form_behind
+/*.form_behind
 {
 	position: absolute;
 	transition: 1s all  ease-in-out;
@@ -3503,7 +3506,7 @@ height: 40%;
 	 overflow: visible !important;
 	width:120vw;
 	height:100%;
-	/*background-color: rgba(72, 119, 111,0.8);*/
+ 
 	z-index: 10;
 }
  .form-container:hover + .form_behind
@@ -3531,8 +3534,8 @@ form h1
 	text-transform: uppercase;
 	font-size: 1.7vw;
 
-}
-.form-control
+}*/
+/*.form-control
 {
 	position: relative;
 	display: block;
@@ -3600,7 +3603,7 @@ input:-webkit-autofill:active  {
 input::placeholder
 {
 	color: #fff;
-}
+}*/
 
 .hero__categ1
 {
@@ -3857,67 +3860,156 @@ text-transform: uppercase;
 
 
  
-
-.close{
-  position:absolute;
-  color:#fff;
-  top:20px;
-  right:50px;
-  font-size:1.7em;
-  cursor:pointer;
-  display:none;
-  z-index:999;
-  -webkit-transform:rotate(0deg);
-  transform:rotate(0deg);
-  -webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+   
+.form_body
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100%;
+	background-color: #000;
+	margin: 0 auto;
+	overflow: hidden;
 }
+.close
+{
+	display: none;
+	position:absolute;
+ 
+	top:40%;
+	right:10%;
+	 
+	font-size:1.7em;
+	cursor:pointer;
+	 
+	z-index:11999;
+	-webkit-transform:rotate(0deg);
+	transform:rotate(0deg);
+	-webkit-transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	transition:         all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	color: #000;
 
-.close:hover{
-  font-size:2.4em;
-  -webkit-transform:rotate(360deg);
-  transform:rotate(360deg);
 }
-/*-------------- saerch section -----------*/
+.popup_btn
+{
+	width: 80px;
+	height: 60px;
+	margin-top: -100px;
+	background-image: url("../styles/images/sendIco.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	transition: .1s;
+	 }
 .search{
-  position:fixed;
-  top:50%;
-  left:50%;
-  -webkit-transform:translate(-50%, -50%);
-  transform:translate(-50%, -50%);
-  border-radius:1000px;
-  width:0;
-  height:0;
-  background:#03a9f4;
-   -webkit-transition: all .4s linear;
-  transition:  all .4s linear;
+	position:absolute;
+	top:60%;
+	left:50%;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	border-radius:10px;
+	width:0;
+	height:0;
+	/*background:#0aa994;*/
+	background: -webkit-linear-gradient(to bottom, #0184ff, #f99bff);
+	background: -moz-linear-gradient(to bottom, #0184ff, #f99bff);
+	background: -o-linear-gradient(to bottom, #0184ff, #f99bff);
+	background: -ms-linear-gradient(to bottom, #0184ff, #f99bff);
+	background: linear-gradient(to bottom left, #0184ff 11%, #f99bff 110%);
+	-webkit-transition: all .8s linear;
+	transition:  all .8s linear;
+	z-index: 11;
+
 }
+.search .input1,.input2,.input3{
 
-.search i{
-  color:#03a9f4;
-  font-size:1.7em;
-  cursor:pointer;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	width:350px;
+	height:40px;
+	background:transparent !important;
+	border:none;
+	outline:none;
+	border-bottom:3px solid #eee;
+	color:#fff;
+	font-size:1.2em;
+	display:none;
+	margin-bottom:  25px;
 }
-
-.search .input{
-  position:absolute;
-  top:50%;
-  left:50%;
-  -webkit-transform:translate(-50%, -50%);
-  transform:translate(-50%, -50%);
-  width:350px;
-  height:40px;
-  background:transparent;
-  border:none;
-  outline:none;
-  border-bottom:3px solid #eee;
-  color:#eee;
-  font-size:1.3em;
-  display:none;
+.search .input3
+{
+	margin-bottom: 5px !important;
 }
-
-
+input::placeholder
+{
+	font-size:0.9rem;
+	color: #fff;
+}
+input::placeholder:active
+{
+	opacity: .5;
+}
+input[type="text"]
+{
+    background: transparent;
+    
+}
+textarea:focus, input:focus{
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+*:focus {
+    outline: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {	
+    -webkit-box-shadow: 0 0 0 30px #cce6ff inset;
+    border-radius: none;
+    color: #fff;
+}
+input::active  {
+	opacity: 0.4;
+	}
 .search.open{
-  height:4000px;
-  width:4000px;
+
+	height:150%;
+	width:150%;
+}
+
+
+.inputs
+{
+	position:absolute;
+	top:30%;
+	left:50%;
+	display: flex;
+	flex-direction: column;
+
+}
+.send_form
+{
+	display: none;
+	-webkit-transform:translate(-50%, -50%);
+	transform:translate(-50%, -50%);
+	width:350px;
+	height:40px;
+	background:transparent;
+	margin-top: 20px;
+	text-align: center;
+	padding: 10px 5px;
+	box-shadow: none;
+	border: none;
+	background-color: #fff;
+	color: #80c1ff;
+	font-weight: 600;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 15px;
+	cursor: pointer;
+	letter-spacing: 2px;
 }
