@@ -1075,10 +1075,10 @@ function ChangingLang(en,ru,ua)
 				search.addClass('open');
 
 
-				input1.fadeIn(800);
-				input2.fadeIn(800);
-				input3.fadeIn(800);
-				send_form.fadeIn(500);
+				input1.fadeIn(900);
+				input2.fadeIn(900);
+				input3.fadeIn(900);
+				send_form.fadeIn(600);
 
 			},300);
 			
@@ -1114,7 +1114,7 @@ function ChangingLang(en,ru,ua)
 
 				x = e.pageX - this.offsetLeft;
 				y = e.pageY - this.offsetTop;
-				xy = x + y;
+				xy = (x + y)/3;
 				bgWebKit = "linear-gradient(" + xy + "deg, #0184ff 11%, #f99bff 100%)";
 
 

@@ -3997,7 +3997,7 @@ input::active  {
 	-webkit-transform:translate(-50%, -50%);
 	transform:translate(-50%, -50%);
 	width:350px;
-	height:40px;
+ 
 	background:transparent;
 	margin-top: 20px;
 	text-align: center;
