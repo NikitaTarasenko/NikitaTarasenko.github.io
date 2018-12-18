@@ -1103,8 +1103,26 @@ function ChangingLang(en,ru,ua)
 
 
 		}
+		var in1 = document.getElementById("input1");
+		var in2 = document.getElementById("input2");
+		var in3 = document.getElementById("input3");
+		hoveringInputs(in1);
+		hoveringInputs(in2);
+		hoveringInputs(in3);
 
+		function hoveringInputs(input)
+		{
+		
+			input.addEventListener("mouseenter",()=>
+			{	
+				input.classList.add("input_hovered");
+			});
+			input.addEventListener("mouseleave",()=>
+			{
+				input.classList.remove("input_hovered");
+			})
 
+		}
 
 
 		function gradientForm(){

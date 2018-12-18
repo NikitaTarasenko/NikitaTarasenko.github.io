@@ -2022,7 +2022,7 @@ height: 40%;
 		opacity: 0;
 		background-image: url("..//styles/images/ryabaNew.png");
 		background-repeat: no-repeat;
-		background-position: 50% 10%;
+		background-position: 100% 10%;
 		background-size: 110%;
 	}
 
@@ -3913,11 +3913,11 @@ text-transform: uppercase;
 	width:0;
 	height:0;
 	/*background:#0aa994;*/
-	background: -webkit-linear-gradient(to bottom, #0184ff, #f99bff);
-	background: -moz-linear-gradient(to bottom, #0184ff, #f99bff);
-	background: -o-linear-gradient(to bottom, #0184ff, #f99bff);
-	background: -ms-linear-gradient(to bottom, #0184ff, #f99bff);
-	background: linear-gradient(to bottom left, #0184ff 11%, #f99bff 110%);
+	background: -webkit-linear-gradient(to top, #0184ff, #f99bff);
+	background: -moz-linear-gradient(to top, #0184ff, #f99bff);
+	background: -o-linear-gradient(to top, #0184ff, #f99bff);
+	background: -ms-linear-gradient(to top, #0184ff, #f99bff);
+	background: linear-gradient(to top right, #0184ff 11%, #f99bff 110%);
 	-webkit-transition: all .8s linear;
 	transition:  all .8s linear;
 	z-index: 11;
@@ -3934,7 +3934,7 @@ text-transform: uppercase;
 	outline:none;
 	border-bottom:3px solid #eee;
 	color:#fff;
-	font-size:1.2em;
+	font-size:1.1em;
 	display:none;
 	margin-bottom:  25px;
 }
@@ -3944,13 +3944,15 @@ text-transform: uppercase;
 }
 input::placeholder
 {
-	font-size:0.9rem;
+	font-size:12px;
 	color: #fff;
+	transition: 0.5s;
 }
-input::placeholder:active
-{
-	opacity: .5;
-}
+.input_hovered::-webkit-input-placeholder {
+    font-size:12px;
+	 
+    opacity: 0.5;
+ }
 input[type="text"]
 {
     background: transparent;
@@ -3972,9 +3974,7 @@ input:-webkit-autofill:active  {
     border-radius: none;
     color: #fff;
 }
-input::active  {
-	opacity: 0.4;
-	}
+ 
 .search.open{
 
 	height:150%;
@@ -3997,7 +3997,7 @@ input::active  {
 	-webkit-transform:translate(-50%, -50%);
 	transform:translate(-50%, -50%);
 	width:350px;
- 
+	 
 	background:transparent;
 	margin-top: 20px;
 	text-align: center;
@@ -4012,4 +4012,9 @@ input::active  {
 	border-radius: 15px;
 	cursor: pointer;
 	letter-spacing: 2px;
+	 
+}
+.send_form:hover
+{
+	color: #0184ff;
 }
