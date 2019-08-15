@@ -6,19 +6,34 @@
 	<title>Kievstar</title>
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="swiper/css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 </head>
 <body>
 
 	<div class="fixedHeader">
 		<div class="container">
-			<img src="img/ " class="header__logo"> 
-				<ul class="header__nav" > 
-					<li><a href="#about">Про програми</a></li>
-					<li><a href="#project">Проект</a></li>
-					<li><a href="#teachers">Викладачi</a></li>
-					<li><a href="#contacts">Контакти</a></li>
-				</ul>
+			<img src="img/mainLogoDesk.svg " class="header__logo"> 
+			<ul class="header__nav" > 
+				<li><a href="#about">Про програми</a></li>
+				<li><a href="#project">Проект</a></li>
+				<li><a href="#teachers">Викладачi</a></li>
+				<li><a href="#contacts">Контакти</a></li>
+			</ul>
+			<div class="menu menu_btn">
+				<i class="material-icons burger"></i>
+			</div>
 		</div>
+	</div>
+
+	<div class="fixedDropMenu">
+		<ul class="header__nav" > 
+			<li><a href="#about">Про програми</a></li>
+			<li><a href="#project">Проект</a></li>
+			<li><a href="#teachers">Викладачi</a></li>
+			<li><a href="#contacts">Контакти</a></li>
+		</ul>
 	</div>
 	<div class="bgBalls__item">
 		<img src="img/oval1.svg">
@@ -29,13 +44,16 @@
 	<div class="one">
 		<header>
 			<div class="container">
-				<img src="img/ " class="header__logo"> 
+				<img src="img/mainLogoDesk.svg " class="header__logo"> 
 				<ul class="header__nav" > 
 					<li><a href="#about">Про програми</a></li>
 					<li><a href="#project">Проект</a></li>
 					<li><a href="#teachers">Викладачi</a></li>
 					<li><a href="#contacts">Контакти</a></li>
 				</ul>
+				<div class="menu menu_btn">
+					<i class="material-icons burger"></i>
+				</div>
 			</div>
 		</header>
 
@@ -121,12 +139,12 @@
 
 					<div class="minidscr__item">
 						<img src="img/ico5.svg">
-						<span>5 освітніх напрямів</span>
+						<span>Базовий рівень</span>
 					</div>
 
 					<div class="minidscr__item">
 						<img src="img/ico6.svg">
-						<span>5 освітніх напрямів</span>
+						<span>10 спікерів</span>
 					</div>
 				</div>
 
@@ -134,8 +152,11 @@
 				<section class="bluePart" >
 					<div class="bluePart__text">
 						<p class="opacityNone" id="text">
-						Наш проект став можливим завдяки загальнонаціональній соціально-освітній ініціативі “Make Your Mark” компанії «Київстар», що діє в рамках однойменної глобальної програми міжнародної групи компаній VEON з 2015 року.
-					</p>
+							Наш проект став можливим завдяки &nbsp &nbsp &nbsp &nbsp загальнонаціональній соціально-освітній ініціативі “Make Your Mark” компанії &nbsp &nbsp &nbsp &nbsp &nbsp «Київстар», що діє в рамках однойменної глобальної програми міжнародної групи компаній VEON з 2015 року.
+						</p>
+						<p class="" id="text2">
+							Наш проект став можливим завдяки загальнонаціональній соціально-освітній ініціативі “Make Your Mark” компанії «Київстар», що діє в рамках однойменної глобальної програми міжнародної групи компаній VEON з 2015 року.
+						</p>
 					</div>
 					<div class="bluePart__img">
 						<img src="img/child_bg.png">
@@ -145,61 +166,66 @@
 
 
 				<section class="main" id="project">
-					<div class="main__head">
-						<div class="main__head__item main__head__item_selected" id="physics">
-							<div class="main__head__item__circle">
-								<div class="main__head__item__circle__abs">
-									<img src="img/m1.svg">
-								</div>
-							</div>
-							<span>Фiзика</span>
-						</div>
+					<div class="main__head ">
+						<div class="swiper-wrapper" id="swiper-wrapper">
 
-						<div class="main__head__item  "  id="chemistry">
-							<div class="main__head__item__circle">
-								<div class="main__head__item__circle__abs">
-									<img src="img/m2.svg">
+							<div class="main__head__item   main__head__item_selected"  id="chemistry">
+								<div class="main__head__item__circle">
+									<div class="main__head__item__circle__abs">
+										<img src="img/m2.svg">
+									</div>
 								</div>
+								<span>Хiмiя</span>
 							</div>
-							<span>Хiмiя</span>
-						</div>
 
-						<div class="main__head__item  " id="math">
-							<div class="main__head__item__circle">
-								<div class="main__head__item__circle__abs">
-									<img src="img/m3.svg">
+							<div class="main__head__item   " id="bilogy">
+								<div class="main__head__item__circle">
+									<div class="main__head__item__circle__abs">
+										<img src="img/m5.svg">
+									</div>
 								</div>
+								<span>Бiологiя</span>
 							</div>
-							<span>Математика</span>
-						</div>
 
-						<div class="main__head__item  " id="inform">
-							<div class="main__head__item__circle">
-								<div class="main__head__item__circle__abs">
-									<img src="img/m4.svg">
+							<div class="main__head__item   " id="inform">
+								<div class="main__head__item__circle">
+									<div class="main__head__item__circle__abs">
+										<img src="img/m4.svg">
+									</div>
 								</div>
+								<span>Iнформатика</span>
 							</div>
-							<span>Iнформатика</span>
-						</div>
 
 
-						<div class="main__head__item  " id="bilogy">
-							<div class="main__head__item__circle">
-								<div class="main__head__item__circle__abs">
-									<img src="img/m5.svg">
+
+							<div class="main__head__item " id="physics">
+								<div class="main__head__item__circle">
+									<div class="main__head__item__circle__abs">
+										<img src="img/m1.svg">
+									</div>
 								</div>
+								<span>Фiзика</span>
 							</div>
-							<span>Бiологiя</span>
+							<div class="main__head__item  " id="math">
+								<div class="main__head__item__circle">
+									<div class="main__head__item__circle__abs">
+										<img src="img/m3.svg">
+									</div>
+								</div>
+								<span>Математика</span>
+							</div>
+
 						</div>
 					</div>
 
 					<div class="main__body">
-						<div class="main__body__info case0">
+						<div class="main__body__info case0 ">
 							<ul>
-								<li>Властивості газів</li>
-								<li> Парові двигуни</li>
-								<li>Двигуни зовнішнього та внутрішнього згоряння</li>
-								<li>Електричний струм та магнітне поле</li>
+								<li >Метали та їх властивості</li>
+								<li>Окисно-відновні реакції</li>
+								<li>Гідриди. Водневі сполуки s- і p-елементів, їх типи</li>
+								<li>Ковалентний зв’язок</li>
+								<li>Іонний зв’язок</li>
 							</ul>
 
 							<a  href="#" class="main__body__info__btn button_hb button_hb-type2 color1" id="showList" onclick="linkIt();event.preventDefault()"><span class="button__label">Переглянути курс на Youtube</span></a>
@@ -212,9 +238,9 @@
 				</section>
 
 				<section class="teachers" id="teachers">
-					<div class="teachers__title">
+					<h1 class="teachers__title">
 						Викладачі
-					</div>
+					</h1>
 					<div class="teachers__block">
 						<div class="teachers__block__item">
 							<div class="teachers__block__item__imf">
@@ -303,10 +329,115 @@
 							<span>студент НаУКМА</span>
 						</div>
 
-
 					</div>
-				</section>
 
+					
+
+				</section>
+			</div>
+
+			<div class="mobTeachers displayNone">
+				<div class="  s2">
+
+					<div class=" s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t6.jpg">
+							</div>
+							<h5>Наталія Васькевич</h5>
+							<span>вчитель вищої категорії, старший вчитель</span>
+						</div>
+					</div>
+
+					<div class=" s">
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t8.jpg">
+							</div>
+							<h5>Ольга Малюта</h5>
+							<span>молекулярний біолог</span>
+						</div>
+					</div>
+					<div class="  s" >
+
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t3.jpg">
+							</div>
+							<h5>Ірина Єгорченко</h5>
+							<span>український математик і громадський діяч</span>
+						</div>
+					</div>
+					<div class="  s" >
+
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t10.jpg">
+							</div>
+							<h5>Тетяна Древицька</h5>
+							<span>старший науковий співробітник
+							Інституту фізіології ім. О.О.Богомольця</span>
+						</div>
+					</div>
+					<div class=" s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t9.jpg">
+							</div>
+							<h5>Роман Моргачов</h5>
+							<span>інженер Інституту фізіології ім. О.О.Богомольця </span>
+						</div>
+					</div>
+					<div class="  s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t1.jpg">
+							</div>
+							<h5>Дмитро Киричков</h5>
+							<span>студент НТУУ КПІ</span>
+						</div>
+					</div>
+					<div class="  s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t5.jpg">
+							</div>
+							<h5>Михайло Корешков</h5>
+							<span>студент НТУУ КПІ</span>
+						</div>
+					</div>
+					<div class="  s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t7.jpg">
+							</div>
+							<h5>Олексій Федоренко</h5>
+							<span>закінчив ліцей НТУУ КПІ</span>
+						</div>
+					</div>
+					<div class="  s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t4.jpg">
+							</div>
+							<h5>Костянтин Заіграєв</h5>
+							<span>студент НТУУ </span>
+						</div>
+					</div>
+					<div class=" s" >
+						<div class="teachers__block__item2">
+							<div class="teachers__block__item__imf">
+								<img src="img/teachers/t2.jpg">
+							</div>
+							<h5>Ігор Жуковський</h5>
+							<span>студент НаУКМА</span>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="container">
 				<section class="contacts" id="contacts">
 					<div class="contacts__left">
 						<h1>Контакти</h1>
@@ -325,9 +456,8 @@
 						</div>							 
 					</div>
 				</section>
-
-
-				<footer>
+			</div>
+			<!-- 	<footer>
 					<div class="footer__block" >
 						<img src="img/mainLogo.png" class="footer__block__logo">
 						<div class="footer__block__social">
@@ -380,20 +510,43 @@
 							<li><a href="#">Сведения об образовательной организации</a></li>
 						</ul>
 					</div>
-				</footer>
+				</footer> -->
+
 			</div>
-		</div>
 
-		<script
-		src="https://code.jquery.com/jquery-3.4.1.js"
-		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-		crossorigin="anonymous"></script>
+			<script	src="https://code.jquery.com/jquery-3.4.1.js"
+			integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+			crossorigin="anonymous"></script>
+			<script src="swiper/js/swiper.min.js"></script>
+			<script src="js/main.js"></script>
+			<script type="text/javascript" src="slick/slick.min.js"></script>
+		</body>
+		<script>
+			if(window.innerWidth < 480){
+				$('.s2').slick({
+					centerMode: true,
+					centerPadding: '60px',
+					slidesToShow: 3,
+					responsive: [
 
-		<script src="js/main.js"></script>
-		<script type="text/javascript">
+					{
+						breakpoint: 480,
+						settings: {
+							settings: "slick",
+							arrows: false,
+							centerMode: true,
+							centerPadding: '0px',
+							autoplay: true,
+							autoplaySpeed:2000,
+							// fade: true,
+							// cssEase: 'ease-out',
+							slidesToShow: 1
 
-			
-
+						}
+					}
+					]
+				});
+				
+			}
 		</script>
-	</body>
-	</html>
+		</html>

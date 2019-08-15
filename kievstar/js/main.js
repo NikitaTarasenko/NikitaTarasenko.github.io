@@ -11,7 +11,7 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('player', {
 		height: '100%',
 		width: '100%',
-		videoId: 'lPVjpD-ngKI',
+		videoId: '09VfqTmQicA',
 					// events:{
 					// 	onReady: ()=>{
 					// 		player.cueVideoById('lPVjpD-ngKI');
@@ -34,16 +34,37 @@ function stopVideo() {
 
 const showYt = document.querySelector('#showList');
 const youT = document.querySelector('.main__body__video iframe');
+const main__head = document.querySelector('.main__head');
 const listCategories = document.querySelectorAll('.main__head__item');
 const listInfo = document.querySelector('.main__body__info');
+const listInfo__items = document.querySelectorAll('.main__body__info li')
+
 const listInfoBlock = document.querySelector('.main__body__info ul');
 let prevCateg = 0;
 let prevIndex = 0;
-let link ='https://www.youtube.com/playlist?list=PLBoNQWTfdR3gXBiazf0LUXu7UaQQZ8spV' ;
+let link ='https://www.youtube.com/watch?v=09VfqTmQicA' ;
 
 
+const burger = document.querySelectorAll('.menu_btn');
+const menu = document.querySelector('.fixedDropMenu');
+const body = document.querySelector('body');
 
 navCateg();
+
+
+burger.forEach((item)=>
+{
+	item.addEventListener('click',(e)=>{
+		menu.classList.add('fixedDropMenu__show');
+		e.stopPropagation();
+		document.querySelector('.fixedDropMenu__show').addEventListener('click',(e)=>{
+			e.stopPropagation();
+		})
+		body.addEventListener('click',()=>{
+			menu.classList.remove('fixedDropMenu__show');
+		})
+	})
+})
 
 
 function navCateg(){
@@ -68,30 +89,35 @@ function reDirectTo(){
 		link = "https://www.youtube.com/playlist?list=PLBoNQWTfdR3gXBiazf0LUXu7UaQQZ8spV";
 		player.loadVideoById('lPVjpD-ngKI');
 		changeInfo('0');
+		mainBlockAnime();
 	}
 	else if(document.querySelector('#chemistry').classList.contains('main__head__item_selected')){
 
 		link = "https://www.youtube.com/playlist?list=PLBoNQWTfdR3iZFlaPZSP6Ggt0Ss3GHsh6";
 		player.loadVideoById('09VfqTmQicA');
 		changeInfo('1');
+		mainBlockAnime();
 	}
 	else if(document.querySelector('#math').classList.contains('main__head__item_selected')){
 
 		link = " https://www.youtube.com/playlist?list=PLBoNQWTfdR3iEmM8cIcueNcDa-pya63S6";
 		player.loadVideoById('4o2nMBGmmGs');
 		changeInfo('2');
+		mainBlockAnime();
 	}
 	else if(document.querySelector('#inform').classList.contains('main__head__item_selected')){
 
 		link = "https://www.youtube.com/playlist?list=PLBoNQWTfdR3hct_ewWli29THGIuV8kBed";
 		player.loadVideoById('1kwpgBCWjCs');
 		changeInfo('3');
+		mainBlockAnime();
 	}
 	else if(document.querySelector('#bilogy').classList.contains('main__head__item_selected')){
 
 		link = "https://www.youtube.com/playlist?list=PLBoNQWTfdR3jjFi7u8uFxktp8L6eUKpfZ";
 		player.loadVideoById('hk_zBxCY2ak');
 		changeInfo('4');
+		mainBlockAnime();
 	}
 }
 
@@ -101,6 +127,7 @@ function linkIt(){
 }
 
 function changeInfo(index){
+
 
 	listInfo.classList.remove(`case${prevIndex}`);
 	listInfo.classList.add(`case${index}`);
@@ -112,7 +139,8 @@ function changeInfo(index){
 		<li> Парові двигуни</li>
 		<li>Двигуни зовнішнього та внутрішнього згоряння</li>
 		<li>Електричний струм та магнітне поле</li>
-		`
+		`;
+		mainBlockAnime();
 	}
 	else if(index == 1)
 	{
@@ -158,7 +186,21 @@ function changeInfo(index){
 		`
 	}
 
+	
 
+}
+
+function mainBlockAnime(){
+	let listInfo__items = document.querySelectorAll('.main__body__info li');
+	var listInfoDelay = 100;
+
+	listInfo__items.forEach((item)=>{
+		setTimeout(()=>{
+			item.classList.add('main__body__info__li_active');
+
+		},listInfoDelay);
+		listInfoDelay+=200;
+	})
 }
 // animations
 
@@ -170,14 +212,18 @@ const circles__text = document.querySelectorAll('.first__content__item__text');
 const blueBlock = document.querySelector('.bluePart');
 
 const blueBlock__img = document.querySelector('.bluePart__img img');
+const teachers__block = document.querySelector('.teachers__block');
+const mobTeachers = document.querySelector('.mobTeachers');
 const teachers = document.querySelectorAll('.teachers__block__item');
+const contacts__left = document.querySelector('.contacts__left');
+const contacts__right = document.querySelector('.contacts__right');
 
+if(window.innerWidth > 480){
+	setTimeout(()=>{
+		shadowBg.classList.add("first__loaded");
 
-
-setTimeout(()=>{
-	shadowBg.classList.add("first__loaded");
-
-},500);
+	},500);
+}
 
 setTimeout(()=>{
 	first__h1.classList.remove('opacityNone');
@@ -189,6 +235,13 @@ setTimeout(()=>{
 
 },4000);
 
+var setTimeout1= 2500;
+var setTimeout2 = 3600;
+if(window.innerWidth < 480)
+{
+	setTimeout1= 1500;
+    setTimeout2 = 2600;
+}
 
 setTimeout(()=>{
 	circles[0].classList.add('first__content__item__img__show');
@@ -198,7 +251,7 @@ setTimeout(()=>{
 			circles[2].classList.add('first__content__item__img__show');
 		},300);
 	},300);
-},2500);
+},setTimeout1);
 
 setTimeout(()=>{
 	circles__text[0].classList.add('first__content__item__text__show');
@@ -208,7 +261,7 @@ setTimeout(()=>{
 			circles__text[2].classList.add('first__content__item__text__show');
 		},400);
 	},400);
-},3600);
+},setTimeout2);
 
 
 var scroll2 = false;
@@ -216,20 +269,34 @@ var scroll2 = false;
 $(window).scroll(function() {
 	
 	var bT = $(blueBlock).offset().top,
-	teachersT = $('.teachers__title').offset().top,
-	teachersH = $('.teachers__title').outerHeight();
 	bH = $(blueBlock).outerHeight(),
+	teachersT = $('.teachers__title').offset().top -200,
+	teachersH = $('.teachers__title').outerHeight();
+	contactsT = $('.contacts').offset().top - 100,
+	contactsH = $('.contacts').outerHeight(),
+	mainT = $('.main__body ').offset().top + 200,
+	mainH = $('.main__body').outerHeight(),
 	wH = $(window).height(),
 	wS = $(this).scrollTop();
+
+	if(window.innerWidth < 480){
+		bH = $(blueBlock).outerHeight() -300;
+		contactsH = $('.contacts').outerHeight() -100;
+	}
+
 	if (wS > (bT+bH-wH)){
 		scroll1();
-		 
 	}
 	if(wS > (teachersT+teachersH-wH)){
 		scroll2();
-		 
-	}
 
+	}
+	if(wS > (contactsT+contactsH-wH)){
+		scroll3();
+	}
+	if (wS > (bT+bH-wH)){
+		mainBlockAnime();
+	}
 	scrollHeader();
 });
 
@@ -246,7 +313,18 @@ function scrollHeader() {
 	}
 }
 
+var scroll3 =  (function contactsAnime(){
 
+	var delay =0;
+	var executed = false;
+	return ()=>{
+		if(!executed){
+			executed = true;
+			contacts__left.classList.add('contacts__left__show');
+			contacts__right.classList.add('contacts__right__show');
+		}
+	}
+})();
 
 var scroll2 = (function teachersAnime(){
 	var delay =0;
@@ -282,7 +360,9 @@ var scroll1 = (function blueTextAnime(){
 
 			for(let i = 0; i < text.innerText.length; i++)
 			{
+
 				newDom += '<span class="char">' + (text.innerText[i] == ' ' ? '&nbsp;' : text.innerText[i])+ '</span>';
+
 			}
 
 			text.innerHTML = newDom;
@@ -295,6 +375,13 @@ var scroll1 = (function blueTextAnime(){
 		}
 	}
 })();
+
+
+if(window.innerHeight > 960){
+	scroll1();
+}
+
+
 $('a[href^="#"]').click(function(e){
 //Сохраняем значение атрибута href в переменной:
 var target = $(this).attr('href');
@@ -302,6 +389,69 @@ $('html, body').animate({scrollTop: $(target).offset().top -100}, 600);
 e.preventDefault();
 return false;
 });
+
+
+if(window.innerWidth < 1000){
+	initSwipper();
+
+}
+if(window.innerWidth < 500)
+{
+	teachers__block.classList.add('displayNone');
+	mobTeachers.classList.remove('displayNone');
+	initTeachersSwiper();
+}
+function initSwipper()
+{
+	main__head.classList.add('swiper-container');
+	listCategories.forEach((item)=>{
+		item.classList.add('swiper-slide');
+	})
+
+	var swiper = new Swiper('.swiper-container', {
+		slidesPerView: 4,
+		spaceBetween: 0,
+
+		speed: 800,
+		breakpoints: {
+			700:
+			{
+				slidesPerView: 3
+			},
+			450:
+			{
+				slidesPerView: 2
+			}
+		},
+		autoplay: {
+			delay: 600,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+
+
+}
+
+function initTeachersSwiper()
+{
+	console.log('dsds')
+}
+	// var swiper = new Swiper('.s2', {
+	// 	slidesPerView: 1,
+	// 	spaceBetween: 0,
+	// 	loop: true,
+	// 	centeredSlides: true
+		 
+ //      pagination: {
+ //        el: '.swiper-pagination2',
+ //      },
+ //  });
+
+ 
+
 // function goLink(){
 // 	listCategories.forEach((item,index)=>
 // 	{
